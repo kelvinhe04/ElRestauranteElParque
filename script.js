@@ -49,11 +49,11 @@ filterBtns.forEach(function (btn) {
       ) {
           if (scrollDelta > 0 ) {
               // Scrolling down and past hero section
-              categoryFilter.style.transform = "translateY(0)";
+              // categoryFilter.style.transform = "translateY(0%)";
               categoryFilter.style.opacity = "1";
           } else {
               // Scrolling up or at top
-              categoryFilter.style.transform = "translateY(5%)";
+              // categoryFilter.style.transform = "translateY(100%)";
               categoryFilter.style.opacity = "0";
           }
 
