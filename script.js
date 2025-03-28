@@ -45,7 +45,7 @@ filterBtns.forEach(function (btn) {
 // Scroll handling for category filter
 let lastScrollY = window.scrollY;
 let lastScrollTime = Date.now();
-const scrollThreshold = 1; // minimum scroll distance to trigger filter visibility
+const scrollThreshold = window.innerHeight; // Set threshold to window height
 const scrollTimeout = 1; // minimum time between scroll events
 
 window.addEventListener("scroll", () => {
@@ -963,3 +963,20 @@ function renderMenu(menuItems) {
 
 // Llamar a la función para renderizar el menú
 renderMenu(menuItems);
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const scrollToTopBtn = document.getElementById("scrollToTop");
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > window.innerHeight) {
+            scrollToTopBtn.classList.add("show");
+        } else {
+            scrollToTopBtn.classList.remove("show");
+        }
+    });
+
+    scrollToTopBtn.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+});
