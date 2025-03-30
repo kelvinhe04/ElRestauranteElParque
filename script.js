@@ -11,29 +11,27 @@ themeToggle.addEventListener("click", () => {
     icon.classList.toggle("fa-moon");
     icon.classList.toggle("fa-sun");
 });
+//
+//
+//Scroll to top button
+//
+//
+document.addEventListener("DOMContentLoaded", function () {
+    const scrollToTopBtn = document.getElementById("scrollToTop");
 
-//
-//
-//
-// Quitar active class y ponerlo denuevo //
-//
-//
-//
-
-function handleFilterClick(btn) {
-    filterBtns.forEach(function (b) {
-        b.classList.remove("active");
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > window.innerHeight) {
+            scrollToTopBtn.classList.add("show");
+        } else {
+            scrollToTopBtn.classList.remove("show");
+        }
     });
-    btn.classList.add("active");
-    var category = btn.dataset.category;
-    filterMenuItems(category);
-}
 
-filterBtns.forEach(function (btn) {
-    btn.addEventListener("click", function () {
-        handleFilterClick(btn);
+    scrollToTopBtn.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
     });
 });
+
 //
 //
 //
@@ -347,629 +345,1076 @@ const menuItems = [
         ],
     },
     {
-        category: "MAINS",
-        description:
-            "Our main dishes are crafted with care, combining fresh ingredients and bold flavors to create unforgettable meals.",
+        category: {
+            en: "MAINS",
+            es: "PLATOS PRINCIPALES",
+        },
+        description: {
+            en: "Our main dishes are crafted with care, combining fresh ingredients and bold flavors to create unforgettable meals.",
+            es: "Nuestros platos principales están elaborados con cuidado, combinando ingredientes frescos y sabores audaces para crear comidas inolvidables.",
+        },
         items: [
             {
-                name: "An Full Order of Chow Mein",
-                description:
-                    "Crispy noodles topped with a savory mix of stir-fried vegetables and your choice of protein. A delightful contrast of textures and flavors.",
+                name: {
+                    en: "An Full Order of Chow Mein",
+                    es: "Orden Completa de Chow Mein",
+                },
+                description: {
+                    en: "Crispy noodles topped with a savory mix of stir-fried vegetables and your choice of protein. A delightful contrast of textures and flavors.",
+                    es: "Fideos crujientes cubiertos con una mezcla sabrosa de vegetales salteados y tu proteína a elección. Un delicioso contraste de texturas y sabores.",
+                },
                 variants: [
-                    { name: "Pork", price: "$8.00" },
-                    { name: "Vegetarian", price: "$8.00" },
-                    { name: "Mixed", price: "$9.00" },
-                    { name: "Shrimp", price: "$8.50" },
-                    { name: "Chicken", price: "$8.00" },
-                    { name: "Beef", price: "$8.00" },
+                    { name: { en: "Pork", es: "Cerdo" }, price: "$8.00" },
+                    {
+                        name: { en: "Vegetarian", es: "Vegetariano" },
+                        price: "$8.00",
+                    },
+                    { name: { en: "Mixed", es: "Mixto" }, price: "$9.00" },
+                    { name: { en: "Shrimp", es: "Camarón" }, price: "$8.50" },
+                    { name: { en: "Chicken", es: "Pollo" }, price: "$8.00" },
+                    { name: { en: "Beef", es: "Res" }, price: "$8.00" },
                 ],
                 image: "img item menu/An Full Order of Chow Mein.webp",
             },
             {
-                name: "Half Order of Chow Mein",
-                description:
-                    "A smaller portion of our classic chow mein, perfect for a lighter meal.",
+                name: {
+                    en: "Half Order of Chow Mein",
+                    es: "Media Orden de Chow Mein",
+                },
+                description: {
+                    en: "A smaller portion of our classic chow mein, perfect for a lighter meal.",
+                    es: "Una porción más pequeña de nuestro clásico chow mein, perfecto para una comida más ligera.",
+                },
                 variants: [
-                    { name: "Pork", price: "$6.00" },
-                    { name: "Vegetarian", price: "$6.00" },
-                    { name: "Mixed", price: "$7.00" },
-                    { name: "Shrimp", price: "$6.50" },
-                    { name: "Chicken", price: "$6.00" },
-                    { name: "Beef", price: "$6.00" },
+                    { name: { en: "Pork", es: "Cerdo" }, price: "$6.00" },
+                    {
+                        name: { en: "Vegetarian", es: "Vegetariano" },
+                        price: "$6.00",
+                    },
+                    { name: { en: "Mixed", es: "Mixto" }, price: "$7.00" },
+                    { name: { en: "Shrimp", es: "Camarón" }, price: "$6.50" },
+                    { name: { en: "Chicken", es: "Pollo" }, price: "$6.00" },
+                    { name: { en: "Beef", es: "Res" }, price: "$6.00" },
                 ],
                 image: "img item menu/Half Order of Chow Mein.webp",
             },
             {
-                name: "An Full Order of Chop Suey",
-                description:
-                    "A hearty stir-fry of fresh vegetables and your choice of protein.",
+                name: {
+                    en: "An Full Order of Chop Suey",
+                    es: "Orden Completa de Chop Suey",
+                },
+                description: {
+                    en: "A hearty stir-fry of fresh vegetables and your choice of protein.",
+                    es: "Un salteado abundante de vegetales frescos y tu proteína a elección.",
+                },
                 variants: [
-                    { name: "Pork", price: "$8.50" },
-                    { name: "Mixed", price: "$9.50" },
-                    { name: "Shrimp", price: "$9.00" },
-                    { name: "Chicken", price: "$8.50" },
-                    { name: "Beef", price: "$8.50" },
+                    { name: { en: "Pork", es: "Cerdo" }, price: "$8.50" },
+                    { name: { en: "Mixed", es: "Mixto" }, price: "$9.50" },
+                    { name: { en: "Shrimp", es: "Camarón" }, price: "$9.00" },
+                    { name: { en: "Chicken", es: "Pollo" }, price: "$8.50" },
+                    { name: { en: "Beef", es: "Res" }, price: "$8.50" },
                 ],
                 image: "img item menu/An Full Order of Chop Suey.webp",
             },
             {
-                name: "Half Order of Chop Suey",
-                description:
-                    "A smaller portion of our flavorful chop suey, ideal for a lighter appetite.",
+                name: {
+                    en: "Half Order of Chop Suey",
+                    es: "Media Orden de Chop Suey",
+                },
+                description: {
+                    en: "A smaller portion of our flavorful chop suey, ideal for a lighter appetite.",
+                    es: "Una porción más pequeña de nuestro sabroso chop suey, ideal para un apetito más ligero.",
+                },
                 variants: [
-                    { name: "Pork", price: "$6.50" },
-                    { name: "Mixed", price: "$7.50" },
-                    { name: "Shrimp", price: "$7.00" },
-                    { name: "Chicken", price: "$6.50" },
-                    { name: "Beef", price: "$6.50" },
+                    { name: { en: "Pork", es: "Cerdo" }, price: "$6.50" },
+                    { name: { en: "Mixed", es: "Mixto" }, price: "$7.50" },
+                    { name: { en: "Shrimp", es: "Camarón" }, price: "$7.00" },
+                    { name: { en: "Chicken", es: "Pollo" }, price: "$6.50" },
+                    { name: { en: "Beef", es: "Res" }, price: "$6.50" },
                 ],
                 image: "img item menu/Half Order of Chop Suey.webp",
             },
             {
-                name: "An Full Order of Chow Fun",
-                description:
-                    "Wide, flat rice noodles stir-fried with fresh vegetables and your choice of protein.",
+                name: {
+                    en: "An Full Order of Chow Fun",
+                    es: "Orden Completa de Chow Fun",
+                },
+                description: {
+                    en: "Wide, flat rice noodles stir-fried with fresh vegetables and your choice of protein.",
+                    es: "Fideos de arroz anchos y planos salteados con vegetales frescos y tu proteína a elección.",
+                },
                 variants: [
-                    { name: "Pork", price: "$9.25" },
-                    { name: "Vegetarian", price: "$9.25" },
-                    { name: "Mixed", price: "$10.25" },
-                    { name: "Shrimp", price: "$9.75" },
-                    { name: "Chicken", price: "$9.25" },
+                    { name: { en: "Pork", es: "Cerdo" }, price: "$9.25" },
+                    {
+                        name: { en: "Vegetarian", es: "Vegetariano" },
+                        price: "$9.25",
+                    },
+                    { name: { en: "Mixed", es: "Mixto" }, price: "$10.25" },
+                    { name: { en: "Shrimp", es: "Camarón" }, price: "$9.75" },
+                    { name: { en: "Chicken", es: "Pollo" }, price: "$9.25" },
                 ],
                 image: "img item menu/An Full Order of Chow Fun.webp",
             },
             {
-                name: "Half Order of Chow Fun",
-                description:
-                    "A smaller portion of our savory chow fun, perfect for a lighter meal.",
+                name: {
+                    en: "Half Order of Chow Fun",
+                    es: "Media Orden de Chow Fun",
+                },
+                description: {
+                    en: "A smaller portion of our savory chow fun, perfect for a lighter meal.",
+                    es: "Una porción más pequeña de nuestro sabroso chow fun, perfecto para una comida más ligera.",
+                },
                 variants: [
-                    { name: "Pork", price: "$7.25" },
-                    { name: "Vegetarian", price: "$7.25" },
-                    { name: "Mixed", price: "$8.25" },
-                    { name: "Shrimp", price: "$7.75" },
-                    { name: "Chicken", price: "$7.25" },
+                    { name: { en: "Pork", es: "Cerdo" }, price: "$7.25" },
+                    {
+                        name: { en: "Vegetarian", es: "Vegetariano" },
+                        price: "$7.25",
+                    },
+                    { name: { en: "Mixed", es: "Mixto" }, price: "$8.25" },
+                    { name: { en: "Shrimp", es: "Camarón" }, price: "$7.75" },
+                    { name: { en: "Chicken", es: "Pollo" }, price: "$7.25" },
                 ],
                 image: "img item menu/Half Order of Chow Fun.webp",
             },
             {
-                name: "An Full Order of Fried Rice",
-                description:
-                    "A hearty and flavorful classic. Our fried rice is made with your choice of protein, tossed with vegetables and aromatic seasonings.",
+                name: {
+                    en: "An Full Order of Fried Rice",
+                    es: "Orden Completa de Arroz Frito",
+                },
+                description: {
+                    en: "A hearty and flavorful classic. Our fried rice is made with your choice of protein, tossed with vegetables and aromatic seasonings.",
+                    es: "Un clásico abundante y sabroso. Nuestro arroz frito se prepara con tu proteína a elección, mezclado con vegetales y condimentos aromáticos.",
+                },
                 variants: [
-                    { name: "Pork", price: "$7.50" },
-                    { name: "Mixed", price: "$8.50" },
-                    { name: "Shrimp", price: "$8.00" },
-                    { name: "Chicken", price: "$7.50" },
-                    { name: "Egg and vegetables", price: "$7.50" },
-                    { name: "Beef", price: "$7.50" },
+                    { name: { en: "Pork", es: "Cerdo" }, price: "$7.50" },
+                    { name: { en: "Mixed", es: "Mixto" }, price: "$8.50" },
+                    { name: { en: "Shrimp", es: "Camarón" }, price: "$8.00" },
+                    { name: { en: "Chicken", es: "Pollo" }, price: "$7.50" },
+                    {
+                        name: {
+                            en: "Egg and vegetables",
+                            es: "Huevo y vegetales",
+                        },
+                        price: "$7.50",
+                    },
+                    { name: { en: "Beef", es: "Res" }, price: "$7.50" },
                 ],
                 image: "img item menu/An Full Order of Fried Rice.webp",
             },
             {
-                name: "Half Order of Fried Rice",
-                description:
-                    "A smaller portion of our delicious fried rice, perfect for a lighter appetite.",
+                name: {
+                    en: "Half Order of Fried Rice",
+                    es: "Media Orden de Arroz Frito",
+                },
+                description: {
+                    en: "A smaller portion of our delicious fried rice, perfect for a lighter appetite.",
+                    es: "Una porción más pequeña de nuestro delicioso arroz frito, perfecto para un apetito más ligero.",
+                },
                 variants: [
-                    { name: "Pork", price: "$5.50" },
-                    { name: "Mixed", price: "$6.50" },
-                    { name: "Shrimp", price: "$6.00" },
-                    { name: "Chicken", price: "$5.50" },
-                    { name: "Egg and Vegetables", price: "$5.50" },
-                    { name: "Beef", price: "$5.50" },
+                    { name: { en: "Pork", es: "Cerdo" }, price: "$5.50" },
+                    { name: { en: "Mixed", es: "Mixto" }, price: "$6.50" },
+                    { name: { en: "Shrimp", es: "Camarón" }, price: "$6.00" },
+                    { name: { en: "Chicken", es: "Pollo" }, price: "$5.50" },
+                    {
+                        name: {
+                            en: "Egg and Vegetables",
+                            es: "Huevo y Vegetales",
+                        },
+                        price: "$5.50",
+                    },
+                    { name: { en: "Beef", es: "Res" }, price: "$5.50" },
                 ],
                 image: "img item menu/Half Order of Fried Rice.webp",
             },
             {
-                name: "An Full Order of Canton Rice",
-                description:
-                    "A flavorful rice dish made with chicken, pork, beef, shrimp, and egg.",
+                name: {
+                    en: "An Full Order of Canton Rice",
+                    es: "Orden Completa de Arroz Cantón",
+                },
+                description: {
+                    en: "A flavorful rice dish made with chicken, pork, beef, shrimp, and egg.",
+                    es: "Un sabroso plato de arroz preparado con pollo, cerdo, res, camarón y huevo.",
+                },
                 price: "$9.00",
                 image: "img item menu/An Full Order of Canton Rice.webp",
             },
             {
-                name: "Half Order of Canton Rice",
-                description:
-                    "A smaller portion of our savory canton rice, perfect for a lighter meal.",
+                name: {
+                    en: "Half Order of Canton Rice",
+                    es: "Media Orden de Arroz Cantón",
+                },
+                description: {
+                    en: "A smaller portion of our savory canton rice, perfect for a lighter meal.",
+                    es: "Una porción más pequeña de nuestro sabroso arroz cantón, perfecto para una comida más ligera.",
+                },
                 price: "$7.00",
                 image: "img item menu/Half Order of Canton Rice.webp",
             },
             {
-                name: "An Full Order of Leon Panmein",
-                description:
-                    "A delicious noodle dish made with your choice of protein and eggs.",
+                name: {
+                    en: "An Full Order of Leon Panmein",
+                    es: "Orden Completa de Leon Panmein",
+                },
+                description: {
+                    en: "A delicious noodle dish made with your choice of protein and eggs.",
+                    es: "Un delicioso plato de fideos preparado con tu proteína a elección y huevos.",
+                },
                 variants: [
-                    { name: "Pork", price: "$8.50" },
-                    { name: "Chicken", price: "$8.50" },
-                    { name: "Shrimp", price: "$9.00" },
-                    { name: "Mixed", price: "$9.50" },
+                    { name: { en: "Pork", es: "Cerdo" }, price: "$8.50" },
+                    { name: { en: "Chicken", es: "Pollo" }, price: "$8.50" },
+                    { name: { en: "Shrimp", es: "Camarón" }, price: "$9.00" },
+                    { name: { en: "Mixed", es: "Mixto" }, price: "$9.50" },
                 ],
                 image: "img item menu/An Full Order of Leon Panmein.webp",
             },
             {
-                name: "Half Order of Leon Pan Mein",
-                description:
-                    "A smaller portion of our flavorful pan mein, ideal for a lighter appetite.",
+                name: {
+                    en: "Half Order of Leon Pan Mein",
+                    es: "Media Orden de Leon Pan Mein",
+                },
+                description: {
+                    en: "A smaller portion of our flavorful pan mein, ideal for a lighter appetite.",
+                    es: "Una porción más pequeña de nuestro sabroso pan mein, ideal para un apetito más ligero.",
+                },
                 variants: [
-                    { name: "Pork", price: "$6.50" },
-                    { name: "Chicken", price: "$6.50" },
-                    { name: "Shrimp", price: "$7.00" },
-                    { name: "Mixed", price: "$7.50" },
+                    { name: { en: "Pork", es: "Cerdo" }, price: "$6.50" },
+                    { name: { en: "Chicken", es: "Pollo" }, price: "$6.50" },
+                    { name: { en: "Shrimp", es: "Camarón" }, price: "$7.00" },
+                    { name: { en: "Mixed", es: "Mixto" }, price: "$7.50" },
                 ],
                 image: "img item menu/Half Order of Leon Pan Mein.webp",
             },
             {
-                name: "Grilled Chicken with Fried Plantain",
-                description:
-                    "Juicy grilled chicken served with fried plantains.",
+                name: {
+                    en: "Grilled Chicken with Fried Plantain",
+                    es: "Pollo a la Parrilla con Plátano Frito",
+                },
+                description: {
+                    en: "Juicy grilled chicken served with fried plantains.",
+                    es: "Pollo jugoso a la parrilla servido con plátanos fritos.",
+                },
                 price: "$8.00",
                 image: "img item menu/Grilled Chicken with Fried Plantain.webp",
             },
             {
-                name: "Sweet and Sour Chicken with Fries",
-                description:
-                    "Crispy chicken tossed in a tangy sweet and sour sauce, served with a side of fries.",
+                name: {
+                    en: "Sweet and Sour Chicken with Fries",
+                    es: "Pollo Agridulce con Papas Fritas",
+                },
+                description: {
+                    en: "Crispy chicken tossed in a tangy sweet and sour sauce, served with a side of fries.",
+                    es: "Pollo crujiente mezclado con una salsa agridulce, servido con papas fritas.",
+                },
                 price: "$7.50",
                 image: "img item menu/Sweet and Sour Chicken with Fries.webp",
             },
             {
-                name: "Sweet & Sour Chicken Combo",
-                description:
-                    "Crispy chicken pieces tossed in a tangy sweet and sour glaze, served with golden french fries and a side of flavorful fried rice. A satisfying combo that hits all the right notes—sweet, savory, and crunchy.",
+                name: {
+                    en: "Sweet & Sour Chicken Combo",
+                    es: "Combo de Pollo Agridulce",
+                },
+                description: {
+                    en: "Crispy chicken pieces tossed in a tangy sweet and sour glaze, served with golden french fries and a side of flavorful fried rice. A satisfying combo that hits all the right notes—sweet, savory, and crunchy.",
+                    es: "Trozos de pollo crujiente mezclados con un glaseado agridulce, servido con papas fritas doradas y una porción de arroz frito sabroso. Un combo satisfactorio que tiene todo lo bueno: dulce, salado y crujiente.",
+                },
                 price: "$8.00",
                 image: "img item menu/Sweet & Sour Chicken Combo.webp",
             },
             {
-                name: "1/2 Fried Chicken with Fries",
-                description:
-                    "Half of a crispy fried chicken served with a side of fries.",
+                name: {
+                    en: "1/2 Fried Chicken with Fries",
+                    es: "1/2 Pollo Frito con Papas Fritas",
+                },
+                description: {
+                    en: "Half of a crispy fried chicken served with a side of fries.",
+                    es: "Mitad de un pollo frito crujiente servido con papas fritas.",
+                },
                 price: "$7.50",
                 image: "img item menu/Half Fried Chicken with Fries.webp",
             },
             {
-                name: "1/4 Fried Chicken with French Fries",
-                description:
-                    "A quarter of crispy fried chicken served with golden french fries.",
+                name: {
+                    en: "1/4 Fried Chicken with French Fries",
+                    es: "1/4 de Pollo Frito con Papas Fritas",
+                },
+                description: {
+                    en: "A quarter of crispy fried chicken served with golden french fries.",
+                    es: "Un cuarto de pollo frito crujiente servido con papas fritas doradas.",
+                },
                 price: "$6.00",
                 image: "img item menu/Quarter Fried Chicken with French Fries.webp",
             },
             {
-                name: "1/4 Fried or Roasted Chicken with Potatoes and Fried Rice",
-                description:
-                    "Savor our perfectly seasoned fried or roasted chicken, served with golden crispy potatoes and flavorful fried rice.",
+                name: {
+                    en: "1/4 Fried or Roasted Chicken with Potatoes and Fried Rice",
+                    es: "1/4 de Pollo Frito o Asado con Papas y Arroz Frito",
+                },
+                description: {
+                    en: "Savor our perfectly seasoned fried or roasted chicken, served with golden crispy potatoes and flavorful fried rice.",
+                    es: "Disfruta de nuestro pollo frito o asado perfectamente sazonado, servido con papas doradas crujientes y arroz frito sabroso.",
+                },
                 price: "$8.00",
                 image: "img item menu/Quarter Fried or Roasted Chicken with Potatoes and Fried Rice.webp",
             },
             {
-                name: "1/4 of a Breaded Chicken with Fries",
-                description:
-                    "A quarter of crispy breaded chicken served with golden fries.",
+                name: {
+                    en: "1/4 of a Breaded Chicken with Fries",
+                    es: "1/4 de Pollo Empanizado con Papas Fritas",
+                },
+                description: {
+                    en: "A quarter of crispy breaded chicken served with golden fries.",
+                    es: "Un cuarto de pollo empanizado crujiente servido con papas fritas doradas.",
+                },
                 price: "$6.50",
                 image: "img item menu/Quarter of a Breaded Chicken with Fries.webp",
             },
             {
-                name: "Chopped Steak with Fries",
-                description:
-                    "Tender chopped steak served with a side of crispy fries.",
+                name: {
+                    en: "Chopped Steak with Fries",
+                    es: "Bistec Picado con Papas Fritas",
+                },
+                description: {
+                    en: "Tender chopped steak served with a side of crispy fries.",
+                    es: "Bistec picado tierno servido con papas fritas crujientes.",
+                },
                 price: "$7.50",
                 image: "img item menu/Chopped Steak with Fries.webp",
             },
             {
-                name: "Grilled Pork Chop with Fried Plantain",
-                description:
-                    "Juicy, grilled pork chop seasoned to perfection, served with fried plantains.",
+                name: {
+                    en: "Grilled Pork Chop with Fried Plantain",
+                    es: "Chuleta de Cerdo a la Parrilla con Plátano Frito",
+                },
+                description: {
+                    en: "Juicy, grilled pork chop seasoned to perfection, served with fried plantains.",
+                    es: "Jugosa chuleta de cerdo a la parrilla sazonada a la perfección, servida con plátanos fritos.",
+                },
                 price: "$8.00",
                 image: "img item menu/Grilled Pork Chop with Fried Plantain.webp",
             },
             {
-                name: "Grilled Pork Chop with Fries",
-                description:
-                    "Juicy, perfectly grilled pork chop served with a side of golden, crispy fries. A classic, hearty dish that combines savory flavors with satisfying textures.",
+                name: {
+                    en: "Grilled Pork Chop with Fries",
+                    es: "Chuleta de Cerdo a la Parrilla con Papas Fritas",
+                },
+                description: {
+                    en: "Juicy, perfectly grilled pork chop served with a side of golden, crispy fries. A classic, hearty dish that combines savory flavors with satisfying textures.",
+                    es: "Jugosa chuleta de cerdo perfectamente asada a la parrilla servida con papas fritas doradas y crujientes. Un plato clásico y abundante que combina sabores salados con texturas satisfactorias.",
+                },
                 price: "$8.00",
                 image: "img item menu/Grilled Pork Chop with Fries.webp",
             },
             {
-                name: "Smoked Pork Chop with Fried Plantains",
-                description:
-                    "Smoky, tender pork chops served with fried plantains.",
+                name: {
+                    en: "Smoked Pork Chop with Fried Plantains",
+                    es: "Chuleta de Cerdo Ahumada con Plátanos Fritos",
+                },
+                description: {
+                    en: "Smoky, tender pork chops served with fried plantains.",
+                    es: "Jugosas chuletas de cerdo ahumadas servidas con plátanos fritos.",
+                },
                 price: "$8.00",
                 image: "img item menu/Smoked Pork Chop with Fried Plantains.webp",
             },
             {
-                name: "Roast/Sweet and Sour Pork with Fried Plantains",
-                description:
-                    "Tender roasted pork or crispy pork in sweet and sour sauce, served with fried plantains.",
+                name: {
+                    en: "Roast/Sweet and Sour Pork with Fried Plantains",
+                    es: "Cerdo Asado/Agridulce con Plátanos Fritos",
+                },
+                description: {
+                    en: "Tender roasted pork or crispy pork in sweet and sour sauce, served with fried plantains.",
+                    es: "Cerdo asado tierno o cerdo crujiente en salsa agridulce, servido con plátanos fritos.",
+                },
                 price: "$7.50",
                 image: "img item menu/Roast or Sweet and Sour Pork with Fried Plantains.webp",
             },
             {
-                name: "Roast/Sweet and Sour Pork with Fries",
-                description:
-                    "Tender roasted pork or crispy pork in sweet and sour sauce, served with fries.",
+                name: {
+                    en: "Roast/Sweet and Sour Pork with Fries",
+                    es: "Cerdo Asado/Agridulce con Papas Fritas",
+                },
+                description: {
+                    en: "Tender roasted pork or crispy pork in sweet and sour sauce, served with fries.",
+                    es: "Cerdo asado tierno o cerdo crujiente en salsa agridulce, servido con papas fritas.",
+                },
                 price: "$7.50",
                 image: "img item menu/Roast or Sweet and Sour Pork with Fries.webp",
             },
             {
-                name: "Sweet and Sour Rib with Fries",
-                description:
-                    "Juicy ribs coated in a tangy sweet and sour sauce, served with fries.",
+                name: {
+                    en: "Sweet and Sour Rib with Fries",
+                    es: "Costilla Agridulce con Papas Fritas",
+                },
+                description: {
+                    en: "Juicy ribs coated in a tangy sweet and sour sauce, served with fries.",
+                    es: "Costillas jugosas cubiertas con salsa agridulce, servidas con papas fritas.",
+                },
                 price: "$7.50",
                 image: "img item menu/Sweet and Sour Rib with Fries.webp",
             },
             {
-                name: "Chinese Style Combination Rice",
-                description:
-                    "A flavorful rice dish combining chicken, pork, beef, shrimp.",
+                name: {
+                    en: "Chinese Style Combination Rice",
+                    es: "Arroz Combinado al Estilo Chino",
+                },
+                description: {
+                    en: "A flavorful rice dish combining chicken, pork, beef, shrimp.",
+                    es: "Un sabroso plato de arroz que combina pollo, cerdo, res y camarón.",
+                },
                 price: "$9.00",
                 image: "img item menu/Chinese Style Combination Rice.webp",
             },
             {
-                name: "Chinese Style Combination Rice",
-                description:
-                    "A flavorful rice dish combining chicken, pork, beef, shrimp, and choy sum.",
+                name: {
+                    en: "Chinese Style Combination Rice",
+                    es: "Arroz Combinado al Estilo Chino",
+                },
+                description: {
+                    en: "A flavorful rice dish combining chicken, pork, beef, shrimp, and choy sum.",
+                    es: "Un sabroso plato de arroz que combina pollo, cerdo, res, camarón y choy sum.",
+                },
                 price: "$9.00",
                 image: "img item menu/Chinese Style Combination Rice2.webp",
             },
         ],
     },
     {
-        category: "SEAFOODS",
-        description:
-            "Savor the fresh flavors of the ocean with our delicious seafood dishes. From succulent prawns to flavorful fish, each dish is expertly prepared to highlight the natural taste of the sea. Enjoy a variety of options, perfectly seasoned and cooked to perfection.",
+        category: {
+            en: "SEAFOODS",
+            es: "MARISCOS",
+        },
+        description: {
+            en: "Savor the fresh flavors of the ocean with our delicious seafood dishes. From succulent prawns to flavorful fish, each dish is expertly prepared to highlight the natural taste of the sea. Enjoy a variety of options, perfectly seasoned and cooked to perfection.",
+            es: "Saborea los frescos sabores del océano con nuestros deliciosos platos de mariscos. Desde gambas suculentas hasta pescados llenos de sabor, cada plato está preparado con maestría para resaltar el gusto natural del mar. Disfruta de una variedad de opciones, perfectamente sazonadas y cocinadas a la perfección.",
+        },
         items: [
             {
-                name: "Garlic Prawn with Fried Plantain",
-                description:
-                    "Succulent prawns sautéed in a rich, aromatic garlic sauce, paired with fried plantains.<br><br>Available with or without shells.",
+                name: {
+                    en: "Garlic Prawn with Fried Plantain",
+                    es: "Gambas al Ajo con Plátano Frito",
+                },
+                description: {
+                    en: "Succulent prawns sautéed in a rich, aromatic garlic sauce, paired with fried plantains.<br><br>Available with or without shells.",
+                    es: "Gambas suculentas salteadas en una rica salsa de ajo aromática, acompañadas de plátanos fritos.<br><br>Disponible con o sin cáscara.",
+                },
                 price: "$13.50",
                 image: "img item menu/Garlic Prawn with Fried Plantain.webp",
             },
             {
-                name: "Butter Prawn",
-                description:
-                    "Succulent prawns sautéed in a rich, buttery sauce, served with rice and a fresh salad of tomato, lettuce, carrot, and purple cabbage. <br><br>Available with or without shells.",
+                name: {
+                    en: "Butter Prawn",
+                    es: "Gambas a la Mantequilla",
+                },
+                description: {
+                    en: "Succulent prawns sautéed in a rich, buttery sauce, served with rice and a fresh salad of tomato, lettuce, carrot, and purple cabbage. <br><br>Available with or without shells.",
+                    es: "Gambas suculentas salteadas en una rica salsa de mantequilla, servidas con arroz y una ensalada fresca de tomate, lechuga, zanahoria y repollo morado. <br><br>Disponible con o sin cáscara.",
+                },
                 price: "$13.50",
                 image: "img item menu/Butter Prawn.webp",
             },
             {
-                name: "Garlic Octopus with Fries",
-                description:
-                    "Tender octopus cooked in a flavorful garlic sauce, served with fries.",
+                name: {
+                    en: "Garlic Octopus with Fries",
+                    es: "Pulpo al Ajo con Papas Fritas",
+                },
+                description: {
+                    en: "Tender octopus cooked in a flavorful garlic sauce, served with fries.",
+                    es: "Pulpo tierno cocinado en una sabrosa salsa de ajo, servido con papas fritas.",
+                },
                 price: "$9.75",
                 image: "img item menu/Garlic Octopus with Fries.webp",
             },
             {
-                name: "Garlic Octopus with Fried Plantains",
-                description:
-                    "Tender octopus cooked in a garlic sauce, served with sweet fried plantains.",
+                name: {
+                    en: "Garlic Octopus with Fried Plantains",
+                    es: "Pulpo al Ajo con Plátanos Fritos",
+                },
+                description: {
+                    en: "Tender octopus cooked in a garlic sauce, served with sweet fried plantains.",
+                    es: "Pulpo tierno cocinado en salsa de ajo, servido con plátanos fritos dulces.",
+                },
                 price: "$9.75",
                 image: "img item menu/Garlic Octopus with Fried Plantains.webp",
             },
             {
-                name: "Garlic Shrimp with Fried Plantain",
-                description:
-                    "Succulent shrimp sautéed in a rich, aromatic garlic sauce, served alongside fried plantains.",
+                name: {
+                    en: "Garlic Shrimp with Fried Plantain",
+                    es: "Camarones al Ajo con Plátano Frito",
+                },
+                description: {
+                    en: "Succulent shrimp sautéed in a rich, aromatic garlic sauce, served alongside fried plantains.",
+                    es: "Camarones suculentos salteados en una rica salsa de ajo aromática, servidos con plátanos fritos.",
+                },
                 price: "$9.75",
                 image: "img item menu/Garlic Shrimp with Fried Plantain.webp",
             },
             {
-                name: "Garlic Shrimp with Fries",
-                description:
-                    "Tender shrimp cooked in a garlic sauce, served with fried plantains.",
+                name: {
+                    en: "Garlic Shrimp with Fries",
+                    es: "Camarones al Ajo con Papas Fritas",
+                },
+                description: {
+                    en: "Tender shrimp cooked in a garlic sauce, served with fried plantains.",
+                    es: "Camarones tiernos cocinados en salsa de ajo, servidos con plátanos fritos.",
+                },
                 price: "$9.75",
                 image: "img item menu/Garlic Shrimp with Fries.webp",
             },
             {
-                name: "Garlic Shrimp with Rice",
-                description:
-                    "Juicy shrimp cooked in a garlic sauce, served with steamed rice.",
+                name: {
+                    en: "Garlic Shrimp with Rice",
+                    es: "Camarones al Ajo con Arroz",
+                },
+                description: {
+                    en: "Juicy shrimp cooked in a garlic sauce, served with steamed rice.",
+                    es: "Camarones jugosos cocinados en salsa de ajo, servidos con arroz al vapor.",
+                },
                 price: "$9.75",
                 image: "img item menu/Garlic Shrimp with Rice.webp",
             },
             {
-                name: "Garlic Shrimp with Fried Rice",
-                description:
-                    "Juicy shrimp cooked in a garlic sauce, served with flavorful fried rice.",
+                name: {
+                    en: "Garlic Shrimp with Fried Rice",
+                    es: "Camarones al Ajo con Arroz Frito",
+                },
+                description: {
+                    en: "Juicy shrimp cooked in a garlic sauce, served with flavorful fried rice.",
+                    es: "Camarones jugosos cocinados en salsa de ajo, servidos con arroz frito sabroso.",
+                },
                 price: "$9.75",
                 image: "img item menu/Garlic Shrimp with Fried Rice.webp",
             },
             {
-                name: "Creole Shrimp with Fried Plantain",
-                description:
-                    "Shrimp cooked in a spicy Creole sauce, served with fried plantains.",
+                name: {
+                    en: "Creole Shrimp with Fried Plantain",
+                    es: "Camarones a la Criolla con Plátano Frito",
+                },
+                description: {
+                    en: "Shrimp cooked in a spicy Creole sauce, served with fried plantains.",
+                    es: "Camarones cocinados en salsa criolla picante, servidos con plátanos fritos.",
+                },
                 price: "$9.75",
                 image: "img item menu/Creole Shrimp with Fried Plantain.webp",
             },
             {
-                name: "Butter Shrimp with Fried Plantain",
-                description:
-                    "Shrimp cooked in a rich buttery sauce, served with sweet fried plantains.",
+                name: {
+                    en: "Butter Shrimp with Fried Plantain",
+                    es: "Camarones a la Mantequilla con Plátano Frito",
+                },
+                description: {
+                    en: "Shrimp cooked in a rich buttery sauce, served with sweet fried plantains.",
+                    es: "Camarones cocinados en rica salsa de mantequilla, servidos con plátanos fritos dulces.",
+                },
                 price: "$9.75",
                 image: "img item menu/Butter Shrimp with Fried Plantain.webp",
             },
             {
-                name: "Breaded Shrimp with Fries",
-                description: "Crispy breaded shrimp served with golden fries.",
+                name: {
+                    en: "Breaded Shrimp with Fries",
+                    es: "Camarones Empanizados con Papas Fritas",
+                },
+                description: {
+                    en: "Crispy breaded shrimp served with golden fries.",
+                    es: "Camarones empanizados crujientes servidos con papas fritas doradas.",
+                },
                 price: "$9.75",
                 image: "img item menu/Breaded Shrimp with Fries.webp",
             },
             {
-                name: "Breaded Shrimp with Fried Plantain",
-                description:
-                    "Crispy breaded shrimp served with sweet fried plantains.",
+                name: {
+                    en: "Breaded Shrimp with Fried Plantain",
+                    es: "Camarones Empanizados con Plátano Frito",
+                },
+                description: {
+                    en: "Crispy breaded shrimp served with sweet fried plantains.",
+                    es: "Camarones empanizados crujientes servidos con plátanos fritos dulces.",
+                },
                 price: "$9.75",
                 image: "img item menu/Breaded Shrimp with Fried Plantain.webp",
             },
             {
-                name: "Creole Oyster with Rice",
-                description:
-                    "Fresh oysters cooked in a spicy Creole sauce, served with rice.",
+                name: {
+                    en: "Creole Oyster with Rice",
+                    es: "Ostras a la Criolla con Arroz",
+                },
+                description: {
+                    en: "Fresh oysters cooked in a spicy Creole sauce, served with rice.",
+                    es: "Ostras frescas cocinadas en salsa criolla picante, servidas con arroz.",
+                },
                 price: "$9.75",
                 image: "img item menu/Creole Oyster with Rice.webp",
             },
             {
-                name: "Garlic Oyster with Fries",
-                description:
-                    "Fresh oysters cooked in a garlic sauce, served with fries.",
+                name: {
+                    en: "Garlic Oyster with Fries",
+                    es: "Ostras al Ajo con Papas Fritas",
+                },
+                description: {
+                    en: "Fresh oysters cooked in a garlic sauce, served with fries.",
+                    es: "Ostras frescas cocinadas en salsa de ajo, servidas con papas fritas.",
+                },
                 price: "$9.75",
                 image: "img item menu/Garlic Oyster with Fries.webp",
             },
             {
-                name: "Garlic Snapper with Fries",
-                description:
-                    "Fresh snapper fillet cooked in a garlic sauce, served with fries.",
+                name: {
+                    en: "Garlic Snapper with Fries",
+                    es: "Pargo al Ajo con Papas Fritas",
+                },
+                description: {
+                    en: "Fresh snapper fillet cooked in a garlic sauce, served with fries.",
+                    es: "Filete de pargo fresco cocinado en salsa de ajo, servido con papas fritas.",
+                },
                 price: "$9.75",
                 image: "img item menu/Garlic Snapper with Fries.webp",
             },
             {
-                name: "Fried Snapper with Rice",
-                description: "Crispy fried snapper served with steamed rice.",
+                name: {
+                    en: "Fried Snapper with Rice",
+                    es: "Pargo Frito con Arroz",
+                },
+                description: {
+                    en: "Crispy fried snapper served with steamed rice.",
+                    es: "Pargo frito crujiente servido con arroz al vapor.",
+                },
                 price: "$9.75",
                 image: "img item menu/Fried Snapper with Rice.webp",
             },
             {
-                name: "Fried Snapper with Fried Rice",
-                description:
-                    "Crispy fried snapper served with flavorful fried rice.",
+                name: {
+                    en: "Fried Snapper with Fried Rice",
+                    es: "Pargo Frito con Arroz Frito",
+                },
+                description: {
+                    en: "Crispy fried snapper served with flavorful fried rice.",
+                    es: "Pargo frito crujiente servido con arroz frito sabroso.",
+                },
                 price: "$9.75",
                 image: "img item menu/Fried Snapper with Fried Rice.webp",
             },
             {
-                name: "Garlic Sea Bass Fillet with French Fries",
-                description:
-                    "Tender sea bass fillet cooked in a garlic sauce, served with fries.",
+                name: {
+                    en: "Garlic Sea Bass Fillet with French Fries",
+                    es: "Filete de Corvina al Ajo con Papas Fritas",
+                },
+                description: {
+                    en: "Tender sea bass fillet cooked in a garlic sauce, served with fries.",
+                    es: "Filete de corvina tierno cocinado en salsa de ajo, servido con papas fritas.",
+                },
                 price: "$9.75",
                 image: "img item menu/Garlic Sea Bass Fillet with French Fries.webp",
             },
             {
-                name: "Garlic Sea Bass Fillet with Fried Plantain",
-                description:
-                    "Tender sea bass fillet cooked in a garlic sauce, served with fried plantains.",
+                name: {
+                    en: "Garlic Sea Bass Fillet with Fried Plantain",
+                    es: "Filete de Corvina al Ajo con Plátano Frito",
+                },
+                description: {
+                    en: "Tender sea bass fillet cooked in a garlic sauce, served with fried plantains.",
+                    es: "Filete de corvina tierno cocinado en salsa de ajo, servido con plátanos fritos.",
+                },
                 price: "$9.75",
                 image: "img item menu/Garlic Sea Bass Fillet with Fried Plantain.webp",
             },
             {
-                name: "Garlic Sea Bass Fillet with Salad",
-                description:
-                    "Tender sea bass fillet cooked in a garlic sauce, served with a fresh salad.",
+                name: {
+                    en: "Garlic Sea Bass Fillet with Salad",
+                    es: "Filete de Corvina al Ajo con Ensalada",
+                },
+                description: {
+                    en: "Tender sea bass fillet cooked in a garlic sauce, served with a fresh salad.",
+                    es: "Filete de corvina tierno cocinado en salsa de ajo, servido con una ensalada fresca.",
+                },
                 price: "$9.75",
                 image: "img item menu/Garlic Sea Bass Fillet with Salad.webp",
             },
             {
-                name: "Grilled Sea Bass with White Rice",
-                description: "Grilled sea bass fillet served with white rice.",
+                name: {
+                    en: "Grilled Sea Bass with White Rice",
+                    es: "Corvina a la Parrilla con Arroz Blanco",
+                },
+                description: {
+                    en: "Grilled sea bass fillet served with white rice.",
+                    es: "Filete de corvina a la parrilla servido con arroz blanco.",
+                },
                 price: "$9.75",
                 image: "img item menu/Grilled Sea Bass with White Rice.webp",
             },
             {
-                name: "Creole Sea Bass Fillet with Fries",
-                description:
-                    "Tender sea bass fillet seasoned with bold Creole spices, pan-seared to perfection, and served with a side of golden, crispy fries.",
+                name: {
+                    en: "Creole Sea Bass Fillet with Fries",
+                    es: "Filete de Corvina a la Criolla con Papas Fritas",
+                },
+                description: {
+                    en: "Tender sea bass fillet seasoned with bold Creole spices, pan-seared to perfection, and served with a side of golden, crispy fries.",
+                    es: "Filete de corvina tierno sazonado con especias criollas, sellado a la perfección y servido con papas fritas doradas y crujientes.",
+                },
                 price: "$9.75",
                 image: "img item menu/Creole Sea Bass Fillet with Fries.webp",
             },
             {
-                name: "Creole Sea Bass Fillet with Fried Plantain",
-                description:
-                    "Creole-seasoned sea bass fillet served with fried plantains.",
+                name: {
+                    en: "Creole Sea Bass Fillet with Fried Plantain",
+                    es: "Filete de Corvina a la Criolla con Plátano Frito",
+                },
+                description: {
+                    en: "Creole-seasoned sea bass fillet served with fried plantains.",
+                    es: "Filete de corvina sazonado al estilo criollo servido con plátanos fritos.",
+                },
                 price: "$9.75",
                 image: "img item menu/Creole Sea Bass Fillet with Fried Plantain.webp",
             },
             {
-                name: "Breaded School Shark Fillet with Fries",
-                description:
-                    "Crispy breaded shark fillet served with golden fries.",
+                name: {
+                    en: "Breaded School Shark Fillet with Fries",
+                    es: "Filete de Cazón Empanizado con Papas Fritas",
+                },
+                description: {
+                    en: "Crispy breaded shark fillet served with golden fries.",
+                    es: "Filete de cazón empanizado crujiente servido con papas fritas doradas.",
+                },
                 price: "$6.00",
                 image: "img item menu/Breaded School Shark Fillet with Fries.webp",
             },
             {
-                name: "Garlic Squid with Fried Plantain",
-                description:
-                    "Tender squid cooked in a garlic sauce, served with sweet fried plantains.",
+                name: {
+                    en: "Garlic Squid with Fried Plantain",
+                    es: "Calamares al Ajo con Plátano Frito",
+                },
+                description: {
+                    en: "Tender squid cooked in a garlic sauce, served with sweet fried plantains.",
+                    es: "Calamares tiernos cocinados en salsa de ajo, servidos con plátanos fritos dulces.",
+                },
                 price: "$9.75",
                 image: "img item menu/Garlic Squid with Fried Plantain.webp",
             },
         ],
     },
     {
-        category: "SOUPS",
-        description:
-            "Warm, comforting, and full of flavor—our selection of authentic Chinese soups is the perfect way to start your meal. Each bowl is crafted with fresh ingredients and traditional seasonings, offering a rich and satisfying experience with every sip.",
+        category: {
+            en: "SOUPS",
+            es: "SOPAS",
+        },
+        description: {
+            en: "Warm, comforting, and full of flavor—our selection of authentic Chinese soups is the perfect way to start your meal. Each bowl is crafted with fresh ingredients and traditional seasonings, offering a rich and satisfying experience with every sip.",
+            es: "Cálidas, reconfortantes y llenas de sabor—nuestra selección de sopas chinas auténticas es la manera perfecta de comenzar tu comida. Cada tazón está elaborado con ingredientes frescos y condimentos tradicionales, ofreciendo una experiencia rica y satisfactoria con cada sorbo.",
+        },
         items: [
             {
-                name: "Mayor Aleman Soup",
-                description:
-                    "A hearty soup made with chicken, pork, shrimp, egg, vegetables, and noodles.",
+                name: {
+                    en: "Mayor Aleman Soup",
+                    es: "Sopa Mayor Alemán",
+                },
+                description: {
+                    en: "A hearty soup made with chicken, pork, shrimp, egg, vegetables, and noodles.",
+                    es: "Una sopa sustanciosa hecha con pollo, cerdo, camarones, huevo, vegetales y fideos.",
+                },
                 price: "$5.00",
                 image: "img item menu/Mayor Aleman Soup.webp",
             },
             {
-                name: "Wonton Soup",
-                description:
-                    "A comforting soup featuring chicken, pork, a wonton, and noodles.",
+                name: {
+                    en: "Wonton Soup",
+                    es: "Sopa de Wonton",
+                },
+                description: {
+                    en: "A comforting soup featuring chicken, pork, a wonton, and noodles.",
+                    es: "Una sopa reconfortante con pollo, cerdo, wonton y fideos.",
+                },
                 price: "$4.00",
                 image: "img item menu/Wonton Soup.webp",
             },
             {
-                name: "Chinese Style Noodle Soup",
-                description:
-                    "A traditional soup made with flat rice noodles, shrimp, chicken, pork, and beef.",
+                name: {
+                    en: "Chinese Style Noodle Soup",
+                    es: "Sopa de Fideos al Estilo Chino",
+                },
+                description: {
+                    en: "A traditional soup made with flat rice noodles, shrimp, chicken, pork, and beef.",
+                    es: "Una sopa tradicional hecha con fideos de arroz planos, camarones, pollo, cerdo y res.",
+                },
                 price: "$6.00",
                 image: "img item menu/Chinese Style Noodle Soup.webp",
             },
             {
-                name: "Combination Soup",
-                description:
-                    "A hearty and comforting soup packed with a delicious mix of flavors and textures. <br><br>This dish features a savory broth filled with tender chicken, pork, shrimp, fresh vegetables, and noodles. ",
+                name: {
+                    en: "Combination Soup",
+                    es: "Sopa Combinada",
+                },
+                description: {
+                    en: "A hearty and comforting soup packed with a delicious mix of flavors and textures. <br><br>This dish features a savory broth filled with tender chicken, pork, shrimp, fresh vegetables, and noodles.",
+                    es: "Una sopa sustanciosa y reconfortante llena de una deliciosa mezcla de sabores y texturas. <br><br>Este plato presenta un caldo sabroso con pollo tierno, cerdo, camarones, vegetales frescos y fideos.",
+                },
                 price: "$5.50",
                 image: "img item menu/Combination Soup.webp",
             },
             {
-                name: "Wat Kay Mein Soup",
-                description:
-                    "A hearty chicken noodle soup with tender chicken, fresh vegetables, and egg noodles in a flavorful broth, topped with green onions.",
+                name: {
+                    en: "Wat Kay Mein Soup",
+                    es: "Sopa Wat Kay Mein",
+                },
+                description: {
+                    en: "A hearty chicken noodle soup with tender chicken, fresh vegetables, and egg noodles in a flavorful broth, topped with green onions.",
+                    es: "Una sustanciosa sopa de pollo con fideos que incluye pollo tierno, vegetales frescos y fideos de huevo en un caldo sabroso, coronado con cebollines.",
+                },
                 price: "$5.00",
                 image: "img item menu/Wat Kay MeinSoup.webp",
             },
             {
-                name: "Seafood Soup",
-                description:
-                    "A flavorful mix of clams, shrimp, fish, and squid in a rich, aromatic broth. <br><br>Seafood selection varies based on daily availability.",
+                name: {
+                    en: "Seafood Soup",
+                    es: "Sopa de Mariscos",
+                },
+                description: {
+                    en: "A flavorful mix of clams, shrimp, fish, and squid in a rich, aromatic broth. <br><br>Seafood selection varies based on daily availability.",
+                    es: "Una mezcla sabrosa de almejas, camarones, pescado y calamares en un caldo rico y aromático. <br><br>La selección de mariscos varía según disponibilidad diaria.",
+                },
                 price: "$6.00",
                 image: "img item menu/Seafood Soup.webp",
             },
             {
-                name: "Shrimp Soup",
-                description:
-                    "A savory and flavorful shrimp soup, perfect for seafood lovers.",
+                name: {
+                    en: "Shrimp Soup",
+                    es: "Sopa de Camarones",
+                },
+                description: {
+                    en: "A savory and flavorful shrimp soup, perfect for seafood lovers.",
+                    es: "Una sopa de camarones sabrosa y llena de sabor, perfecta para amantes de los mariscos.",
+                },
                 price: "$5.50",
                 image: "img item menu/Shrimp Soup.webp",
             },
             {
-                name: "Consommé",
-                description: "A light and flavorful broth.",
+                name: {
+                    en: "Consommé",
+                    es: "Consomé",
+                },
+                description: {
+                    en: "A light and flavorful broth.",
+                    es: "Un caldo ligero y sabroso.",
+                },
                 variants: [
-                    { name: "Shrimp", price: "$2.50" },
-                    { name: "Chicken", price: "$2.50" },
+                    {
+                        name: { en: "Shrimp", es: "Camarón" },
+                        price: "$2.50",
+                    },
+                    {
+                        name: { en: "Chicken", es: "Pollo" },
+                        price: "$2.50",
+                    },
                 ],
                 image: "img item menu/Consommé.webp",
             },
         ],
     },
     {
-        category: "DESSERT",
-        description:
-            "End your meal on a sweet note with our delightful selection of desserts. From rich, indulgent treats to light and refreshing options, each dessert is crafted to satisfy your cravings and complete your dining experience.",
+        category: {
+            en: "DESSERT",
+            es: "POSTRES",
+        },
+        description: {
+            en: "End your meal on a sweet note with our delightful selection of desserts. From rich, indulgent treats to light and refreshing options, each dessert is crafted to satisfy your cravings and complete your dining experience.",
+            es: "Termina tu comida con un toque dulce con nuestra encantadora selección de postres. Desde ricos y indulgentes manjares hasta opciones ligeras y refrescantes, cada postre está elaborado para satisfacer tus antojos y completar tu experiencia culinaria.",
+        },
         items: [
             {
-                name: "Caramel Custard",
-                description:
-                    "A creamy, smooth custard topped with a layer of rich caramel.",
+                name: {
+                    en: "Caramel Custard",
+                    es: "Flan de Caramelo",
+                },
+                description: {
+                    en: "A creamy, smooth custard topped with a layer of rich caramel.",
+                    es: "Un cremoso y suave flan cubierto con una capa de rico caramelo.",
+                },
                 price: "$2.00",
                 image: "img item menu/Caramel Custard.webp",
             },
         ],
     },
     {
-        category: "BREAKFASTS",
-        description:
-            "Start your day right with our delicious breakfast selections! From hearty classics to light and healthy options, we offer a variety of dishes to satisfy every craving. Enjoy fresh ingredients, rich flavors, and the perfect balance to fuel your morning.",
+        category: {
+            en: "BREAKFASTS",
+            es: "DESAYUNOS",
+        },
+        description: {
+            en: "Start your day right with our delicious breakfast selections! From hearty classics to light and healthy options, we offer a variety of dishes to satisfy every craving. Enjoy fresh ingredients, rich flavors, and the perfect balance to fuel your morning.",
+            es: "¡Comienza tu día con nuestras deliciosas opciones de desayuno! Desde clásicos sustanciosos hasta opciones ligeras y saludables, ofrecemos una variedad de platos para satisfacer todos los antojos. Disfruta de ingredientes frescos, sabores ricos y el equilibrio perfecto para energizar tu mañana.",
+        },
         items: [
             {
-                name: "Chopped Steak with Tortilla",
-                description: "Tender chopped steak served with warm tortillas.",
+                name: {
+                    en: "Chopped Steak with Tortilla",
+                    es: "Bistec Picado con Tortilla",
+                },
+                description: {
+                    en: "Tender chopped steak served with warm tortillas.",
+                    es: "Bistec picado tierno servido con tortillas calientes.",
+                },
                 price: "$5.00",
                 image: "img item menu/Chopped Steak with Tortilla.webp",
             },
             {
-                name: "Chopped Steak with Fries",
-                description: "Tender chopped steak served with fries.",
+                name: {
+                    en: "Chopped Steak with Fries",
+                    es: "Bistec Picado con Papas Fritas",
+                },
+                description: {
+                    en: "Tender chopped steak served with fries.",
+                    es: "Bistec picado tierno servido con papas fritas.",
+                },
                 price: "$5.00",
                 image: "img item menu/Chopped Steak with Fries.webp",
             },
             {
-                name: "Stewed Sausage with Fried Plantain",
-                description:
-                    "Flavorful stewed sausage served with sweet fried plantains.",
+                name: {
+                    en: "Stewed Sausage with Fried Plantain",
+                    es: "Salchicha Guisada con Plátano Frito",
+                },
+                description: {
+                    en: "Flavorful stewed sausage served with sweet fried plantains.",
+                    es: "Salchicha guisada sabrosa servida con plátanos fritos dulces.",
+                },
                 price: "$4.00",
                 image: "img item menu/Stewed Sausage with Fried Plantain.webp",
             },
             {
-                name: "Stewed Sausage with Fried Dough",
-                description:
-                    "Flavorful stewed sausage served with fried dough.",
+                name: {
+                    en: "Stewed Sausage with Fried Dough",
+                    es: "Salchicha Guisada con Masa Frita",
+                },
+                description: {
+                    en: "Flavorful stewed sausage served with fried dough.",
+                    es: "Salchicha guisada sabrosa servida con masa frita.",
+                },
                 price: "$4.00",
                 image: "img item menu/Stewed Sausage with Fried Dough.webp",
             },
             {
-                name: "Scrambled Eggs with Fries",
-                description:
-                    "Fluffy, perfectly scrambled eggs served with a side of golden, crispy fries.",
+                name: {
+                    en: "Scrambled Eggs with Fries",
+                    es: "Huevos Revueltos con Papas Fritas",
+                },
+                description: {
+                    en: "Fluffy, perfectly scrambled eggs served with a side of golden, crispy fries.",
+                    es: "Huevos revueltos esponjosos y perfectos servidos con papas fritas doradas y crujientes.",
+                },
                 price: "$4.00",
                 image: "img item menu/Scrambled Eggs with Fries.webp",
             },
             {
-                name: "Fried Tortilla with Fried Egg",
-                description:
-                    "Golden fried tortilla served with a delicious fried egg.",
+                name: {
+                    en: "Fried Tortilla with Fried Egg",
+                    es: "Tortilla Frita con Huevo Frito",
+                },
+                description: {
+                    en: "Golden fried tortilla served with a delicious fried egg.",
+                    es: "Tortilla frita dorada servida con un delicioso huevo frito.",
+                },
                 price: "$3.50",
                 image: "img item menu/Fried Tortilla with Fried Egg.webp",
             },
             {
-                name: "Fried Chicken with Fried Plantains",
-                description:
-                    "Savor our mouthwatering fried chicken, perfectly seasoned and fried to golden perfection, paired with crispy fried plantains.",
+                name: {
+                    en: "Fried Chicken with Fried Plantains",
+                    es: "Pollo Frito con Plátanos Fritos",
+                },
+                description: {
+                    en: "Savor our mouthwatering fried chicken, perfectly seasoned and fried to golden perfection, paired with crispy fried plantains.",
+                    es: "Saborea nuestro pollo frito delicioso, perfectamente sazonado y frito hasta lograr un dorado perfecto, acompañado de plátanos fritos crujientes.",
+                },
                 price: "$4.50",
                 image: "img item menu/Fried Chicken with Fried Plantains.webp",
             },
             {
-                name: "Coffee with Milk",
-                description:
-                    "Indulge in the rich aroma and bold flavors of our freshly brewed coffee.",
+                name: {
+                    en: "Coffee with Milk",
+                    es: "Café con Leche",
+                },
+                description: {
+                    en: "Indulge in the rich aroma and bold flavors of our freshly brewed coffee.",
+                    es: "Disfruta del rico aroma y sabores intensos de nuestro café recién preparado.",
+                },
                 price: "$0.75",
                 image: "img item menu/Coffee with Milk.webp",
             },
             {
-                name: "Black Coffee",
-                description:
-                    "Indulge in the rich aroma and bold flavors of our freshly brewed coffee.",
+                name: {
+                    en: "Black Coffee",
+                    es: "Café Negro",
+                },
+                description: {
+                    en: "Indulge in the rich aroma and bold flavors of our freshly brewed coffee.",
+                    es: "Disfruta del rico aroma y sabores intensos de nuestro café recién preparado.",
+                },
                 price: "$0.60",
                 image: "img item menu/Black Coffee.webp",
             },
             {
-                name: "Black Tea or Cinnamon Tea",
-                description:
-                    "Choose between the bold, robust flavor of black tea or the soothing warmth of cinnamon tea. Perfect for any time of the day, whether you need energy or comfort.",
+                name: {
+                    en: "Black Tea or Cinnamon Tea",
+                    es: "Té Negro o Té de Canela",
+                },
+                description: {
+                    en: "Choose between the bold, robust flavor of black tea or the soothing warmth of cinnamon tea. Perfect for any time of the day, whether you need energy or comfort.",
+                    es: "Elige entre el sabor intenso y robusto del té negro o el reconfortante calor del té de canela. Perfecto para cualquier momento del día, ya sea que necesites energía o consuelo.",
+                },
                 variants: [
-                    { name: "With milk", price: "$0.75" },
-                    { name: "Without milk", price: "$0.60" },
+                    {
+                        name: { en: "With milk", es: "Con leche" },
+                        price: "$0.75",
+                    },
+                    {
+                        name: { en: "Without milk", es: "Sin leche" },
+                        price: "$0.60",
+                    },
                 ],
                 image: "img item menu/Black Tea or Cinnamon Tea.webp",
             },
         ],
     },
     {
-        category: "TRAYS",
-        description:
-            "Perfect for sharing, our trays are packed with generous portions of delicious, freshly prepared dishes. Whether for family gatherings, special occasions, or simply a feast with friends, enjoy a variety of flavors served in convenient, ready-to-enjoy portions.",
+        category: {
+            en: "TRAYS",
+            es: "BANDEJAS",
+        },
+        description: {
+            en: "Perfect for sharing, our trays are packed with generous portions of delicious, freshly prepared dishes. Whether for family gatherings, special occasions, or simply a feast with friends, enjoy a variety of flavors served in convenient, ready-to-enjoy portions.",
+            es: "Perfectas para compartir, nuestras bandejas contienen generosas porciones de deliciosos platillos recién preparados. Ya sea para reuniones familiares, ocasiones especiales o simplemente una fiesta con amigos, disfruta de una variedad de sabores servidos en porciones convenientes y listas para disfrutar.",
+        },
         items: [
             {
-                name: "Fried Rice Tray (For 8-10 People)",
-                description:
-                    "A large tray of fried rice, perfect for sharing. Available in chicken, pork, shrimp, mixed, or beef.",
+                name: {
+                    en: "Fried Rice Tray (For 8-10 People)",
+                    es: "Bandeja de Arroz Frito (Para 8-10 Personas)",
+                },
+                description: {
+                    en: "A large tray of fried rice, perfect for sharing. Available in chicken, pork, shrimp, mixed, or beef.",
+                    es: "Una bandeja grande de arroz frito, perfecta para compartir. Disponible con pollo, cerdo, camarón, mixto o res.",
+                },
                 price: "$22.00",
                 image: "img item menu/Fried Rice Tray (For 8-10 People).webp",
             },
             {
-                name: "Fried Rice Tray<br> (For 12-18 People)",
-                description:
-                    "A larger tray of fried rice, ideal for bigger gatherings. Available in chicken, pork, shrimp, mixed, or beef.",
+                name: {
+                    en: "Fried Rice Tray<br> (For 12-18 People)",
+                    es: "Bandeja de Arroz Frito<br> (Para 12-18 Personas)",
+                },
+                description: {
+                    en: "A larger tray of fried rice, ideal for bigger gatherings. Available in chicken, pork, shrimp, mixed, or beef.",
+                    es: "Una bandeja más grande de arroz frito, ideal para reuniones más numerosas. Disponible con pollo, cerdo, camarón, mixto o res.",
+                },
                 price: "$30.00",
                 image: "img item menu/Fried Rice Tray (For 12-18 People).webp",
             },
             {
-                name: "Fried Rice Tray<br> (For 18-25 People)",
-                description:
-                    "A massive tray of fried rice, perfect for large events. Available in chicken, pork, shrimp, mixed, or beef.",
+                name: {
+                    en: "Fried Rice Tray<br> (For 18-25 People)",
+                    es: "Bandeja de Arroz Frito<br> (Para 18-25 Personas)",
+                },
+                description: {
+                    en: "A massive tray of fried rice, perfect for large events. Available in chicken, pork, shrimp, mixed, or beef.",
+                    es: "Una bandeja enorme de arroz frito, perfecta para eventos grandes. Disponible con pollo, cerdo, camarón, mixto o res.",
+                },
                 price: "$37.00",
                 image: "img item menu/Fried Rice Tray (For 18-25 People).webp",
             },
@@ -1049,7 +1494,6 @@ function renderMenu() {
     });
 }
 
-
 const heroContent = {
     title: {
         en: "Welcome to our Restaurant",
@@ -1064,7 +1508,11 @@ const heroContent = {
         es: "Ver Menú",
     },
 };
-
+//
+//
+// Las traducciones para contenido del héroe
+//
+//
 function updateHeroContent() {
     // Cambiar título
     document.querySelector(".hero-content h1").textContent =
@@ -1078,37 +1526,137 @@ function updateHeroContent() {
     document.querySelector(".view-menu-btn span").textContent =
         heroContent.viewMenuButton[currentLang];
 }
+//
+//
+// Las traducciones de los filtros
+//
+//
+const filterTranslations = {
+    all: {
+        en: "All",
+        es: "Todo"
+    },
+    appetizers: {
+        en: "Appetizers",
+        es: "Entradas"
+    },
+    mains: {
+        en: "Mains",
+        es: "Principales"
+    },
+    "sea foods": {
+        en: "Sea foods",
+        es: "Mariscos"
+    },
+    soups: {
+        en: "Soups",
+        es: "Sopas"
+    },
+    dessert: {
+        en: "Dessert",
+        es: "Postre"
+    },
+    breakfasts: {
+        en: "Breakfasts",
+        es: "Desayunos"
+    },
+    trays: {
+        en: "Trays",
+        es: "Bandejas"
+    }
+};
+//
+//
+// Función para actualizar los textos de los filtros
+//
+//
+function updateFilterButtons() {
+    document.querySelectorAll('.filter-btn').forEach(button => {
+        const category = button.dataset.category;
+        button.textContent = filterTranslations[category][currentLang];
+    });
+}
 
-// Llamar a la función para renderizar el menú
-renderMenu(menuItems);
-
-// Evento para cambiar el idioma
-document.getElementById("langToggle").addEventListener("click", () => {
-    // Cambiar el idioma
-    currentLang = currentLang === "en" ? "es" : "en"; // Alternar idioma
-    document.getElementById("langToggle").querySelector("span").textContent = currentLang.toUpperCase(); // Cambiar texto del botón
-
-    // Cambiar el estado activo del botón
-    const langButton = document.getElementById("langToggle");
-    langButton.classList.toggle("active"); // Alternar la clase active
-
-    updateHeroContent();  // Actualizar el contenido del hero
-    renderMenu(); // Vuelve a renderizar el menú con el nuevo idioma
-});
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    const scrollToTopBtn = document.getElementById("scrollToTop");
-
-    window.addEventListener("scroll", function () {
-        if (window.scrollY > window.innerHeight) {
-            scrollToTopBtn.classList.add("show");
-        } else {
-            scrollToTopBtn.classList.remove("show");
+// 3. Función de filtrado adaptada a tu estructura de datos
+function filterMenuItems(category = 'all') {
+    try {
+        if (!Array.isArray(menuItems)) {
+            console.error('menuItems no es un array válido');
+            return;
         }
+
+        const itemsToShow = category === 'all' 
+            ? menuItems 
+            : menuItems.filter(item => {
+                // Para tu estructura de datos, necesitamos acceder a item.category.en/es
+                const itemCategory = item.category 
+                    ? item.category.en.toLowerCase().trim() 
+                    : 'uncategorized';
+                
+                const filterCategory = category.toLowerCase().trim();
+
+                // Mapeo de equivalencias
+                const categoryEquivalents = {
+                    'sea foods': ['sea foods', 'seafoods', 'mariscos'],
+                    'appetizers': ['appetizers', 'entradas'],
+                    'mains': ['mains', 'platos principales'],
+                    'trays': ['trays', 'bandejas']
+                };
+
+                if (categoryEquivalents[filterCategory]) {
+                    return categoryEquivalents[filterCategory].some(equiv => 
+                        equiv === itemCategory
+                    );
+                }
+
+                return itemCategory === filterCategory;
+            });
+
+        renderMenu(itemsToShow);
+    } catch (error) {
+        console.error('Error en filterMenuItems:', error);
+        renderMenu(menuItems);
+    }
+}
+//
+//
+// Cambio de idioma y boton de idioma
+//
+//
+function setupEventListeners() {
+    // Botón de idioma
+    document.getElementById("langToggle").addEventListener("click", () => {
+        currentLang = currentLang === "en" ? "es" : "en";
+        document.querySelector("#langToggle span").textContent = currentLang.toUpperCase();
+        document.getElementById("langToggle").classList.toggle("active");
+        
+        updateHeroContent();
+        updateFilterButtons();
+        updateHeroContent(document.querySelector(".filter-btn.active").dataset.category);
     });
 
-    scrollToTopBtn.addEventListener("click", function () {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+    // Botones de filtro (solo este bloque)
+    document.querySelectorAll('.filter-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            this.classList.add('active');
+            filterMenuItems(this.dataset.category);
+        });
     });
+}
+
+// 5. Inicialización
+document.addEventListener('DOMContentLoaded', () => {
+    // Asegúrate de que menuItems está definido antes de esto
+    updateFilterButtons();
+    filterMenuItems("all");
+    setupEventListeners();
 });
+
+
+
+
