@@ -1,85 +1,4 @@
-const filterBtns = document.querySelectorAll(".filter-btn");
-const categoryFilter = document.querySelector(".category-filter");
-const categoryFilterBar = document.querySelector(".category-filter-bar");
-const menuGrid = document.getElementById("menu-grid");
-const themeToggle = document.getElementById("themeToggle");
-
-// Theme Toggle
-themeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("light-mode");
-    const icon = themeToggle.querySelector("i");
-    icon.classList.toggle("fa-moon");
-    icon.classList.toggle("fa-sun");
-});
-//
-//
-//Scroll to top button
-//
-//
-document.addEventListener("DOMContentLoaded", function () {
-    const scrollToTopBtn = document.getElementById("scrollToTop");
-
-    window.addEventListener("scroll", function () {
-        if (window.scrollY > window.innerHeight) {
-            scrollToTopBtn.classList.add("show");
-        } else {
-            scrollToTopBtn.classList.remove("show");
-        }
-    });
-
-    scrollToTopBtn.addEventListener("click", function () {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-});
-
-//
-//
-//
-// Scroll handling for category filter //
-//
-//
-//
-// Scroll handling for category filter
-let lastScrollY = window.scrollY;
-let lastScrollTime = Date.now();
-const scrollThreshold = window.innerHeight; // Set threshold to window height
-const scrollTimeout = 1; // minimum time between scroll events
-
-window.addEventListener("scroll", () => {
-    const now = Date.now();
-    const currentScrollY = window.scrollY;
-    const scrollDelta = currentScrollY - lastScrollY;
-
-    // Only process scroll events after timeout and if scroll distance is significant
-    if (
-        now - lastScrollTime > scrollTimeout &&
-        Math.abs(scrollDelta) > scrollThreshold
-    ) {
-        if (scrollDelta > 0) {
-            // Scrolling down and past hero section
-            // categoryFilter.style.transform = "translateY(0%)";
-            categoryFilter.style.opacity = "1";
-            categoryFilterBar.style.opacity = "1";
-        } else {
-            // Scrolling up or at top
-            // categoryFilter.style.transform = "translateY(100%)";
-            categoryFilter.style.opacity = "0";
-            categoryFilterBar.style.opacity = "0";
-        }
-
-        lastScrollTime = now;
-        lastScrollY = currentScrollY;
-    }
-});
-//
-//
-//
-// Load Menu Items //
-//
-//
-//
-
-const menuItems = [
+export const menuItems = [
     {
         category: { en: "APPETIZERS", es: "ENTRADAS" },
         description: {
@@ -94,7 +13,7 @@ const menuItems = [
                     es: "Crujientes tiras de wonton dorado - ligeras y crujientes, perfectas para mojar. Salsa agridulce disponible por $1.00 adicionales. Servido con 12 piezas.",
                 },
                 price: "$3.00",
-                image: "img item menu/Fried Wonton.webp",
+                image: "img/menu-items/Fried Wonton.webp",
             },
             {
                 name: { en: "Spring Rolls", es: "Rollitos de Primavera" },
@@ -111,7 +30,7 @@ const menuItems = [
                     { name: { en: "Pork", es: "Cerdo" }, price: "$7.00" },
                     { name: { en: "Shrimp", es: "Camarón" }, price: "$8.00" },
                 ],
-                image: "img item menu/Spring Rolls.webp",
+                image: "img/menu-items/Spring Rolls.webp",
             },
             {
                 name: { en: "Stuffed Wonton", es: "Wonton Relleno" },
@@ -124,7 +43,7 @@ const menuItems = [
                     { name: { en: "Chicken", es: "Pollo" }, price: "$7.00" },
                     { name: { en: "Shrimp", es: "Camarón" }, price: "$8.00" },
                 ],
-                image: "img item menu/Stuffed Wonton.webp",
+                image: "img/menu-items/Stuffed Wonton.webp",
             },
             {
                 name: { en: "Sweet and Sour Sauce", es: "Salsa Agridulce" },
@@ -133,7 +52,7 @@ const menuItems = [
                     es: "Una salsa ligeramente dulce y ácida que combina perfectamente con los aperitivos fritos.",
                 },
                 price: "$1.00",
-                image: "img item menu/Sweet and Sour Sauce.webp",
+                image: "img/menu-items/Sweet and Sour Sauce.webp",
             },
             {
                 name: { en: "Fried Plantains", es: "Plátanos Fritos" },
@@ -142,7 +61,7 @@ const menuItems = [
                     es: "Dorados y crujientes en los bordes y por dentro, estos plátanos fritos son el acompañamiento o snack perfecto.",
                 },
                 price: "$3.00",
-                image: "img item menu/Fried Plantains.webp",
+                image: "img/menu-items/Fried Plantains.webp",
             },
             {
                 name: { en: "French Fries", es: "Papas Fritas" },
@@ -151,7 +70,7 @@ const menuItems = [
                     es: "Crujientes, doradas e irresistibles. Un acompañamiento clásico que a todos les encanta.",
                 },
                 price: "$3.00",
-                image: "img item menu/French Fries.webp",
+                image: "img/menu-items/French Fries.webp",
             },
             {
                 name: { en: "Breaded Shrimp", es: "Camarones Empanizados" },
@@ -160,7 +79,7 @@ const menuItems = [
                     es: "Camarones empanizados, crujientes y dorados, perfectos como bocadillo o aperitivo.",
                 },
                 price: "$10.50",
-                image: "img item menu/Breaded Shrimp.webp",
+                image: "img/menu-items/Breaded Shrimp.webp",
             },
             {
                 name: {
@@ -172,7 +91,7 @@ const menuItems = [
                     es: "Camarones jugosos salteados con una colorida mezcla de verduras frescas. Ligero, sabroso y perfecto para compartir.",
                 },
                 price: "$12.00",
-                image: "img item menu/Shrimp with Vegetables.webp",
+                image: "img/menu-items/Shrimp with Vegetables.webp",
             },
             {
                 name: {
@@ -184,7 +103,7 @@ const menuItems = [
                     es: "Langostinos jugosos acompañados de una mezcla vibrante de verduras frescas y crujientes, salteados a la perfección y sazonados con especias aromáticas.",
                 },
                 price: "$16.00",
-                image: "img item menu/Prawn with Vegetables.webp",
+                image: "img/menu-items/Prawn with Vegetables.webp",
             },
             {
                 name: {
@@ -196,7 +115,7 @@ const menuItems = [
                     es: "Almejas frescas cocinadas en una rica salsa de ajo o salsa de frijoles negros, ofreciendo un sabor sabroso y aromático.",
                 },
                 price: "$8.00",
-                image: "img item menu/Clams in Garlic Sauce or Black Bean Sauce.webp",
+                image: "img/menu-items/Clams in Garlic Sauce or Black Bean Sauce.webp",
             },
             {
                 name: { en: "Chopped Steak", es: "Bistec Picado" },
@@ -205,7 +124,7 @@ const menuItems = [
                     es: "Bistec picado tierno y jugoso, sazonado a la perfección y cocido en su punto.",
                 },
                 price: "$11.00",
-                image: "img item menu/Chopped Steak.webp",
+                image: "img/menu-items/Chopped Steak.webp",
             },
             {
                 name: { en: "Sweet & Sour Chicken", es: "Pollo Agridulce" },
@@ -214,7 +133,7 @@ const menuItems = [
                     es: "Trozos de pollo crujientes cubiertos con un glaseado agridulce.",
                 },
                 price: "$9.00",
-                image: "img item menu/Sweet & Sour Chicken.webp",
+                image: "img/menu-items/Sweet & Sour Chicken.webp",
             },
             {
                 name: {
@@ -226,7 +145,7 @@ const menuItems = [
                     es: "Trozos de cerdo crujientes cubiertos con un glaseado agridulce.",
                 },
                 price: "$9.00",
-                image: "img item menu/Roast or Sweet & Sour Pork.webp",
+                image: "img/menu-items/Roast or Sweet & Sour Pork.webp",
             },
             {
                 name: {
@@ -238,7 +157,7 @@ const menuItems = [
                     es: "Una mezcla fresca de hojas verdes, tomates y pepinos.",
                 },
                 price: "$4.00",
-                image: "img item menu/Lettuce & Tomato Salad.webp",
+                image: "img/menu-items/Lettuce & Tomato Salad.webp",
             },
             {
                 name: { en: "Foo Young", es: "Foo Young" },
@@ -252,7 +171,7 @@ const menuItems = [
                     { name: { en: "Shrimp", es: "Camarón" }, price: "$6.00" },
                     { name: { en: "Mixed", es: "Mixto" }, price: "$6.50" },
                 ],
-                image: "img item menu/Foo Young.webp",
+                image: "img/menu-items/Foo Young.webp",
             },
             {
                 name: {
@@ -274,7 +193,7 @@ const menuItems = [
                     { name: { en: "Chicken", es: "Pollo" }, price: "$7.25" },
                     { name: { en: "Beef", es: "Res" }, price: "$7.75" },
                 ],
-                image: "img item menu/A Bowl of Vegetable Fried Rice.webp",
+                image: "img/menu-items/A Bowl of Vegetable Fried Rice.webp",
             },
             {
                 name: { en: "Leon Pan Wanton", es: "Wonton Leon Pan" },
@@ -283,7 +202,7 @@ const menuItems = [
                     es: "Wontons suaves y tiernos rellenos de carne sabrosa o pollo.",
                 },
                 price: "$8.00",
-                image: "img item menu/Leon Pan Wanton.webp",
+                image: "img/menu-items/Leon Pan Wanton.webp",
             },
             {
                 name: {
@@ -295,7 +214,7 @@ const menuItems = [
                     es: "Pollo hervido tierno infusionado con jengibre aromático.",
                 },
                 price: "$9.00",
-                image: "img item menu/Boiled Chicken with Ginger.webp",
+                image: "img/menu-items/Boiled Chicken with Ginger.webp",
             },
             {
                 name: {
@@ -307,7 +226,7 @@ const menuItems = [
                     es: "Un pollo entero, frito a la perfección crujiente o asado para un bocado jugoso y tierno.",
                 },
                 price: "$10.50",
-                image: "img item menu/Fried or Roasted Whole Chicken.webp",
+                image: "img/menu-items/Fried or Roasted Whole Chicken.webp",
             },
             {
                 name: {
@@ -319,7 +238,7 @@ const menuItems = [
                     es: "Disfruta de una generosa porción de nuestro pollo perfectamente cocinado, ya sea frito dorado a la perfección crujiente o asado lentamente para un sabor jugoso y tierno.",
                 },
                 price: "$5.75",
-                image: "img item menu/Half Fried or Roasted Chicken.webp",
+                image: "img/menu-items/Half Fried or Roasted Chicken.webp",
             },
             {
                 name: {
@@ -331,7 +250,7 @@ const menuItems = [
                     es: "Disfruta de una porción sabrosa de nuestro pollo: elige entre frito dorado para un bocado crujiente o asado lentamente para una perfección tierna y jugosa, en una porción perfectamente proporcionada de un cuarto.",
                 },
                 price: "$3.25",
-                image: "img item menu/Quarter Fried or Roasted Chicken.webp",
+                image: "img/menu-items/Quarter Fried or Roasted Chicken.webp",
             },
             {
                 name: { en: "Garlic Lobster", es: "Langosta al Ajo" },
@@ -340,7 +259,7 @@ const menuItems = [
                     es: "Langosta suculenta cocinada en una rica salsa de ajo. Servida con tu elección de papas fritas, plátano frito o arroz.",
                 },
                 price: "$18.50",
-                image: "img item menu/Garlic Lobster.webp",
+                image: "img/menu-items/Garlic Lobster.webp",
             },
         ],
     },
@@ -374,7 +293,7 @@ const menuItems = [
                     { name: { en: "Chicken", es: "Pollo" }, price: "$8.00" },
                     { name: { en: "Beef", es: "Res" }, price: "$8.00" },
                 ],
-                image: "img item menu/An Full Order of Chow Mein.webp",
+                image: "img/menu-items/An Full Order of Chow Mein.webp",
             },
             {
                 name: {
@@ -396,7 +315,7 @@ const menuItems = [
                     { name: { en: "Chicken", es: "Pollo" }, price: "$6.00" },
                     { name: { en: "Beef", es: "Res" }, price: "$6.00" },
                 ],
-                image: "img item menu/Half Order of Chow Mein.webp",
+                image: "img/menu-items/Half Order of Chow Mein.webp",
             },
             {
                 name: {
@@ -414,7 +333,7 @@ const menuItems = [
                     { name: { en: "Chicken", es: "Pollo" }, price: "$8.50" },
                     { name: { en: "Beef", es: "Res" }, price: "$8.50" },
                 ],
-                image: "img item menu/An Full Order of Chop Suey.webp",
+                image: "img/menu-items/An Full Order of Chop Suey.webp",
             },
             {
                 name: {
@@ -432,7 +351,7 @@ const menuItems = [
                     { name: { en: "Chicken", es: "Pollo" }, price: "$6.50" },
                     { name: { en: "Beef", es: "Res" }, price: "$6.50" },
                 ],
-                image: "img item menu/Half Order of Chop Suey.webp",
+                image: "img/menu-items/Half Order of Chop Suey.webp",
             },
             {
                 name: {
@@ -453,7 +372,7 @@ const menuItems = [
                     { name: { en: "Shrimp", es: "Camarón" }, price: "$9.75" },
                     { name: { en: "Chicken", es: "Pollo" }, price: "$9.25" },
                 ],
-                image: "img item menu/An Full Order of Chow Fun.webp",
+                image: "img/menu-items/An Full Order of Chow Fun.webp",
             },
             {
                 name: {
@@ -474,7 +393,7 @@ const menuItems = [
                     { name: { en: "Shrimp", es: "Camarón" }, price: "$7.75" },
                     { name: { en: "Chicken", es: "Pollo" }, price: "$7.25" },
                 ],
-                image: "img item menu/Half Order of Chow Fun.webp",
+                image: "img/menu-items/Half Order of Chow Fun.webp",
             },
             {
                 name: {
@@ -499,7 +418,7 @@ const menuItems = [
                     },
                     { name: { en: "Beef", es: "Res" }, price: "$7.50" },
                 ],
-                image: "img item menu/An Full Order of Fried Rice.webp",
+                image: "img/menu-items/An Full Order of Fried Rice.webp",
             },
             {
                 name: {
@@ -524,7 +443,7 @@ const menuItems = [
                     },
                     { name: { en: "Beef", es: "Res" }, price: "$5.50" },
                 ],
-                image: "img item menu/Half Order of Fried Rice.webp",
+                image: "img/menu-items/Half Order of Fried Rice.webp",
             },
             {
                 name: {
@@ -536,7 +455,7 @@ const menuItems = [
                     es: "Un sabroso plato de arroz preparado con pollo, cerdo, res, camarón y huevo.",
                 },
                 price: "$9.00",
-                image: "img item menu/An Full Order of Canton Rice.webp",
+                image: "img/menu-items/An Full Order of Canton Rice.webp",
             },
             {
                 name: {
@@ -548,7 +467,7 @@ const menuItems = [
                     es: "Una porción más pequeña de nuestro sabroso arroz cantón, perfecto para una comida más ligera.",
                 },
                 price: "$7.00",
-                image: "img item menu/Half Order of Canton Rice.webp",
+                image: "img/menu-items/Half Order of Canton Rice.webp",
             },
             {
                 name: {
@@ -565,7 +484,7 @@ const menuItems = [
                     { name: { en: "Shrimp", es: "Camarón" }, price: "$9.00" },
                     { name: { en: "Mixed", es: "Mixto" }, price: "$9.50" },
                 ],
-                image: "img item menu/An Full Order of Leon Panmein.webp",
+                image: "img/menu-items/An Full Order of Leon Panmein.webp",
             },
             {
                 name: {
@@ -582,7 +501,7 @@ const menuItems = [
                     { name: { en: "Shrimp", es: "Camarón" }, price: "$7.00" },
                     { name: { en: "Mixed", es: "Mixto" }, price: "$7.50" },
                 ],
-                image: "img item menu/Half Order of Leon Pan Mein.webp",
+                image: "img/menu-items/Half Order of Leon Pan Mein.webp",
             },
             {
                 name: {
@@ -594,7 +513,7 @@ const menuItems = [
                     es: "Pollo jugoso a la parrilla servido con plátanos fritos.",
                 },
                 price: "$8.00",
-                image: "img item menu/Grilled Chicken with Fried Plantain.webp",
+                image: "img/menu-items/Grilled Chicken with Fried Plantain.webp",
             },
             {
                 name: {
@@ -606,7 +525,7 @@ const menuItems = [
                     es: "Pollo crujiente mezclado con una salsa agridulce, servido con papas fritas.",
                 },
                 price: "$7.50",
-                image: "img item menu/Sweet and Sour Chicken with Fries.webp",
+                image: "img/menu-items/Sweet and Sour Chicken with Fries.webp",
             },
             {
                 name: {
@@ -618,7 +537,7 @@ const menuItems = [
                     es: "Trozos de pollo crujiente mezclados con un glaseado agridulce, servido con papas fritas doradas y una porción de arroz frito sabroso. Un combo satisfactorio que tiene todo lo bueno: dulce, salado y crujiente.",
                 },
                 price: "$8.00",
-                image: "img item menu/Sweet & Sour Chicken Combo.webp",
+                image: "img/menu-items/Sweet & Sour Chicken Combo.webp",
             },
             {
                 name: {
@@ -630,7 +549,7 @@ const menuItems = [
                     es: "Mitad de un pollo frito crujiente servido con papas fritas.",
                 },
                 price: "$7.50",
-                image: "img item menu/Half Fried Chicken with Fries.webp",
+                image: "img/menu-items/Half Fried Chicken with Fries.webp",
             },
             {
                 name: {
@@ -642,7 +561,7 @@ const menuItems = [
                     es: "Un cuarto de pollo frito crujiente servido con papas fritas doradas.",
                 },
                 price: "$6.00",
-                image: "img item menu/Quarter Fried Chicken with French Fries.webp",
+                image: "img/menu-items/Quarter Fried Chicken with French Fries.webp",
             },
             {
                 name: {
@@ -654,7 +573,7 @@ const menuItems = [
                     es: "Disfruta de nuestro pollo frito o asado perfectamente sazonado, servido con papas doradas crujientes y arroz frito sabroso.",
                 },
                 price: "$8.00",
-                image: "img item menu/Quarter Fried or Roasted Chicken with Potatoes and Fried Rice.webp",
+                image: "img/menu-items/Quarter Fried or Roasted Chicken with Potatoes and Fried Rice.webp",
             },
             {
                 name: {
@@ -666,7 +585,7 @@ const menuItems = [
                     es: "Un cuarto de pollo empanizado crujiente servido con papas fritas doradas.",
                 },
                 price: "$6.50",
-                image: "img item menu/Quarter of a Breaded Chicken with Fries.webp",
+                image: "img/menu-items/Quarter of a Breaded Chicken with Fries.webp",
             },
             {
                 name: {
@@ -678,7 +597,7 @@ const menuItems = [
                     es: "Bistec picado tierno servido con papas fritas crujientes.",
                 },
                 price: "$7.50",
-                image: "img item menu/Chopped Steak with Fries.webp",
+                image: "img/menu-items/Chopped Steak with Fries.webp",
             },
             {
                 name: {
@@ -690,7 +609,7 @@ const menuItems = [
                     es: "Jugosa chuleta de cerdo a la parrilla sazonada a la perfección, servida con plátanos fritos.",
                 },
                 price: "$8.00",
-                image: "img item menu/Grilled Pork Chop with Fried Plantain.webp",
+                image: "img/menu-items/Grilled Pork Chop with Fried Plantain.webp",
             },
             {
                 name: {
@@ -702,7 +621,7 @@ const menuItems = [
                     es: "Jugosa chuleta de cerdo perfectamente asada a la parrilla servida con papas fritas doradas y crujientes. Un plato clásico y abundante que combina sabores salados con texturas satisfactorias.",
                 },
                 price: "$8.00",
-                image: "img item menu/Grilled Pork Chop with Fries.webp",
+                image: "img/menu-items/Grilled Pork Chop with Fries.webp",
             },
             {
                 name: {
@@ -714,7 +633,7 @@ const menuItems = [
                     es: "Jugosas chuletas de cerdo ahumadas servidas con plátanos fritos.",
                 },
                 price: "$8.00",
-                image: "img item menu/Smoked Pork Chop with Fried Plantains.webp",
+                image: "img/menu-items/Smoked Pork Chop with Fried Plantains.webp",
             },
             {
                 name: {
@@ -726,7 +645,7 @@ const menuItems = [
                     es: "Cerdo asado tierno o cerdo crujiente en salsa agridulce, servido con plátanos fritos.",
                 },
                 price: "$7.50",
-                image: "img item menu/Roast or Sweet and Sour Pork with Fried Plantains.webp",
+                image: "img/menu-items/Roast or Sweet and Sour Pork with Fried Plantains.webp",
             },
             {
                 name: {
@@ -738,7 +657,7 @@ const menuItems = [
                     es: "Cerdo asado tierno o cerdo crujiente en salsa agridulce, servido con papas fritas.",
                 },
                 price: "$7.50",
-                image: "img item menu/Roast or Sweet and Sour Pork with Fries.webp",
+                image: "img/menu-items/Roast or Sweet and Sour Pork with Fries.webp",
             },
             {
                 name: {
@@ -750,7 +669,7 @@ const menuItems = [
                     es: "Costillas jugosas cubiertas con salsa agridulce, servidas con papas fritas.",
                 },
                 price: "$7.50",
-                image: "img item menu/Sweet and Sour Rib with Fries.webp",
+                image: "img/menu-items/Sweet and Sour Rib with Fries.webp",
             },
             {
                 name: {
@@ -762,7 +681,7 @@ const menuItems = [
                     es: "Un sabroso plato de arroz que combina pollo, cerdo, res y camarón.",
                 },
                 price: "$9.00",
-                image: "img item menu/Chinese Style Combination Rice.webp",
+                image: "img/menu-items/Chinese Style Combination Rice.webp",
             },
             {
                 name: {
@@ -774,7 +693,7 @@ const menuItems = [
                     es: "Un sabroso plato de arroz que combina pollo, cerdo, res, camarón y choy sum.",
                 },
                 price: "$9.00",
-                image: "img item menu/Chinese Style Combination Rice2.webp",
+                image: "img/menu-items/Chinese Style Combination Rice2.webp",
             },
         ],
     },
@@ -798,7 +717,7 @@ const menuItems = [
                     es: "Gambas suculentas salteadas en una rica salsa de ajo aromática, acompañadas de plátanos fritos.<br><br>Disponible con o sin cáscara.",
                 },
                 price: "$13.50",
-                image: "img item menu/Garlic Prawn with Fried Plantain.webp",
+                image: "img/menu-items/Garlic Prawn with Fried Plantain.webp",
             },
             {
                 name: {
@@ -810,7 +729,7 @@ const menuItems = [
                     es: "Gambas suculentas salteadas en una rica salsa de mantequilla, servidas con arroz y una ensalada fresca de tomate, lechuga, zanahoria y repollo morado. <br><br>Disponible con o sin cáscara.",
                 },
                 price: "$13.50",
-                image: "img item menu/Butter Prawn.webp",
+                image: "img/menu-items/Butter Prawn.webp",
             },
             {
                 name: {
@@ -822,7 +741,7 @@ const menuItems = [
                     es: "Pulpo tierno cocinado en una sabrosa salsa de ajo, servido con papas fritas.",
                 },
                 price: "$9.75",
-                image: "img item menu/Garlic Octopus with Fries.webp",
+                image: "img/menu-items/Garlic Octopus with Fries.webp",
             },
             {
                 name: {
@@ -834,7 +753,7 @@ const menuItems = [
                     es: "Pulpo tierno cocinado en salsa de ajo, servido con plátanos fritos dulces.",
                 },
                 price: "$9.75",
-                image: "img item menu/Garlic Octopus with Fried Plantains.webp",
+                image: "img/menu-items/Garlic Octopus with Fried Plantains.webp",
             },
             {
                 name: {
@@ -846,7 +765,7 @@ const menuItems = [
                     es: "Camarones suculentos salteados en una rica salsa de ajo aromática, servidos con plátanos fritos.",
                 },
                 price: "$9.75",
-                image: "img item menu/Garlic Shrimp with Fried Plantain.webp",
+                image: "img/menu-items/Garlic Shrimp with Fried Plantain.webp",
             },
             {
                 name: {
@@ -858,7 +777,7 @@ const menuItems = [
                     es: "Camarones tiernos cocinados en salsa de ajo, servidos con plátanos fritos.",
                 },
                 price: "$9.75",
-                image: "img item menu/Garlic Shrimp with Fries.webp",
+                image: "img/menu-items/Garlic Shrimp with Fries.webp",
             },
             {
                 name: {
@@ -870,7 +789,7 @@ const menuItems = [
                     es: "Camarones jugosos cocinados en salsa de ajo, servidos con arroz al vapor.",
                 },
                 price: "$9.75",
-                image: "img item menu/Garlic Shrimp with Rice.webp",
+                image: "img/menu-items/Garlic Shrimp with Rice.webp",
             },
             {
                 name: {
@@ -882,7 +801,7 @@ const menuItems = [
                     es: "Camarones jugosos cocinados en salsa de ajo, servidos con arroz frito sabroso.",
                 },
                 price: "$9.75",
-                image: "img item menu/Garlic Shrimp with Fried Rice.webp",
+                image: "img/menu-items/Garlic Shrimp with Fried Rice.webp",
             },
             {
                 name: {
@@ -894,7 +813,7 @@ const menuItems = [
                     es: "Camarones cocinados en salsa criolla picante, servidos con plátanos fritos.",
                 },
                 price: "$9.75",
-                image: "img item menu/Creole Shrimp with Fried Plantain.webp",
+                image: "img/menu-items/Creole Shrimp with Fried Plantain.webp",
             },
             {
                 name: {
@@ -906,7 +825,7 @@ const menuItems = [
                     es: "Camarones cocinados en rica salsa de mantequilla, servidos con plátanos fritos dulces.",
                 },
                 price: "$9.75",
-                image: "img item menu/Butter Shrimp with Fried Plantain.webp",
+                image: "img/menu-items/Butter Shrimp with Fried Plantain.webp",
             },
             {
                 name: {
@@ -918,7 +837,7 @@ const menuItems = [
                     es: "Camarones empanizados crujientes servidos con papas fritas doradas.",
                 },
                 price: "$9.75",
-                image: "img item menu/Breaded Shrimp with Fries.webp",
+                image: "img/menu-items/Breaded Shrimp with Fries.webp",
             },
             {
                 name: {
@@ -930,7 +849,7 @@ const menuItems = [
                     es: "Camarones empanizados crujientes servidos con plátanos fritos dulces.",
                 },
                 price: "$9.75",
-                image: "img item menu/Breaded Shrimp with Fried Plantain.webp",
+                image: "img/menu-items/Breaded Shrimp with Fried Plantain.webp",
             },
             {
                 name: {
@@ -942,7 +861,7 @@ const menuItems = [
                     es: "Ostras frescas cocinadas en salsa criolla picante, servidas con arroz.",
                 },
                 price: "$9.75",
-                image: "img item menu/Creole Oyster with Rice.webp",
+                image: "img/menu-items/Creole Oyster with Rice.webp",
             },
             {
                 name: {
@@ -954,7 +873,7 @@ const menuItems = [
                     es: "Ostras frescas cocinadas en salsa de ajo, servidas con papas fritas.",
                 },
                 price: "$9.75",
-                image: "img item menu/Garlic Oyster with Fries.webp",
+                image: "img/menu-items/Garlic Oyster with Fries.webp",
             },
             {
                 name: {
@@ -966,7 +885,7 @@ const menuItems = [
                     es: "Filete de pargo fresco cocinado en salsa de ajo, servido con papas fritas.",
                 },
                 price: "$9.75",
-                image: "img item menu/Garlic Snapper with Fries.webp",
+                image: "img/menu-items/Garlic Snapper with Fries.webp",
             },
             {
                 name: {
@@ -978,7 +897,7 @@ const menuItems = [
                     es: "Pargo frito crujiente servido con arroz al vapor.",
                 },
                 price: "$9.75",
-                image: "img item menu/Fried Snapper with Rice.webp",
+                image: "img/menu-items/Fried Snapper with Rice.webp",
             },
             {
                 name: {
@@ -990,7 +909,7 @@ const menuItems = [
                     es: "Pargo frito crujiente servido con arroz frito sabroso.",
                 },
                 price: "$9.75",
-                image: "img item menu/Fried Snapper with Fried Rice.webp",
+                image: "img/menu-items/Fried Snapper with Fried Rice.webp",
             },
             {
                 name: {
@@ -1002,7 +921,7 @@ const menuItems = [
                     es: "Filete de corvina tierno cocinado en salsa de ajo, servido con papas fritas.",
                 },
                 price: "$9.75",
-                image: "img item menu/Garlic Sea Bass Fillet with French Fries.webp",
+                image: "img/menu-items/Garlic Sea Bass Fillet with French Fries.webp",
             },
             {
                 name: {
@@ -1014,7 +933,7 @@ const menuItems = [
                     es: "Filete de corvina tierno cocinado en salsa de ajo, servido con plátanos fritos.",
                 },
                 price: "$9.75",
-                image: "img item menu/Garlic Sea Bass Fillet with Fried Plantain.webp",
+                image: "img/menu-items/Garlic Sea Bass Fillet with Fried Plantain.webp",
             },
             {
                 name: {
@@ -1026,7 +945,7 @@ const menuItems = [
                     es: "Filete de corvina tierno cocinado en salsa de ajo, servido con una ensalada fresca.",
                 },
                 price: "$9.75",
-                image: "img item menu/Garlic Sea Bass Fillet with Salad.webp",
+                image: "img/menu-items/Garlic Sea Bass Fillet with Salad.webp",
             },
             {
                 name: {
@@ -1038,7 +957,7 @@ const menuItems = [
                     es: "Filete de corvina a la parrilla servido con arroz blanco.",
                 },
                 price: "$9.75",
-                image: "img item menu/Grilled Sea Bass with White Rice.webp",
+                image: "img/menu-items/Grilled Sea Bass with White Rice.webp",
             },
             {
                 name: {
@@ -1050,7 +969,7 @@ const menuItems = [
                     es: "Filete de corvina tierno sazonado con especias criollas, sellado a la perfección y servido con papas fritas doradas y crujientes.",
                 },
                 price: "$9.75",
-                image: "img item menu/Creole Sea Bass Fillet with Fries.webp",
+                image: "img/menu-items/Creole Sea Bass Fillet with Fries.webp",
             },
             {
                 name: {
@@ -1062,7 +981,7 @@ const menuItems = [
                     es: "Filete de corvina sazonado al estilo criollo servido con plátanos fritos.",
                 },
                 price: "$9.75",
-                image: "img item menu/Creole Sea Bass Fillet with Fried Plantain.webp",
+                image: "img/menu-items/Creole Sea Bass Fillet with Fried Plantain.webp",
             },
             {
                 name: {
@@ -1074,7 +993,7 @@ const menuItems = [
                     es: "Filete de cazón empanizado crujiente servido con papas fritas doradas.",
                 },
                 price: "$6.00",
-                image: "img item menu/Breaded School Shark Fillet with Fries.webp",
+                image: "img/menu-items/Breaded School Shark Fillet with Fries.webp",
             },
             {
                 name: {
@@ -1086,7 +1005,7 @@ const menuItems = [
                     es: "Calamares tiernos cocinados en salsa de ajo, servidos con plátanos fritos dulces.",
                 },
                 price: "$9.75",
-                image: "img item menu/Garlic Squid with Fried Plantain.webp",
+                image: "img/menu-items/Garlic Squid with Fried Plantain.webp",
             },
         ],
     },
@@ -1110,7 +1029,7 @@ const menuItems = [
                     es: "Una sopa sustanciosa hecha con pollo, cerdo, camarones, huevo, vegetales y fideos.",
                 },
                 price: "$5.00",
-                image: "img item menu/Mayor Aleman Soup.webp",
+                image: "img/menu-items/Mayor Aleman Soup.webp",
             },
             {
                 name: {
@@ -1122,7 +1041,7 @@ const menuItems = [
                     es: "Una sopa reconfortante con pollo, cerdo, wonton y fideos.",
                 },
                 price: "$4.00",
-                image: "img item menu/Wonton Soup.webp",
+                image: "img/menu-items/Wonton Soup.webp",
             },
             {
                 name: {
@@ -1134,7 +1053,7 @@ const menuItems = [
                     es: "Una sopa tradicional hecha con fideos de arroz planos, camarones, pollo, cerdo y res.",
                 },
                 price: "$6.00",
-                image: "img item menu/Chinese Style Noodle Soup.webp",
+                image: "img/menu-items/Chinese Style Noodle Soup.webp",
             },
             {
                 name: {
@@ -1146,7 +1065,7 @@ const menuItems = [
                     es: "Una sopa sustanciosa y reconfortante llena de una deliciosa mezcla de sabores y texturas. <br><br>Este plato presenta un caldo sabroso con pollo tierno, cerdo, camarones, vegetales frescos y fideos.",
                 },
                 price: "$5.50",
-                image: "img item menu/Combination Soup.webp",
+                image: "img/menu-items/Combination Soup.webp",
             },
             {
                 name: {
@@ -1158,7 +1077,7 @@ const menuItems = [
                     es: "Una sustanciosa sopa de pollo con fideos que incluye pollo tierno, vegetales frescos y fideos de huevo en un caldo sabroso, coronado con cebollines.",
                 },
                 price: "$5.00",
-                image: "img item menu/Wat Kay MeinSoup.webp",
+                image: "img/menu-items/Wat Kay MeinSoup.webp",
             },
             {
                 name: {
@@ -1170,7 +1089,7 @@ const menuItems = [
                     es: "Una mezcla sabrosa de almejas, camarones, pescado y calamares en un caldo rico y aromático. <br><br>La selección de mariscos varía según disponibilidad diaria.",
                 },
                 price: "$6.00",
-                image: "img item menu/Seafood Soup.webp",
+                image: "img/menu-items/Seafood Soup.webp",
             },
             {
                 name: {
@@ -1182,7 +1101,7 @@ const menuItems = [
                     es: "Una sopa de camarones sabrosa y llena de sabor, perfecta para amantes de los mariscos.",
                 },
                 price: "$5.50",
-                image: "img item menu/Shrimp Soup.webp",
+                image: "img/menu-items/Shrimp Soup.webp",
             },
             {
                 name: {
@@ -1203,7 +1122,7 @@ const menuItems = [
                         price: "$2.50",
                     },
                 ],
-                image: "img item menu/Consommé.webp",
+                image: "img/menu-items/Consommé.webp",
             },
         ],
     },
@@ -1227,7 +1146,7 @@ const menuItems = [
                     es: "Un cremoso y suave flan cubierto con una capa de rico caramelo.",
                 },
                 price: "$2.00",
-                image: "img item menu/Caramel Custard.webp",
+                image: "img/menu-items/Caramel Custard.webp",
             },
         ],
     },
@@ -1251,7 +1170,7 @@ const menuItems = [
                     es: "Bistec picado tierno servido con tortillas calientes.",
                 },
                 price: "$5.00",
-                image: "img item menu/Chopped Steak with Tortilla.webp",
+                image: "img/menu-items/Chopped Steak with Tortilla.webp",
             },
             {
                 name: {
@@ -1263,7 +1182,7 @@ const menuItems = [
                     es: "Bistec picado tierno servido con papas fritas.",
                 },
                 price: "$5.00",
-                image: "img item menu/Chopped Steak with Fries.webp",
+                image: "img/menu-items/Chopped Steak with Fries.webp",
             },
             {
                 name: {
@@ -1275,7 +1194,7 @@ const menuItems = [
                     es: "Salchicha guisada sabrosa servida con plátanos fritos dulces.",
                 },
                 price: "$4.00",
-                image: "img item menu/Stewed Sausage with Fried Plantain.webp",
+                image: "img/menu-items/Stewed Sausage with Fried Plantain.webp",
             },
             {
                 name: {
@@ -1287,7 +1206,7 @@ const menuItems = [
                     es: "Salchicha guisada sabrosa servida con masa frita.",
                 },
                 price: "$4.00",
-                image: "img item menu/Stewed Sausage with Fried Dough.webp",
+                image: "img/menu-items/Stewed Sausage with Fried Dough.webp",
             },
             {
                 name: {
@@ -1299,7 +1218,7 @@ const menuItems = [
                     es: "Huevos revueltos esponjosos y perfectos servidos con papas fritas doradas y crujientes.",
                 },
                 price: "$4.00",
-                image: "img item menu/Scrambled Eggs with Fries.webp",
+                image: "img/menu-items/Scrambled Eggs with Fries.webp",
             },
             {
                 name: {
@@ -1311,7 +1230,7 @@ const menuItems = [
                     es: "Tortilla frita dorada servida con un delicioso huevo frito.",
                 },
                 price: "$3.50",
-                image: "img item menu/Fried Tortilla with Fried Egg.webp",
+                image: "img/menu-items/Fried Tortilla with Fried Egg.webp",
             },
             {
                 name: {
@@ -1323,7 +1242,7 @@ const menuItems = [
                     es: "Saborea nuestro pollo frito delicioso, perfectamente sazonado y frito hasta lograr un dorado perfecto, acompañado de plátanos fritos crujientes.",
                 },
                 price: "$4.50",
-                image: "img item menu/Fried Chicken with Fried Plantains.webp",
+                image: "img/menu-items/Fried Chicken with Fried Plantains.webp",
             },
             {
                 name: {
@@ -1335,7 +1254,7 @@ const menuItems = [
                     es: "Disfruta del rico aroma y sabores intensos de nuestro café recién preparado.",
                 },
                 price: "$0.75",
-                image: "img item menu/Coffee with Milk.webp",
+                image: "img/menu-items/Coffee with Milk.webp",
             },
             {
                 name: {
@@ -1347,7 +1266,7 @@ const menuItems = [
                     es: "Disfruta del rico aroma y sabores intensos de nuestro café recién preparado.",
                 },
                 price: "$0.60",
-                image: "img item menu/Black Coffee.webp",
+                image: "img/menu-items/Black Coffee.webp",
             },
             {
                 name: {
@@ -1368,7 +1287,7 @@ const menuItems = [
                         price: "$0.60",
                     },
                 ],
-                image: "img item menu/Black Tea or Cinnamon Tea.webp",
+                image: "img/menu-items/Black Tea or Cinnamon Tea.webp",
             },
         ],
     },
@@ -1392,7 +1311,7 @@ const menuItems = [
                     es: "Una bandeja grande de arroz frito, perfecta para compartir. Disponible con pollo, cerdo, camarón, mixto o res.",
                 },
                 price: "$22.00",
-                image: "img item menu/Fried Rice Tray (For 8-10 People).webp",
+                image: "img/menu-items/Fried Rice Tray (For 8-10 People).webp",
             },
             {
                 name: {
@@ -1404,7 +1323,7 @@ const menuItems = [
                     es: "Una bandeja más grande de arroz frito, ideal para reuniones más numerosas. Disponible con pollo, cerdo, camarón, mixto o res.",
                 },
                 price: "$30.00",
-                image: "img item menu/Fried Rice Tray (For 12-18 People).webp",
+                image: "img/menu-items/Fried Rice Tray (For 12-18 People).webp",
             },
             {
                 name: {
@@ -1416,247 +1335,8 @@ const menuItems = [
                     es: "Una bandeja enorme de arroz frito, perfecta para eventos grandes. Disponible con pollo, cerdo, camarón, mixto o res.",
                 },
                 price: "$37.00",
-                image: "img item menu/Fried Rice Tray (For 18-25 People).webp",
+                image: "img/menu-items/Fried Rice Tray (For 18-25 People).webp",
             },
         ],
     },
 ];
-
-let currentLang = "en"; // Idioma por defecto
-
-function createMenuItemElement(item) {
-    const div = document.createElement("div");
-    div.className = "menu-item";
-
-    div.innerHTML = `
-        <div class="menu-item-image">
-            <img src="${item.image}" alt="${
-        item.name[currentLang]
-    }" loading="lazy">
-        </div>
-        <div class="menu-item-content">
-            <h3>${item.name[currentLang]}</h3>
-            <p class="description">${item.description[currentLang] || ""}</p>
-            ${
-                item.variants
-                    ? `<div class="variants">
-                        <p class="variants-title">${
-                            currentLang === "en" ? "Variants:" : "Variantes:"
-                        }</p>
-                        <ul>
-                           ${item.variants
-                               .map(
-                                   (variant) =>
-                                       `<li>${variant.name[currentLang]}: <span class="price">${variant.price}</span></li>`
-                               )
-                               .join("")}</ul>
-                    </div>`
-                    : `<p class="price">${item.price}</p>`
-            }
-        </div>
-    `;
-
-    return div;
-}
-
-function createCategorySection(category) {
-    const categoryDiv = document.createElement("div");
-    categoryDiv.className = "category-section";
-
-    categoryDiv.innerHTML = `
-    <div class="category-wrapper">
-        <div class="category-header">
-            <hr class="top-line">
-            <h2>${category.category[currentLang]}</h2>
-            <p class="category-description">${
-                category.description[currentLang]
-            }</p>
-            <hr class="bottom-line">
-        </div>
-        <div class="menu-items">
-            ${category.items
-                .map((item) => createMenuItemElement(item).outerHTML)
-                .join("")}
-        </div>
-    </div>
-    `;
-
-    return categoryDiv;
-}
-
-function renderMenu() {
-    const menuGrid = document.getElementById("menuGrid");
-    menuGrid.innerHTML = ""; // Limpia el contenido antes de volver a renderizar
-
-    menuItems.forEach((category) => {
-        const categorySection = createCategorySection(category);
-        menuGrid.appendChild(categorySection);
-    });
-}
-
-const heroContent = {
-    title: {
-        en: "Welcome to our Restaurant",
-        es: "Bienvenido a nuestro Restaurante",
-    },
-    openingHours: {
-        en: "Open: Mon - Sun <br />9:30 a.m. - 7:30 p.m.",
-        es: "Abierto: Lun - Dom <br />9:30 a.m. - 7:30 p.m.",
-    },
-    viewMenuButton: {
-        en: "View Menu",
-        es: "Ver Menú",
-    },
-};
-//
-//
-// Las traducciones para contenido del héroe
-//
-//
-function updateHeroContent() {
-    // Cambiar título
-    document.querySelector(".hero-content h1").textContent =
-        heroContent.title[currentLang];
-
-    // Cambiar horas de apertura
-    document.querySelector(".opening-hours p").innerHTML =
-        heroContent.openingHours[currentLang];
-
-    // Cambiar texto del botón
-    document.querySelector(".view-menu-btn span").textContent =
-        heroContent.viewMenuButton[currentLang];
-}
-//
-//
-// Las traducciones de los filtros
-//
-//
-const filterTranslations = {
-    all: {
-        en: "All",
-        es: "Todo"
-    },
-    appetizers: {
-        en: "Appetizers",
-        es: "Entradas"
-    },
-    mains: {
-        en: "Mains",
-        es: "Principales"
-    },
-    "sea foods": {
-        en: "Sea foods",
-        es: "Mariscos"
-    },
-    soups: {
-        en: "Soups",
-        es: "Sopas"
-    },
-    dessert: {
-        en: "Dessert",
-        es: "Postre"
-    },
-    breakfasts: {
-        en: "Breakfasts",
-        es: "Desayunos"
-    },
-    trays: {
-        en: "Trays",
-        es: "Bandejas"
-    }
-};
-//
-//
-// Función para actualizar los textos de los filtros
-//
-//
-function updateFilterButtons() {
-    document.querySelectorAll('.filter-btn').forEach(button => {
-        const category = button.dataset.category;
-        button.textContent = filterTranslations[category][currentLang];
-    });
-}
-
-
-
-// 3. Función de filtrado adaptada a tu estructura de datos
-function filterMenuItems(category = 'all') {
-    try {
-        if (!Array.isArray(menuItems)) {
-            console.error('menuItems no es un array válido');
-            return;
-        }
-
-        const itemsToShow = category === 'all' 
-            ? menuItems 
-            : menuItems.filter(item => {
-                // Para tu estructura de datos, necesitamos acceder a item.category.en/es
-                const itemCategory = item.category 
-                    ? item.category.en.toLowerCase().trim() 
-                    : 'uncategorized';
-                
-                const filterCategory = category.toLowerCase().trim();
-
-                // Mapeo de equivalencias
-                const categoryEquivalents = {
-                    'sea foods': ['sea foods', 'seafoods', 'mariscos'],
-                    'appetizers': ['appetizers', 'entradas'],
-                    'mains': ['mains', 'platos principales'],
-                    'trays': ['trays', 'bandejas']
-                };
-
-                if (categoryEquivalents[filterCategory]) {
-                    return categoryEquivalents[filterCategory].some(equiv => 
-                        equiv === itemCategory
-                    );
-                }
-
-                return itemCategory === filterCategory;
-            });
-
-        renderMenu(itemsToShow);
-    } catch (error) {
-        console.error('Error en filterMenuItems:', error);
-        renderMenu(menuItems);
-    }
-}
-//
-//
-// Cambio de idioma y boton de idioma
-//
-//
-function setupEventListeners() {
-    // Botón de idioma
-    document.getElementById("langToggle").addEventListener("click", () => {
-        currentLang = currentLang === "en" ? "es" : "en";
-        document.querySelector("#langToggle span").textContent = currentLang.toUpperCase();
-        document.getElementById("langToggle").classList.toggle("active");
-        
-        updateHeroContent();
-        updateFilterButtons();
-        updateHeroContent(document.querySelector(".filter-btn.active").dataset.category);
-    });
-
-    // Botones de filtro (solo este bloque)
-    document.querySelectorAll('.filter-btn').forEach(button => {
-        button.addEventListener('click', function() {
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            this.classList.add('active');
-            filterMenuItems(this.dataset.category);
-        });
-    });
-}
-
-// 5. Inicialización
-document.addEventListener('DOMContentLoaded', () => {
-    // Asegúrate de que menuItems está definido antes de esto
-    updateFilterButtons();
-    filterMenuItems("all");
-    setupEventListeners();
-});
-
-
-
-
