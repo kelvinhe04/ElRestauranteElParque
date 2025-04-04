@@ -179,7 +179,7 @@ nav {
     white-space: nowrap;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    transition: all 0.3s ease;
+    transition: opacity 0.3s, transform 0.3s;
     touch-action: pan-x;
     overscroll-behavior-x: contain;
     justify-content: flex-start;
