@@ -1,5 +1,6 @@
 export const menuItems = [
     {
+        key: "appetizers", // clave interna, no se traduce
         category: { en: "APPETIZERS", es: "ENTRADAS" },
         description: {
             en: "Kick off your meal with our selection of shareable starters, designed to awaken your taste buds and bring people together. Perfect for pairing with drinks or enjoying as a light bite.",
@@ -264,6 +265,7 @@ export const menuItems = [
         ],
     },
     {
+        key: "mains", // clave interna, no se traduce
         category: {
             en: "MAINS",
             es: "PLATOS PRINCIPALES",
@@ -697,7 +699,8 @@ export const menuItems = [
             },
         ],
     },
-    {   
+    {
+        key: "sea foods", // clave interna, no se traduce
         category: {
             en: "SEA FOODS",
             es: "MARISCOS",
@@ -1010,6 +1013,7 @@ export const menuItems = [
         ],
     },
     {
+        key: "soups", // clave interna, no se traduce
         category: {
             en: "SOUPS",
             es: "SOPAS",
@@ -1127,6 +1131,7 @@ export const menuItems = [
         ],
     },
     {
+        key: "dessert", // clave interna, no se traduce
         category: {
             en: "DESSERT",
             es: "POSTRES",
@@ -1151,6 +1156,7 @@ export const menuItems = [
         ],
     },
     {
+        key: "breakfasts", // clave interna, no se traduce
         category: {
             en: "BREAKFASTS",
             es: "DESAYUNOS",
@@ -1292,6 +1298,7 @@ export const menuItems = [
         ],
     },
     {
+        key: "trays",
         category: {
             en: "TRAYS",
             es: "BANDEJAS",

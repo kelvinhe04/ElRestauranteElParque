@@ -121,9 +121,7 @@ function createMenuItemElement(item) {
 function createCategorySection(category) {
     const categoryDiv = document.createElement("div");
     categoryDiv.className = "category-section";
-    categoryDiv.id = category.category[currentLang]
-        .toLowerCase()
-        .replace(/\s+/g, "-"); // Crea un ID basado en la categoría
+    categoryDiv.id = category.key; // Usamos la clave única, no el nombre traducido
 
     categoryDiv.innerHTML = `
     <div class="category-wrapper">
@@ -274,11 +272,9 @@ function setupEventListeners() {
             this.classList.add("active");
             // filterMenuItems(this.dataset.category);
 
-            // Obtener la categoría y su correspondiente sección
-            const category = this.dataset.category
-                .toLowerCase()
-                .replace(/\s+/g, "-");
+            const category = this.dataset.category; 
             const section = document.getElementById(category);
+
 
             // Si la sección existe, hacer scroll hasta ella
             if (section) {
