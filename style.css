@@ -206,8 +206,8 @@ nav {
     position: fixed;
     bottom: 75px;
     right: 1rem;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background-color: var(--glass-bg); /* Color llamativo */
     border: 1px solid var(--glass-border);
     color: var(--text-light);
@@ -221,7 +221,7 @@ nav {
     transition: opacity 0.3s, transform 0.3s;
 }
 .fa-arrow-up {
-    font-size: 16px; /* Ajusta el tamaño */
+    font-size: 18px; /* Ajusta el tamaño */
 }
 
 .scroll-to-top.show {
