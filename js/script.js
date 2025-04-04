@@ -86,7 +86,7 @@ let currentLang = "en"; // Idioma por defecto
 function createMenuItemElement(item) {
     const div = document.createElement("div");
     div.className = "menu-item";
-    div.setAttribute("data-aos", "fade-up"); // Aquí se agrega la animación
+    div.setAttribute("data-aos", "fade-up-right"); // Aquí se agrega la animación
 
     div.innerHTML = `
         <div class="menu-item-image">
