@@ -205,7 +205,7 @@ nav {
 .scroll-to-top {
     position: fixed;
     bottom: 75px;
-    right: 1rem;
+    right: 8px;
     width: 50px;
     height: 50px;
     background-color: var(--glass-bg); /* Color llamativo */
@@ -236,7 +236,7 @@ nav {
     gap: 2rem;
 }
 .category-wrapper {
-    width: 85%;
+    width: 94.5%;
     margin: 0 auto;
 }
 
