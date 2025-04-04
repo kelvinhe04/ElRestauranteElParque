@@ -697,9 +697,9 @@ export const menuItems = [
             },
         ],
     },
-    {
+    {   
         category: {
-            en: "SEAFOODS",
+            en: "SEA FOODS",
             es: "MARISCOS",
         },
         description: {

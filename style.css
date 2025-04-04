@@ -163,6 +163,7 @@ nav {
     opacity: 0;
     border: 1px solid var(--glass-border);
     padding: 0.5rem 0;
+    z-index: 100;
 }
 .category-filter {
     display: flex;

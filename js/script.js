@@ -1,4 +1,4 @@
-import { menuItems } from "./menuData.js"; // Sin "/js/js/"
+import { menuItems } from "./menuData.js"; 
 
 const filterBtns = document.querySelectorAll(".filter-btn");
 const categoryFilter = document.querySelector(".category-filter");
@@ -13,6 +13,10 @@ themeToggle.addEventListener("click", () => {
     icon.classList.toggle("fa-moon");
     icon.classList.toggle("fa-sun");
 });
+
+
+
+
 //
 //
 //Scroll to top button
@@ -34,6 +38,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
+
+
 //
 //
 //
@@ -41,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //
 //
 //
-// Scroll handling for category filter
+// 
 let lastScrollY = window.scrollY;
 let lastScrollTime = Date.now();
 const scrollThreshold = window.innerHeight; // Set threshold to window height
@@ -73,8 +80,6 @@ window.addEventListener("scroll", () => {
         lastScrollY = currentScrollY;
     }
 });
-
-
 
 let currentLang = "en"; // Idioma por defecto
 
@@ -116,6 +121,9 @@ function createMenuItemElement(item) {
 function createCategorySection(category) {
     const categoryDiv = document.createElement("div");
     categoryDiv.className = "category-section";
+    categoryDiv.id = category.category[currentLang]
+        .toLowerCase()
+        .replace(/\s+/g, "-"); // Crea un ID basado en la categoría
 
     categoryDiv.innerHTML = `
     <div class="category-wrapper">
@@ -137,7 +145,11 @@ function createCategorySection(category) {
 
     return categoryDiv;
 }
-
+//
+//
+// Cargar todos los platos del menú
+//
+//
 function renderMenu(items) {
     const menuGrid = document.getElementById("menuGrid");
     menuGrid.innerHTML = ""; // Limpia el contenido antes de volver a renderizar
@@ -147,7 +159,11 @@ function renderMenu(items) {
         menuGrid.appendChild(categorySection);
     });
 }
-
+//
+//
+// Las traducciones para contenido del héroe
+//
+//
 const heroContent = {
     title: {
         en: "Welcome to our Restaurant",
@@ -228,64 +244,9 @@ function updateFilterButtons() {
     document.querySelectorAll(".filter-btn").forEach((button) => {
         const category = button.dataset.category;
         button.textContent = filterTranslations[category][currentLang];
-
-        // Agregar evento de clic para desplazarse a la categoría
-        button.addEventListener("click", () => {
-            const categorySection = document.getElementById(category);
-            if (categorySection) {
-                categorySection.scrollIntoView({ behavior: "smooth" });
-            }
-        });
     });
 }
 
-
-// 3. Función de filtrado adaptada a tu estructura de datos
-function filterMenuItems(category = "all") {
-    try {
-        if (!Array.isArray(menuItems)) {
-            console.error("menuItems no es un array válido");
-            return;
-        }
-
-        const itemsToShow =
-            category === "all"
-                ? menuItems
-                : menuItems.filter((item) => {
-                      // Para tu estructura de datos, necesitamos acceder a item.category.en/es
-                      const itemCategory = item.category
-                          ? item.category.en.toLowerCase().trim()
-                          : "uncategorized";
-
-                      const filterCategory = category.toLowerCase().trim();
-
-                      // Mapeo de equivalencias
-                      const categoryEquivalents = {
-                          "sea foods": ["sea foods", "seafoods", "mariscos"],
-                          appetizers: ["appetizers", "entradas"],
-                          mains: ["mains", "platos principales"],
-                          trays: ["trays", "bandejas"],
-                          soups: ["soups", "sopas"],
-                          dessert: ["dessert", "postre"],
-                          breakfasts: ["breakfasts", "desayunos"],
-                          all: ["all", "todo"], // Si necesitas filtrar por "todos"
-                      };
-
-                      if (categoryEquivalents[filterCategory]) {
-                          return categoryEquivalents[filterCategory].some(
-                              (equiv) => equiv === itemCategory
-                          );
-                      }
-
-                      return itemCategory === filterCategory;
-                  });
-
-        renderMenu(itemsToShow);
-    } catch (error) {
-        console.error("Error en filterMenuItems:", error);
-        renderMenu(menuItems);
-    }
-}
 //
 //
 // Cambio de idioma y boton de idioma
@@ -301,9 +262,7 @@ function setupEventListeners() {
 
         updateHeroContent();
         updateFilterButtons();
-        updateHeroContent(
-            document.querySelector(".filter-btn.active").dataset.category
-        );
+        renderMenu(menuItems);
     });
 
     // Botones de filtro (solo este bloque)
@@ -313,15 +272,29 @@ function setupEventListeners() {
                 btn.classList.remove("active");
             });
             this.classList.add("active");
-            filterMenuItems(this.dataset.category);
+            // filterMenuItems(this.dataset.category);
+
+            // Obtener la categoría y su correspondiente sección
+            const category = this.dataset.category
+                .toLowerCase()
+                .replace(/\s+/g, "-");
+            const section = document.getElementById(category);
+
+            // Si la sección existe, hacer scroll hasta ella
+            if (section) {
+                section.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
         });
     });
 }
 
-// 5. Inicialización
+//
+//
+//  Inicialización
+//
+//
 document.addEventListener("DOMContentLoaded", () => {
-    // Asegúrate de que menuItems está definido antes de esto
     updateFilterButtons();
-    filterMenuItems("all");
     setupEventListeners();
+    renderMenu(menuItems);
 });
