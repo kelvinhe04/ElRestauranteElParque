@@ -87,6 +87,7 @@ function createMenuItemElement(item) {
     const div = document.createElement("div");
     div.className = "menu-item";
     div.setAttribute("data-aos", "fade-up-right"); // Aquí se agrega la animación
+    
 
     div.innerHTML = `
         <div class="menu-item-image">
@@ -122,7 +123,10 @@ function createMenuItemElement(item) {
 function createCategorySection(category) {
     const categoryDiv = document.createElement("div");
     categoryDiv.className = "category-section";
+
     categoryDiv.id = category.key; // Usamos la clave única, no el nombre traducido
+
+    
 
     categoryDiv.innerHTML = `
     <div class="category-wrapper">
@@ -271,7 +275,6 @@ function setupEventListeners() {
                 btn.classList.remove("active");
             });
             this.classList.add("active");
-            // filterMenuItems(this.dataset.category);
 
             const category = this.dataset.category; 
             const section = document.getElementById(category);
@@ -295,3 +298,4 @@ document.addEventListener("DOMContentLoaded", () => {
     setupEventListeners();
     renderMenu(menuItems);
 });
+

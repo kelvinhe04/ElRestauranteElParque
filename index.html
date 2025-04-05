@@ -7,9 +7,9 @@
         <link
             href="https://unpkg.com/aos@2.3.1/dist/aos.css"
             rel="stylesheet"
-        /> 
+        />
         <!-- Animate On Scroll Library -->
-        
+
         <link rel="stylesheet" href="style.css" />
         <link
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -31,7 +31,7 @@
     <body class="dark-mode">
         <main>
             <section class="hero" id="welcome">
-                <nav>
+                <nav data-aos="fade-down-left">
                     <button
                         id="langToggle"
                         class="glass-btn toggle-btn"
@@ -50,12 +50,21 @@
                 </nav>
 
                 <div class="hero-content">
-                    <h1>Welcome to our Restaurant</h1>
-                    <div class="opening-hours">
+                    <h1 data-aos="fade-left">Welcome to our Restaurant</h1>
+                    <div
+                        data-aos="flip-left"
+                        data-aos-easing="ease-out-cubic"
+                        data-aos-duration="1300"
+                        class="opening-hours"
+                    >
                         <i class="far fa-clock"></i>
                         <p>Open: Mon - Sun <br />9:30 a.m. - 7:30 p.m.</p>
                     </div>
-                    <a href="#menuGrid" class="view-menu-btn">
+                    <a
+                        data-aos="fade-right"
+                        href="#menuGrid"
+                        class="view-menu-btn"
+                    >
                         <span>View Menu</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>

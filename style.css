@@ -88,6 +88,7 @@ nav {
     gap: 0.5rem;
     font-weight: 500;
     
+    
 }
 .toggle-btn{
         box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
@@ -200,6 +201,7 @@ nav {
     background: var(--accent);
     color: var(--primary-dark);
     border-color: var(--accent);
+    
 }
 
 .scroll-to-top {
@@ -251,12 +253,12 @@ hr {
     opacity: 70%;
 }
 .top-line {
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 20px;
 }
 .bottom-line {
     margin-top: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 h2 {
     color: var(--text-light);
@@ -266,7 +268,7 @@ h2 {
 .category-description {
     color: var(--text-muted);
     text-align: center;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
 }
 
