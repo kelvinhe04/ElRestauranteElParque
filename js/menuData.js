@@ -3,15 +3,15 @@ export const menuItems = [
         key: "appetizers", // clave interna, no se traduce
         category: { en: "APPETIZERS", es: "ENTRADAS" },
         description: {
-            en: "Kick off your meal with our selection of shareable starters, designed to awaken your taste buds and bring people together. Perfect for pairing with drinks or enjoying as a light bite.",
-            es: "Empieza tu comida con nuestra selección de entradas para compartir, diseñadas para despertar tus papilas gustativas y reunir a las personas. Perfectas para acompañar con bebidas o disfrutar como un bocado ligero.",
+            en: "Start with our shareable starters, perfect with drinks or as a light bite.",
+            es: "Empieza con nuestras entradas para compartir, ideales con bebidas o como aperitivo.",
         },
         items: [
             {
-                name: { en: "Fried Wonton", es: "Wonton Frito" },
+                name: { en: "Fried Wonton", es: "Wanton Frito" },
                 description: {
-                    en: "Crispy, golden wonton strips - light, crunchy, and perfect for dipping. Sweet and sour sauce available for an extra $1.00. Served with 12 pieces.",
-                    es: "Crujientes tiras de wonton dorado - ligeras y crujientes, perfectas para mojar. Salsa agridulce disponible por $1.00 adicionales. Servido con 12 piezas.",
+                    en: "Crispy, golden wonton strips - light, crunchy, and perfect for dipping. <br><br>Sweet and sour sauce available for an extra $1.00. <br><br>Served with 12 pieces.",
+                    es: "Crujientes tiras de wonton dorado - ligeras y crujientes, perfectas para mojar. <br><br>Salsa agridulce disponible por $1.00 adicionales. <br><br>Servido con 12 piezas.",
                 },
                 price: "$3.00",
                 image: "img/menu-items/Fried Wonton.webp",
@@ -19,8 +19,8 @@ export const menuItems = [
             {
                 name: { en: "Spring Rolls", es: "Rollitos de Primavera" },
                 description: {
-                    en: "Crispy, golden rolls stuffed with a refreshing mix of shredded carrots, cabbage, and your choice of protein. Sweet and sour sauce available for an extra $1.00. Served with 9 pieces.",
-                    es: "Crujientes y dorados rollitos rellenos con una mezcla refrescante de zanahorias ralladas, repollo y tu proteína a elección. Salsa agridulce disponible por $1.00 adicionales. Servido con 9 piezas.",
+                    en: "Crispy, golden rolls stuffed with a refreshing mix of shredded carrots, cabbage, and your choice of protein. <br><br>Sweet and sour sauce available for an extra $1.00. <br><br>Served with 9 pieces.",
+                    es: "Crujientes y dorados rollitos rellenos con una mezcla refrescante de zanahorias ralladas, repollo y tu proteína a elección. <br><br>Salsa agridulce disponible por $1.00 adicionales. <br><br>Servido con 9 piezas.",
                 },
                 variants: [
                     {
@@ -34,10 +34,10 @@ export const menuItems = [
                 image: "img/menu-items/Spring Rolls.webp",
             },
             {
-                name: { en: "Stuffed Wonton", es: "Wonton Relleno" },
+                name: { en: "Stuffed Wonton", es: "Wanton Relleno" },
                 description: {
-                    en: "A classic favorite! Golden wontons stuffed with your choice of savory fillings. Each bite is a perfect blend of crunch and flavor. Sweet and sour sauce available for an extra $1.00. Served with 9 pieces.",
-                    es: "¡Un clásico favorito! Wontons dorados rellenos con tu elección de ingredientes sabrosos. Cada bocado es una mezcla perfecta de crujiente y sabor. Salsa agridulce disponible por $1.00 adicionales. Servido con 9 piezas.",
+                    en: "A classic favorite! Golden wontons stuffed with your choice of savory fillings. Each bite is a perfect blend of crunch and flavor. <br><br>Sweet and sour sauce available for an extra $1.00. <br><br>Served with 9 pieces.",
+                    es: "¡Un clásico favorito! Wontons dorados rellenos con tu elección de ingredientes sabrosos. Cada bocado es una mezcla perfecta de crujiente y sabor. <br><br>Salsa agridulce disponible por $1.00 adicionales. <br><br>Servido con 9 piezas.",
                 },
                 variants: [
                     { name: { en: "Pork", es: "Cerdo" }, price: "$7.00" },
@@ -197,7 +197,7 @@ export const menuItems = [
                 image: "img/menu-items/A Bowl of Vegetable Fried Rice.webp",
             },
             {
-                name: { en: "Leon Pan Wanton", es: "Wonton Leon Pan" },
+                name: { en: "Leon Pan Wanton", es: "Leon Pan Wanton" },
                 description: {
                     en: "Soft, tender wontons filled with savory meat or chicken.",
                     es: "Wontons suaves y tiernos rellenos de carne sabrosa o pollo.",
@@ -271,8 +271,8 @@ export const menuItems = [
             es: "PLATOS PRINCIPALES",
         },
         description: {
-            en: "Our main dishes are crafted with care, combining fresh ingredients and bold flavors to create unforgettable meals.",
-            es: "Nuestros platos principales están elaborados con cuidado, combinando ingredientes frescos y sabores audaces para crear comidas inolvidables.",
+            en: "Our mains are made with fresh ingredients and bold flavors for unforgettable meals.",
+            es: "Nuestros platos principales mezclan ingredientes frescos y sabores intensos para comidas memorables.",
         },
         items: [
             {
