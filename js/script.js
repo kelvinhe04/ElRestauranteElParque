@@ -169,13 +169,21 @@ function setupScrollSpy() {
     if (initialId) updateActiveButton(initialId);
 }
 
-// Función independiente para actualizar botones
 function updateActiveButton(currentId) {
     document.querySelectorAll(".filter-btn").forEach((btn) => {
         const isActive = btn.dataset.category === currentId;
         btn.classList.toggle("active", isActive);
+
+        if (isActive) {
+            btn.scrollIntoView({
+                behavior: "smooth",
+                inline: "center",
+                block: "nearest",
+            });
+        }
     });
 }
+
 
 
 
