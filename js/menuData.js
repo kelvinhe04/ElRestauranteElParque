@@ -706,8 +706,9 @@ export const menuItems = [
             es: "MARISCOS",
         },
         description: {
-            en: "Savor the fresh flavors of the ocean with our delicious seafood dishes. From succulent prawns to flavorful fish, each dish is expertly prepared to highlight the natural taste of the sea. Enjoy a variety of options, perfectly seasoned and cooked to perfection.",
-            es: "Saborea los frescos sabores del océano con nuestros deliciosos platos de mariscos. Desde gambas suculentas hasta pescados llenos de sabor, cada plato está preparado con maestría para resaltar el gusto natural del mar. Disfruta de una variedad de opciones, perfectamente sazonadas y cocinadas a la perfección.",
+            en: "Enjoy fresh ocean flavors with our seafood dishes—expertly prepared to highlight the sea's natural taste.",
+
+            es: "Disfruta los sabores del mar con nuestros platos de mariscos—preparados para resaltar su frescura y sabor natural.",
         },
         items: [
             {
@@ -1019,8 +1020,9 @@ export const menuItems = [
             es: "SOPAS",
         },
         description: {
-            en: "Warm, comforting, and full of flavor—our selection of authentic Chinese soups is the perfect way to start your meal. Each bowl is crafted with fresh ingredients and traditional seasonings, offering a rich and satisfying experience with every sip.",
-            es: "Cálidas, reconfortantes y llenas de sabor—nuestra selección de sopas chinas auténticas es la manera perfecta de comenzar tu comida. Cada tazón está elaborado con ingredientes frescos y condimentos tradicionales, ofreciendo una experiencia rica y satisfactoria con cada sorbo.",
+            en: "Warm up with our authentic Chinese soups—crafted with fresh ingredients and rich flavors for a perfect start.",
+
+            es: "Prueba nuestras sopas chinas auténticas—elaboradas con ingredientes frescos y sabores intensos para un comienzo perfecto.",
         },
         items: [
             {
@@ -1137,8 +1139,9 @@ export const menuItems = [
             es: "POSTRES",
         },
         description: {
-            en: "End your meal on a sweet note with our delightful selection of desserts. From rich, indulgent treats to light and refreshing options, each dessert is crafted to satisfy your cravings and complete your dining experience.",
-            es: "Termina tu comida con un toque dulce con nuestra encantadora selección de postres. Desde ricos y indulgentes manjares hasta opciones ligeras y refrescantes, cada postre está elaborado para satisfacer tus antojos y completar tu experiencia culinaria.",
+            en: "End sweetly with our desserts—indulgent treats or light options to complete your meal.",
+
+            es: "Termina con dulzura nuestros postres: indulgentes o ligeros, el broche perfecto para tu comida.",
         },
         items: [
             {
@@ -1162,8 +1165,9 @@ export const menuItems = [
             es: "DESAYUNOS",
         },
         description: {
-            en: "Start your day right with our delicious breakfast selections! From hearty classics to light and healthy options, we offer a variety of dishes to satisfy every craving. Enjoy fresh ingredients, rich flavors, and the perfect balance to fuel your morning.",
-            es: "¡Comienza tu día con nuestras deliciosas opciones de desayuno! Desde clásicos sustanciosos hasta opciones ligeras y saludables, ofrecemos una variedad de platos para satisfacer todos los antojos. Disfruta de ingredientes frescos, sabores ricos y el equilibrio perfecto para energizar tu mañana.",
+            en: "Start your day right with our breakfast selections—heart classics, healthy options, and fresh flavors to fuel your morning.",
+
+            es: "Comienza tu día con nuestro desayuno: clásicos, opciones saludables y sabores frescos para energizar tu mañana.",
         },
         items: [
             {
@@ -1304,8 +1308,9 @@ export const menuItems = [
             es: "BANDEJAS",
         },
         description: {
-            en: "Perfect for sharing, our trays are packed with generous portions of delicious, freshly prepared dishes. Whether for family gatherings, special occasions, or simply a feast with friends, enjoy a variety of flavors served in convenient, ready-to-enjoy portions.",
-            es: "Perfectas para compartir, nuestras bandejas contienen generosas porciones de deliciosos platillos recién preparados. Ya sea para reuniones familiares, ocasiones especiales o simplemente una fiesta con amigos, disfruta de una variedad de sabores servidos en porciones convenientes y listas para disfrutar.",
+            en: "Perfect for sharing, our trays offer generous portions of freshly prepared dishes—ideal for gatherings, celebrations, or feasts with friends.",
+
+            es: "Ideales para compartir, nuestras bandejas incluyen abundantes porciones de platillos recién hechos, perfectos para reuniones, celebraciones o encuentros con amigos.",
         },
         items: [
             {
