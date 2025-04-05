@@ -1,4 +1,4 @@
-import { menuItems } from "./menuData.js"; 
+import { menuItems } from "./menuData.js";
 
 const filterBtns = document.querySelectorAll(".filter-btn");
 const categoryFilter = document.querySelector(".category-filter");
@@ -13,9 +13,6 @@ themeToggle.addEventListener("click", () => {
     icon.classList.toggle("fa-moon");
     icon.classList.toggle("fa-sun");
 });
-
-
-
 
 //
 //
@@ -38,9 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
-
-
 //
 //
 //
@@ -48,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //
 //
 //
-// 
+//
 let lastScrollY = window.scrollY;
 let lastScrollTime = Date.now();
 const scrollThreshold = window.innerHeight; // Set threshold to window height
@@ -87,7 +81,6 @@ function createMenuItemElement(item) {
     const div = document.createElement("div");
     div.className = "menu-item";
     div.setAttribute("data-aos", "fade-up-right"); // Aquí se agrega la animación
-    
 
     div.innerHTML = `
         <div class="menu-item-image">
@@ -126,28 +119,67 @@ function createCategorySection(category) {
 
     categoryDiv.id = category.key; // Usamos la clave única, no el nombre traducido
 
-    
-
     categoryDiv.innerHTML = `
-    <div class="category-wrapper">
-        <div class="category-header">
-            <hr class="top-line">
-            <h2>${category.category[currentLang]}</h2>
-            <p class="category-description">${
-                category.description[currentLang]
-            }</p>
-            <hr class="bottom-line">
+        <div class="category-wrapper">
+            <div class="category-header">
+                <hr class="top-line">
+                <h2>${category.category[currentLang]}</h2>
+                <p class="category-description">${
+                    category.description[currentLang]
+                }</p>
+                <hr class="bottom-line">
+            </div>
+            <div class="menu-items">
+                ${category.items
+                    .map((item) => createMenuItemElement(item).outerHTML)
+                    .join("")}
+            </div>
         </div>
-        <div class="menu-items">
-            ${category.items
-                .map((item) => createMenuItemElement(item).outerHTML)
-                .join("")}
-        </div>
-    </div>
-    `;
+        `;
 
     return categoryDiv;
 }
+function setupScrollSpy() {
+    const sections = document.querySelectorAll(".category-section[id]");
+    const options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const currentId = entry.target.id;
+                console.log("Sección visible:", currentId);
+                updateActiveButton(currentId);
+            }
+        });
+    }, options);
+
+    sections.forEach((section) => observer.observe(section));
+
+    // Marcar la primera sección como activa solo si ninguna otra está visible
+    const visibleSection = Array.from(sections).find((section) => {
+        const rect = section.getBoundingClientRect();
+        return rect.top >= 0 && rect.bottom <= window.innerHeight;
+    });
+
+    const initialId = visibleSection ? visibleSection.id : sections[0]?.id;
+    if (initialId) updateActiveButton(initialId);
+}
+
+// Función independiente para actualizar botones
+function updateActiveButton(currentId) {
+    document.querySelectorAll(".filter-btn").forEach((btn) => {
+        const isActive = btn.dataset.category === currentId;
+        btn.classList.toggle("active", isActive);
+    });
+}
+
+
+
+
 //
 //
 // Cargar todos los platos del menú
@@ -161,6 +193,7 @@ function renderMenu(items) {
         const categorySection = createCategorySection(category);
         menuGrid.appendChild(categorySection);
     });
+    
 }
 //
 //
@@ -276,9 +309,8 @@ function setupEventListeners() {
             });
             this.classList.add("active");
 
-            const category = this.dataset.category; 
+            const category = this.dataset.category;
             const section = document.getElementById(category);
-
 
             // Si la sección existe, hacer scroll hasta ella
             if (section) {
@@ -288,14 +320,14 @@ function setupEventListeners() {
     });
 }
 
-
 window.addEventListener("scroll", () => {
     const scrollTop = document.documentElement.scrollTop;
-    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
     const scrollPercent = (scrollTop / scrollHeight) * 100;
     document.getElementById("progressBar").style.width = scrollPercent + "%";
 });
-
 
 //
 //
@@ -306,5 +338,5 @@ document.addEventListener("DOMContentLoaded", () => {
     updateFilterButtons();
     setupEventListeners();
     renderMenu(menuItems);
+    setupScrollSpy();
 });
-
