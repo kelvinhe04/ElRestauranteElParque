@@ -86,6 +86,8 @@ let currentLang = "en"; // Idioma por defecto
 function createMenuItemElement(item) {
     const div = document.createElement("div");
     div.className = "menu-item";
+    div.setAttribute("data-aos", "fade-up-right"); // Aquí se agrega la animación
+    
 
     div.innerHTML = `
         <div class="menu-item-image">
@@ -121,9 +123,10 @@ function createMenuItemElement(item) {
 function createCategorySection(category) {
     const categoryDiv = document.createElement("div");
     categoryDiv.className = "category-section";
-    categoryDiv.id = category.category[currentLang]
-        .toLowerCase()
-        .replace(/\s+/g, "-"); // Crea un ID basado en la categoría
+
+    categoryDiv.id = category.key; // Usamos la clave única, no el nombre traducido
+
+    
 
     categoryDiv.innerHTML = `
     <div class="category-wrapper">
@@ -272,13 +275,10 @@ function setupEventListeners() {
                 btn.classList.remove("active");
             });
             this.classList.add("active");
-            // filterMenuItems(this.dataset.category);
 
-            // Obtener la categoría y su correspondiente sección
-            const category = this.dataset.category
-                .toLowerCase()
-                .replace(/\s+/g, "-");
+            const category = this.dataset.category; 
             const section = document.getElementById(category);
+
 
             // Si la sección existe, hacer scroll hasta ella
             if (section) {
@@ -287,6 +287,15 @@ function setupEventListeners() {
         });
     });
 }
+
+
+window.addEventListener("scroll", () => {
+    const scrollTop = document.documentElement.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollPercent = (scrollTop / scrollHeight) * 100;
+    document.getElementById("progressBar").style.width = scrollPercent + "%";
+});
+
 
 //
 //
@@ -298,3 +307,4 @@ document.addEventListener("DOMContentLoaded", () => {
     setupEventListeners();
     renderMenu(menuItems);
 });
+

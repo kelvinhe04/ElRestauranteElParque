@@ -4,6 +4,12 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Restaurante El Parque</title>
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
+        <!-- Animate On Scroll Library -->
+
         <link rel="stylesheet" href="style.css" />
         <link
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -23,9 +29,11 @@
         />
     </head>
     <body class="dark-mode">
+        <div id="progressBar"></div>
+
         <main>
             <section class="hero" id="welcome">
-                <nav>
+                <nav data-aos="zoom-in-left">
                     <button
                         id="langToggle"
                         class="glass-btn toggle-btn"
@@ -44,12 +52,21 @@
                 </nav>
 
                 <div class="hero-content">
-                    <h1>Welcome to our Restaurant</h1>
-                    <div class="opening-hours">
+                    <h1 data-aos="fade-left">Welcome to our Restaurant</h1>
+                    <div
+                        data-aos="flip-left"
+                        data-aos-easing="ease-out-cubic"
+                        data-aos-duration="1300"
+                        class="opening-hours"
+                    >
                         <i class="far fa-clock"></i>
                         <p>Open: Mon - Sun <br />9:30 a.m. - 7:30 p.m.</p>
                     </div>
-                    <a href="#menuGrid" class="view-menu-btn">
+                    <a
+                        data-aos="fade-right"
+                        href="#menuGrid"
+                        class="view-menu-btn"
+                    >
                         <span>View Menu</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -58,7 +75,6 @@
 
             <div class="category-filter-bar">
                 <div class="category-filter">
-                    
                     <button
                         class="filter-btn glass-btn"
                         data-category="appetizers"
@@ -99,6 +115,10 @@
             </div>
         </main>
 
-        <script  type="module" src="js/script.js"></script>
+        <script type="module" src="js/script.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
     </body>
 </html>
