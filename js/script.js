@@ -169,6 +169,7 @@ function setupScrollSpy() {
     if (initialId) updateActiveButton(initialId);
 }
 
+
 function updateActiveButton(currentId) {
     const categoryBar = document.querySelector(".category-filter");
     if (!categoryBar) return;
@@ -198,12 +199,6 @@ function updateActiveButton(currentId) {
         }
     });
 }
-
-
-
-
-
-
 //
 //
 // Cargar todos los platos del menú
