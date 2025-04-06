@@ -169,13 +169,37 @@ function setupScrollSpy() {
     if (initialId) updateActiveButton(initialId);
 }
 
-// Función independiente para actualizar botones
 function updateActiveButton(currentId) {
-    document.querySelectorAll(".filter-btn").forEach((btn) => {
+    const categoryBar = document.querySelector(".category-filter");
+    if (!categoryBar) return;
+
+    const buttons = document.querySelectorAll(".filter-btn");
+
+    buttons.forEach((btn) => {
+        if (!btn) return;
+
         const isActive = btn.dataset.category === currentId;
         btn.classList.toggle("active", isActive);
+
+        if (isActive) {
+            const btnRect = btn.getBoundingClientRect();
+            const barRect = categoryBar.getBoundingClientRect();
+
+            const isPartiallyVisible =
+                btnRect.right > barRect.left && btnRect.left < barRect.right;
+
+            if (!isPartiallyVisible) {
+                const scrollLeft = btn.offsetLeft - 16;
+                categoryBar.scrollTo({
+                    left: scrollLeft,
+                    behavior: "smooth",
+                });
+            }
+        }
     });
 }
+
+
 
 
 
