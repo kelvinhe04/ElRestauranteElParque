@@ -56,7 +56,7 @@ export const menuItems = [
                 image: "img/menu-items/Sweet and Sour Sauce.webp",
             },
             {
-                name: { en: "Fried Plantains", es: "Plátanos Fritos" },
+                name: { en: "Fried Plantains", es: "Patacones Fritos" },
                 description: {
                     en: "Golden and crispy on the edges and inside - these fried plantains make the perfect snack or side dish.",
                     es: "Dorados y crujientes en los bordes y por dentro, estos plátanos fritos son el acompañamiento o snack perfecto.",
@@ -457,7 +457,7 @@ export const menuItems = [
                     es: "Un sabroso plato de arroz preparado con pollo, cerdo, res, camarón y huevo.",
                 },
                 price: "$9.00",
-                image: "img/menu-items/An Full Order of Canton Rice.webp",
+                image: "img/menu-items/An full Order of Canton Rice.webp",
             },
             {
                 name: {
