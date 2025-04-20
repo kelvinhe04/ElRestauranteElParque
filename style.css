@@ -365,3 +365,15 @@ h2 {
     z-index: 9999;
     transition: width 0.1s ease-out;
 }
+footer{
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+    padding: 1rem 0;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 94.5%;
+    margin-bottom: 9rem;
+    box-shadow: 5px 6px 10px rgba(0, 0, 0, 0.2);
+}
