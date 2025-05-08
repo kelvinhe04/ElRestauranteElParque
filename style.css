@@ -253,6 +253,7 @@ nav {
 .category-wrapper {
     width: 94.5%;
     margin: 0 auto;
+    
 }
 
 .category-header {
@@ -292,6 +293,8 @@ h2 {
     background-color: var(--secondary-dark);
     padding: 10px;
         box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.2);
+
+         overflow: hidden;
 
 
 }
