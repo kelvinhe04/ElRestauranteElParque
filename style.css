@@ -2,9 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
-}
 
+}
 
 :root {
     /* Dark theme variables */
@@ -245,9 +244,10 @@ nav {
 
 /* Items de menu */
 .menu-grid {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 2rem;
+    gap: 2rem; */
+    
 }
 
 .category-wrapper {
@@ -294,7 +294,7 @@ h2 {
     padding: 10px;
         box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.2);
 
-         overflow: hidden;
+    overflow: hidden;
 
 
 }
@@ -322,12 +322,14 @@ h2 {
     margin: 0.8rem 0 1rem 0;
     font-size: 1.3rem;
     line-height: 1.4;
+
 }
 
 .menu-item-content .price {
     color: var(--text-light);
     font-weight: 600;
     margin-bottom: 1rem;
+  
 }
 
 .menu-item-content .description {
@@ -337,7 +339,9 @@ h2 {
     line-height: 1.5;
     width: 95%;
     margin-bottom: 2rem;
+    
 }
+
 
 .menu-item-content .variants {
     margin-bottom: 1rem;
@@ -390,4 +394,14 @@ footer{
     width: 94.5%;
     margin-bottom: 9rem;
     box-shadow: 5px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+@media (min-width: 768px) {
+  
+}
+
+@media (min-width: 1024px) {
+  
 }
