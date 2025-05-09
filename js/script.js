@@ -1,9 +1,7 @@
 import { menuItems } from "./menuData.js";
 
-const filterBtns = document.querySelectorAll(".filter-btn");
 const categoryFilter = document.querySelector(".category-filter");
 const categoryFilterBar = document.querySelector(".category-filter-bar");
-const menuGrid = document.getElementById("menu-grid");
 const themeToggle = document.getElementById("themeToggle");
 
 // Theme Toggle
