@@ -155,14 +155,14 @@ nav {
     left: 50%;
     transform: translateX(-50%);
     bottom: 0.5rem;
-    width: 95%;
+    width:  calc(100% - 16px);
     border-radius: 100px;
     background: var(--glass-bg);
     backdrop-filter: blur(5px);
     box-shadow: 5px 6px 10px rgba(0, 0, 0, 0.2);
     opacity: 0;
     border: 1px solid var(--glass-border);
-    padding: 0.5rem 0;
+    padding: 8px 0;
     z-index: 100;
 }
 .category-filter {
@@ -170,7 +170,7 @@ nav {
     gap: 0.5rem;
     overflow-x: auto;
     margin: 0 auto;
-    width: 94%;
+    width:  calc(100% - 16px);
     border-radius: 100px;
     z-index: 100;
     scroll-behavior: smooth;
@@ -232,7 +232,8 @@ nav {
 }
 
 .category-wrapper {
-    width: 94.5%;
+   
+    width:  calc(100% - 20px);;
     margin: 0 auto;
 }
 
@@ -422,11 +423,10 @@ footer {
         height: 400px;
     }
     .category-filter-bar {
-        width: 69%;
+        
+        width:  calc(100% - 209px);
     }
-    .category-filter {
-        width: 97%;
-    }
+    
 
     .menu-item-content h3 {
         font-size: 1.5rem;
@@ -449,7 +449,7 @@ footer {
 
     .scroll-to-top {
         bottom: 12px;
-        right: 40px;
+        right: 26px;
         
     }
     .top-line {
@@ -520,11 +520,9 @@ footer {
     }
 
     .category-filter-bar {
-        width: 52%;
+        width:  calc(100% - 706px);
     }
-    .category-filter {
-        width: 97.5%;
-    }   
+     
     .scroll-to-top {
         bottom: 12px;
         right: 140px;
