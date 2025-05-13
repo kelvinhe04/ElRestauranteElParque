@@ -28,62 +28,60 @@
             href="img/icons/cutlery (1).png"
         />
     </head>
-
     <script type="module">
-        // Importa las funciones necesarias de Firebase
+        // ✅ Importar desde la CDN (versión de navegador)
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
-        import {
-            getDatabase,
-            ref,
-            get,
-            set,
-        } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
-
-        // Tu configuración de Firebase
+        import { getDatabase, ref, get, set } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
+    
+        // ✅ Tu configuración
         const firebaseConfig = {
-            apiKey: "AIzaSyBzFeSriMLjxf-bx2NLi5KpzgEEKPGo0fQ",
-            authDomain: "contadorvisitas-77017.firebaseapp.com",
-            databaseURL:
-                "https://contadorvisitas-77017-default-rtdb.firebaseio.com",
-            projectId: "contadorvisitas-77017",
-            storageBucket: "contadorvisitas-77017.firebasestorage.app",
-            messagingSenderId: "916356938625",
-            appId: "1:916356938625:web:9d09f8177a290cca51c680",
+          apiKey: "AIzaSyBzFeSriMLjxf-bx2NLi5KpzgEEKPGo0fQ",
+          authDomain: "contadorvisitas-77017.firebaseapp.com",
+          databaseURL: "https://contadorvisitas-77017-default-rtdb.firebaseio.com",
+          projectId: "contadorvisitas-77017",
+          storageBucket: "contadorvisitas-77017.appspot.com",
+          messagingSenderId: "916356938625",
+          appId: "1:916356938625:web:9d09f8177a290cca51c680"
         };
-
-        // Inicializa Firebase
+    
+        // ✅ Inicializar Firebase
         const app = initializeApp(firebaseConfig);
         const db = getDatabase(app);
-        const visitasRef = ref(db, "visitas");
-
-        // Verificar si ya se ha visitado antes con una cookie
-        const yaVisito = document.cookie.includes("yaVisito=true");
-
-        if (!yaVisito) {
-            // Obtener el número actual de visitas (si existe en Firebase)
-            get(visitasRef).then((snapshot) => {
-                let visitas = snapshot.exists() ? snapshot.val() : 1; // Si no existe, inicializa en 1
-                visitas++; // Incrementa el contador
-
-                // Guarda el nuevo valor de visitas en Firebase
-                set(visitasRef, visitas).then(() => {
-                    console.log("Visitas totales:", visitas);
-                });
-            });
-
-            // Guardar una cookie para no contar más visitas en este navegador
-            document.cookie =
-                "yaVisito=true; max-age=" +
-                60 * 60 * 24 * 365 * 10 +
-                "; path=/";
+    
+        // ✅ Obtener fecha de hoy
+        const fechaHoy = new Date().toISOString().split("T")[0];
+        const visitasRef = ref(db, "visitas/" + fechaHoy);
+    
+        // ✅ Evitar contar varias veces en el mismo día
+        if (!document.cookie.includes("visitaHoy=" + fechaHoy)) {
+          get(visitasRef).then(snapshot => {
+            let visitas = snapshot.exists() ? snapshot.val() : 0;
+            set(visitasRef, visitas + 1);
+            document.cookie = `visitaHoy=${fechaHoy}; max-age=315360000; path=/`;
+            console.log(`✅ Visita contada: ${visitas + 1} en ${fechaHoy}`);
+          });
         } else {
-            // Si el usuario ya visitó antes, solo muestra las visitas actuales
-            get(visitasRef).then((snapshot) => {
-                let visitas = snapshot.exists() ? snapshot.val() : 1; // Asegura que el valor no se quede en 0
-                console.log("Ya visitaste. Visitas totales:", visitas);
-            });
+          console.log("ℹ️ Ya fue contada la visita de hoy.");
         }
-    </script>
+    
+        // ✅ Mostrar visitas por día
+        const totalRef = ref(db, "visitas");
+    
+        get(totalRef).then(snapshot => {
+          if (snapshot.exists()) {
+            const data = snapshot.val();
+            console.log("📊 Visitas por día:");
+            for (const fecha in data) {
+              console.log(`${fecha}: ${data[fecha]} visitas`);
+            }
+          } else {
+            console.log("🚫 No hay datos de visitas aún.");
+          }
+        });
+     
+      </script>
+
+    
 
     <body class="dark-mode">
         <div id="progressBar"></div>
