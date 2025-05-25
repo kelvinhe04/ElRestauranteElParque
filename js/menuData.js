@@ -202,7 +202,7 @@ export const menuItems = [
                     en: "Soft, tender wontons filled with savory meat or chicken.",
                     es: "Wontons suaves y tiernos rellenos de carne sabrosa o pollo.",
                 },
-                price: "$8.00",
+                price: "$8.50",
                 image: "img/menu-items/Leon Pan Wanton.webp",
             },
             {
