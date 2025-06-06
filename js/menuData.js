@@ -138,6 +138,18 @@ export const menuItems = [
             },
             {
                 name: {
+                    en: "Ribs with Black Beans",
+                    es: "Costillas con Frijoles Negros",
+                },
+                description: {
+                    en: "Tender pork ribs slow-cooked with savory black beans.",
+                    es: "Costillas de cerdo tiernas cocinadas a fuego lento con frijoles negros.",
+                },
+                price: "$9.00",
+                image: "img/menu-items/Ribs with Black Beans.avif",
+            },
+            {
+                name: {
                     en: "Roast or Sweet & Sour Pork",
                     es: "Cerdo Asado o Agridulce",
                 },
@@ -529,6 +541,7 @@ export const menuItems = [
                 price: "$7.50",
                 image: "img/menu-items/Sweet and Sour Chicken with Fries.webp",
             },
+
             {
                 name: {
                     en: "Sweet & Sour Chicken Combo",
