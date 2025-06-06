@@ -516,4 +516,8 @@ footer {
         bottom: 12px;
         right: 11%;
     }
+
+    .top-line {
+        margin-top: 300px;
+    }
 }
