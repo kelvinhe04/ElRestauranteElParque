@@ -40,9 +40,9 @@ export const menuItems = [
                     es: "¡Un clásico favorito! Wontons dorados rellenos con tu elección de ingredientes sabrosos. Cada bocado es una mezcla perfecta de crujiente y sabor. <br><br>Salsa agridulce disponible por $1.00 adicionales. <br><br>Servido con 9 piezas.",
                 },
                 variants: [
-                    { name: { en: "Pork", es: "Cerdo" }, price: "$7.00" },
-                    { name: { en: "Chicken", es: "Pollo" }, price: "$7.00" },
-                    { name: { en: "Shrimp", es: "Camarón" }, price: "$8.00" },
+                    { name: { en: "Pork", es: "Cerdo" }, price: "$5.50" },
+                    { name: { en: "Chicken", es: "Pollo" }, price: "$5.50" },
+                    { name: { en: "Shrimp", es: "Camarón" }, price: "$7.00" },
                 ],
                 image: "img/menu-items/Stuffed Wonton.webp",
             },
