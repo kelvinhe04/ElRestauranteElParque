@@ -1193,7 +1193,7 @@ export const menuItems = [
                     es: "Bistec picado tierno servido con tortillas calientes.",
                 },
                 price: "$5.00",
-                image: "img/menu-items/Chopped Steak with Tortilla.webp",
+                image: "img/menu-items/Chopped Steak with Tortilla.avif",
             },
             {
                 name: {
@@ -1205,7 +1205,7 @@ export const menuItems = [
                     es: "Bistec picado tierno servido con papas fritas.",
                 },
                 price: "$5.00",
-                image: "img/menu-items/Chopped Steak with Fries.webp",
+                image: "img/menu-items/Chopped Steak with Fries Breakfasts.avif",
             },
             {
                 name: {
@@ -1253,7 +1253,7 @@ export const menuItems = [
                     es: "Tortilla frita dorada servida con un delicioso huevo frito.",
                 },
                 price: "$3.50",
-                image: "img/menu-items/Fried Tortilla with Fried Egg.webp",
+                image: "img/menu-items/Fried Tortilla with Fried Egg.avif",
             },
             {
                 name: {
@@ -1265,7 +1265,7 @@ export const menuItems = [
                     es: "Saborea nuestro pollo frito delicioso, perfectamente sazonado y frito hasta lograr un dorado perfecto, acompañado de plátanos fritos crujientes.",
                 },
                 price: "$4.50",
-                image: "img/menu-items/Fried Chicken with Fried Plantains.webp",
+                image: "img/menu-items/Fried Chicken with Fried Plantains.avif",
             },
             {
                 name: {
@@ -1277,7 +1277,7 @@ export const menuItems = [
                     es: "Disfruta del rico aroma y sabores intensos de nuestro café recién preparado.",
                 },
                 price: "$0.75",
-                image: "img/menu-items/Coffee with Milk.webp",
+                image: "img/menu-items/Coffee with Milk.avif",
             },
             {
                 name: {
@@ -1289,7 +1289,7 @@ export const menuItems = [
                     es: "Disfruta del rico aroma y sabores intensos de nuestro café recién preparado.",
                 },
                 price: "$0.60",
-                image: "img/menu-items/Black Coffee.webp",
+                image: "img/menu-items/Black Coffee.avif",
             },
             {
                 name: {
@@ -1310,7 +1310,7 @@ export const menuItems = [
                         price: "$0.60",
                     },
                 ],
-                image: "img/menu-items/Black Tea or Cinnamon Tea.webp",
+                image: "img/menu-items/Black Tea or Cinnamon Tea.avif",
             },
         ],
     },
