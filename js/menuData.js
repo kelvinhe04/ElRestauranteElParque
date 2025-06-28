@@ -1217,7 +1217,7 @@ export const menuItems = [
                     es: "Salchicha guisada sabrosa servida con plátanos fritos dulces.",
                 },
                 price: "$4.00",
-                image: "img/menu-items/Stewed Sausage with Fried Plantain.webp",
+                image: "img/menu-items/Stewed Sausage with Fried Plantain.avif",
             },
             {
                 name: {
