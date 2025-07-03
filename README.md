@@ -1,8 +1,8 @@
 # El Restaurante El Parque 🍽️
 
 <div>
-  <img src="./img/preview1.jpg" alt="Preview 1" width="200" style="display:inline-block; margin-right:10px;" />
-  <img src="./img/preview2.jpg" alt="Preview 2" width="400" style="display:inline-block;" />
+  <img src="./img/preview1.jpg" alt="Preview 1" width="200" style="display:inline-block; margin-right:100px;" />
+  <img src="./img/preview2.jpg" alt="Preview 2" width="200" style="display:inline-block;" />
 </div>
 
 
