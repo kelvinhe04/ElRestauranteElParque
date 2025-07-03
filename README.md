@@ -1,7 +1,10 @@
 # El Restaurante El Parque 🍽️
 
-![Preview of El Restaurante El Parque](./img/preview1.jpg)
-![Preview of El Restaurante El Parque](./assets/img/preview2.png)
+<div>
+  <img src="./img/preview1.jpg" alt="Preview 1" width="200" style="display:inline-block; margin-right:10px;" />
+  <img src="./img/preview2.jpg" alt="Preview 2" width="400" style="display:inline-block;" />
+</div>
+
 
 A modern and responsive website for **El Restaurante El Parque**, a restaurant offering a rich mix of **Chinese** and **Creole** cuisine.
 
