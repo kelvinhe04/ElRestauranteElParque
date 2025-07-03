@@ -37,6 +37,7 @@
             get,
             set,
             push,
+            runTransaction,
         } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
         import {
             getAuth,
@@ -99,9 +100,12 @@
                                     ? "mobile"
                                     : "desktop",
                             };
+                            console.log(
+                                "Intentando guardar detalles:",
+                                visitaDetalles
+                            );
 
-                            nuevaVisitaRef
-                                .set(visitaDetalles)
+                            set(nuevaVisitaRef, visitaDetalles)
                                 .then(() => {
                                     console.log(
                                         "✅ Detalles de visita guardados",
