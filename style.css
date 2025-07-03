@@ -243,7 +243,7 @@ nav {
 hr {
     border: 10px;
     height: 2px;
-    background: var(--text-light);
+    background: var(--secondary-dark);
     opacity: 70%;
 }
 .top-line {
