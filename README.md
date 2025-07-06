@@ -5,7 +5,6 @@
   <img src="./img/preview2.jpg" alt="Preview 2" width="200" style="display:inline-block;" />
 </div>
 
-
 A modern and responsive website for **El Restaurante El Parque**, a restaurant offering a rich mix of **Chinese** and **Creole** cuisine.
 
 ---
@@ -16,6 +15,7 @@ This website was created to:
 - Present the menu and prices for various food categories.
 - Promote the unique atmosphere of the restaurant.
 - Offer a seamless browsing experience on any device (mobile, tablet, desktop).
+- **Includes Dark Mode and Light Mode** support for user preference and better accessibility.
 
 ---
 
@@ -24,6 +24,7 @@ This website was created to:
 - **HTML5** and **CSS3** for structure and styling
 - **JavaScript** for interactivity and menu functionality
 - Responsive design using **CSS media queries**
+- Dark Mode / Light Mode toggle implemented with CSS variables and JavaScript
 
 ---
 
@@ -38,6 +39,7 @@ The website adapts to any screen size for an optimal experience across smartphon
 1. Clone the repository:
    ```bash
    git clone https://github.com/kelvinhe04/ElRestauranteElParque.git
+
 
 2. Navigate to the project folder:
    ```bash
