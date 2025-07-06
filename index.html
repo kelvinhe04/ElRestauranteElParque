@@ -28,6 +28,22 @@
             href="img/icons/cutlery (1).png"
         />
     </head>
+
+    <!-- Pega esto en el <head> de tu HTML -->
+    <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-J1VTSB7MC2"
+    ></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "G-J1VTSB7MC2");
+    </script>
+
     <script type="module">
         // ✅ Importar desde la CDN
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
