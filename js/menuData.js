@@ -727,11 +727,11 @@ export const menuItems = [
             {
                 name: {
                     en: "Garlic Prawn with Fried Plantain",
-                    es: "Gambas al Ajo con Plátano Frito",
+                    es: "Langostinos al Ajo con Plátano Frito",
                 },
                 description: {
                     en: "Succulent prawns sautéed in a rich, aromatic garlic sauce, paired with fried plantains.<br><br>Available with or without shells.",
-                    es: "Gambas suculentas salteadas en una rica salsa de ajo aromática, acompañadas de plátanos fritos.<br><br>Disponible con o sin cáscara.",
+                    es: "Langostinos suculentas salteadas en una rica salsa de ajo aromática, acompañadas de plátanos fritos.<br><br>Disponible con o sin cáscara.",
                 },
                 price: "$13.50",
                 image: "img/menu-items/Garlic Prawn with Fried Plantain.webp",
@@ -739,11 +739,11 @@ export const menuItems = [
             {
                 name: {
                     en: "Butter Prawn",
-                    es: "Gambas a la Mantequilla",
+                    es: "Langostinos a la Mantequilla",
                 },
                 description: {
                     en: "Succulent prawns sautéed in a rich, buttery sauce, served with rice and a fresh salad of tomato, lettuce, carrot, and purple cabbage. <br><br>Available with or without shells.",
-                    es: "Gambas suculentas salteadas en una rica salsa de mantequilla, servidas con arroz y una ensalada fresca de tomate, lechuga, zanahoria y repollo morado. <br><br>Disponible con o sin cáscara.",
+                    es: "Langostinos suculentas salteadas en una rica salsa de mantequilla, servidas con arroz y una ensalada fresca de tomate, lechuga, zanahoria y repollo morado. <br><br>Disponible con o sin cáscara.",
                 },
                 price: "$13.50",
                 image: "img/menu-items/Butter Prawn.webp",
