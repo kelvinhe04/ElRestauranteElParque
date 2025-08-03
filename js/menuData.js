@@ -651,6 +651,15 @@ export const menuItems = [
                 image: "img/menu-items/Smoked Pork Chop with Fried Plantains.webp",
             },
             {
+                name: { en: "Breaded Pork Chop", es: "Chuleta Apanada" },
+                description: {
+                    en: "Crispy, golden breaded pork chop - tender and flavorful, served with a side of your choice.",
+                    es: "Crujiente chuleta de cerdo apanada dorada - tierna y sabrosa, servida con un acompañante de tu elección.",
+                },
+                price: "$8.50",
+                image: "img/menu-items/Breaded Pork Chop.avif",
+            },
+            {
                 name: {
                     en: "Roast/Sweet and Sour Pork with Fried Plantains",
                     es: "Cerdo Asado/Agridulce con Plátanos Fritos",
