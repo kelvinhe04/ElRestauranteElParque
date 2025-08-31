@@ -79,7 +79,7 @@ export const menuItems = [
                     en: "Crispy, golden-breaded shrimp - perfect as a snack or appetizer.",
                     es: "Camarones empanizados, crujientes y dorados, perfectos como bocadillo o aperitivo.",
                 },
-                price: "$10.50",
+                price: "$12.00",
                 image: "img/menu-items/Breaded Shrimp.webp",
             },
             {
@@ -135,6 +135,18 @@ export const menuItems = [
                 },
                 price: "$9.00",
                 image: "img/menu-items/Sweet & Sour Chicken.webp",
+            },
+            {
+                name: {
+                    en: "Chicken with Vegetables",
+                    es: "Pollo con Vegetales",
+                },
+                description: {
+                    en: "Tender chicken stir-fried with a mix of fresh vegetables in a light savory sauce.",
+                    es: "Pollo tierno salteado con una mezcla de vegetales frescos en una salsa ligera y sabrosa.",
+                },
+                price: "$9.00",
+                image: "img/menu-items/Chicken with Vegetables.avif",
             },
             {
                 name: {
