@@ -475,11 +475,11 @@ footer {
     .menu-items {
         display: grid;
         grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
-        gap: 2rem; /* Espacio entre columnas (opcional) */
+        gap: 2rem; 
         margin-bottom: 1rem;
     }
     .menu-item {
-        margin-bottom: 1rem;
+        margin-bottom: 0;
     }
 
     .menu-item-image {

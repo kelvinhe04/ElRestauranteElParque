@@ -8,8 +8,8 @@ const themeToggle = document.getElementById("themeToggle");
 themeToggle.addEventListener("click", () => {
     document.body.classList.toggle("light-mode");
     const icon = themeToggle.querySelector("i");
-    icon.classList.toggle("fa-moon");
     icon.classList.toggle("fa-sun");
+    icon.classList.toggle("fa-moon");
 });
 
 //
