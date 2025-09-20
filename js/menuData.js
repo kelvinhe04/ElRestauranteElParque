@@ -963,6 +963,23 @@ export const menuItems = [
             },
             {
                 name: {
+                    en: "Fried Snapper with Salad",
+                    es: "Pargo Frito con Ensalada",
+                },
+                description: {
+                    en: "Crispy fried snapper served with a fresh salad. Available in two sizes: 12oz for $9.75 and 16oz for $12.00.",
+                    es: "Pargo frito crujiente servido con una ensalada fresca. Disponible en dos tamaños: 12oz por $9.75 y 16oz por $12.00.",
+                },
+                variants: [
+                    { name: { en: "12oz", es: "12oz" }, price: "$9.75" },
+                    { name: { en: "16oz", es: "16oz" }, price: "$12.00" },
+                ],
+                price: "$9.75",
+                image: "img/menu-items/Fried Snapper with Salad.avif",
+            },
+
+            {
+                name: {
                     en: "Garlic Sea Bass Fillet with French Fries",
                     es: "Filete de Corvina al Ajo con Papas Fritas",
                 },
