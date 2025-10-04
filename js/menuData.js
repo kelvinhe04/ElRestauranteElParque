@@ -1326,7 +1326,7 @@ export const menuItems = [
                     en: "Indulge in the rich aroma and bold flavors of our freshly brewed coffee.",
                     es: "Disfruta del rico aroma y sabores intensos de nuestro café recién preparado.",
                 },
-                price: "$0.75",
+                price: "$1.00",
                 image: "img/menu-items/Coffee with Milk.avif",
             },
             {
@@ -1338,7 +1338,7 @@ export const menuItems = [
                     en: "Indulge in the rich aroma and bold flavors of our freshly brewed coffee.",
                     es: "Disfruta del rico aroma y sabores intensos de nuestro café recién preparado.",
                 },
-                price: "$0.60",
+                price: "$0.75",
                 image: "img/menu-items/Black Coffee.avif",
             },
             {
@@ -1353,11 +1353,11 @@ export const menuItems = [
                 variants: [
                     {
                         name: { en: "With milk", es: "Con leche" },
-                        price: "$0.75",
+                        price: "$1.00",
                     },
                     {
                         name: { en: "Without milk", es: "Sin leche" },
-                        price: "$0.60",
+                        price: "$0.75",
                     },
                 ],
                 image: "img/menu-items/Black Tea or Cinnamon Tea.avif",
