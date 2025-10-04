@@ -223,14 +223,15 @@ const heroContent = {
         es: "Bienvenido a nuestro Restaurante",
     },
     openingHours: {
-        en: "Open: Mon - Sun <br />9:30 a.m. - 7:30 p.m.",
-        es: "Abierto: Lun - Dom <br />9:30 a.m. - 7:30 p.m.",
+        en: "Open: Mon - Sun <br />9:30 a.m. - 8:00 p.m. <br /><strong> Wed: 9:30 a.m. - 4:00 p.m.</strong>",
+        es: "Abierto: Lun - Dom <br />9:30 a.m. - 8:00 p.m. <br /><strong> Mié: 9:30 a.m. - 4:00 p.m.</strong>",
     },
     viewMenuButton: {
         en: "View Menu",
         es: "Ver Menú",
     },
 };
+
 //
 //
 // Las traducciones para contenido del héroe
