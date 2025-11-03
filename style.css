@@ -362,7 +362,7 @@ h2 {
     position: fixed;
     top: 0;
     left: 0;
-    height: 4px;
+    height: 2px;
     width: 0%;
     background: var(--accent);
     z-index: 9999;
@@ -558,6 +558,8 @@ footer {
         bottom: 12px;
         right: 11%;
     }
+
+  
 
 
 }
