@@ -1216,7 +1216,7 @@ export const menuItems = [
                     en: "A creamy, smooth custard topped with a layer of rich caramel.",
                     es: "Un cremoso y suave flan cubierto con una capa de rico caramelo.",
                 },
-                price: "$2.00",
+                price: "$2.50",
                 image: "img/menu-items/Caramel Custard.webp",
             },
         ],
