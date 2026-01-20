@@ -357,4 +357,14 @@ document.addEventListener("DOMContentLoaded", () => {
     setupEventListeners();
     renderMenu(menuItems);
     setupScrollSpy();
+
+    // Update footer year
+    const yearElement = document.getElementById("year");
+    if (yearElement) {
+        const year = new Date().toLocaleString("en-US", {
+            timeZone: "America/Panama",
+            year: "numeric",
+        });
+        yearElement.textContent = year;
+    }
 });
