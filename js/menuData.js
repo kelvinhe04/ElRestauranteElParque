@@ -550,7 +550,7 @@ export const menuItems = [
                     en: "Crispy chicken tossed in a tangy sweet and sour sauce, served with a side of fries.",
                     es: "Pollo crujiente mezclado con una salsa agridulce, servido con papas fritas.",
                 },
-                price: "$7.50",
+                price: "$8.00",
                 image: "img/menu-items/Sweet and Sour Chicken with Fries.webp",
             },
 
@@ -563,7 +563,7 @@ export const menuItems = [
                     en: "Crispy chicken pieces tossed in a tangy sweet and sour glaze, served with golden french fries and a side of flavorful fried rice. A satisfying combo that hits all the right notes—sweet, savory, and crunchy.",
                     es: "Trozos de pollo crujiente mezclados con un glaseado agridulce, servido con papas fritas doradas y una porción de arroz frito sabroso. Un combo satisfactorio que tiene todo lo bueno: dulce, salado y crujiente.",
                 },
-                price: "$8.00",
+                price: "$8.50",
                 image: "img/menu-items/Sweet & Sour Chicken Combo.webp",
             },
             {
@@ -704,7 +704,7 @@ export const menuItems = [
                     en: "Juicy ribs coated in a tangy sweet and sour sauce, served with fries.",
                     es: "Costillas jugosas cubiertas con salsa agridulce, servidas con papas fritas.",
                 },
-                price: "$7.50",
+                price: "$8.50",
                 image: "img/menu-items/Sweet and Sour Rib with Fries.webp",
             },
             {
