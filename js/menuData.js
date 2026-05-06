@@ -24,11 +24,11 @@ export const menuItems = [
                 },
                 variants: [
                     {
-                        name: { en: "Chicken and pork", es: "Pollo y cerdo" },
+                        name: { en: "Chicken and pork", es: "Pollo y puerco" },
                         price: "$7.00",
                     },
                     { name: { en: "Chicken", es: "Pollo" }, price: "$7.00" },
-                    { name: { en: "Pork", es: "Cerdo" }, price: "$7.00" },
+                    { name: { en: "Pork", es: "Puerco" }, price: "$7.00" },
                     { name: { en: "Shrimp", es: "Camarón" }, price: "$8.00" },
                 ],
                 image: "img/menu-items/Spring Rolls.webp",
@@ -40,7 +40,7 @@ export const menuItems = [
                     es: "¡Un clásico favorito! Wontons dorados rellenos con tu elección de ingredientes sabrosos. Cada bocado es una mezcla perfecta de crujiente y sabor. <br><br>Salsa agridulce disponible por $1.00 adicionales. <br><br>Servido con 9 piezas.",
                 },
                 variants: [
-                    { name: { en: "Pork", es: "Cerdo" }, price: "$5.50" },
+                    { name: { en: "Pork", es: "Puerco" }, price: "$5.50" },
                     { name: { en: "Chicken", es: "Pollo" }, price: "$5.50" },
                     { name: { en: "Shrimp", es: "Camarón" }, price: "$7.00" },
                 ],
@@ -59,7 +59,7 @@ export const menuItems = [
                 name: { en: "Fried Plantains", es: "Patacones Fritos" },
                 description: {
                     en: "Golden and crispy on the edges and inside - these fried plantains make the perfect snack or side dish.",
-                    es: "Dorados y crujientes en los bordes y por dentro, estos plátanos fritos son el acompañamiento o snack perfecto.",
+                    es: "Dorados y crujientes en los bordes y por dentro, estos Patacones son el acompañamiento o snack perfecto.",
                 },
                 price: "$3.00",
                 image: "img/menu-items/Fried Plantains.webp",
@@ -74,10 +74,10 @@ export const menuItems = [
                 image: "img/menu-items/French Fries.webp",
             },
             {
-                name: { en: "Breaded Shrimp", es: "Camarones Empanizados" },
+                name: { en: "Breaded Shrimp", es: "Camarones Apanados" },
                 description: {
                     en: "Crispy, golden-breaded shrimp - perfect as a snack or appetizer.",
-                    es: "Camarones empanizados, crujientes y dorados, perfectos como bocadillo o aperitivo.",
+                    es: "Camarones Apanados, crujientes y dorados, perfectos como bocadillo o aperitivo.",
                 },
                 price: "$12.00",
                 image: "img/menu-items/Breaded Shrimp.webp",
@@ -155,7 +155,7 @@ export const menuItems = [
                 },
                 description: {
                     en: "Tender pork ribs slow-cooked with savory black beans.",
-                    es: "Costillas de cerdo tiernas cocinadas a fuego lento con frijoles negros.",
+                    es: "Costillas de puerco tiernas cocinadas a fuego lento con frijoles negros.",
                 },
                 price: "$9.00",
                 image: "img/menu-items/Ribs with Black Beans.avif",
@@ -163,11 +163,11 @@ export const menuItems = [
             {
                 name: {
                     en: "Roast or Sweet & Sour Pork",
-                    es: "Cerdo Asado o Agridulce",
+                    es: "Puerco Asado o Agridulce",
                 },
                 description: {
                     en: "Crispy chicken pieces coated in a tangy sweet and sour glaze.",
-                    es: "Trozos de cerdo crujientes cubiertos con un glaseado agridulce.",
+                    es: "Trozos de puerco crujientes cubiertos con un glaseado agridulce.",
                 },
                 price: "$9.00",
                 image: "img/menu-items/Roast or Sweet & Sour Pork.webp",
@@ -191,7 +191,7 @@ export const menuItems = [
                     es: "Una tortilla esponjosa y satisfactoria llena de verduras frescas y tu proteína a elección.",
                 },
                 variants: [
-                    { name: { en: "Pork", es: "Cerdo" }, price: "$5.50" },
+                    { name: { en: "Pork", es: "Puerco" }, price: "$5.50" },
                     { name: { en: "Chicken", es: "Pollo" }, price: "$5.50" },
                     { name: { en: "Shrimp", es: "Camarón" }, price: "$6.00" },
                     { name: { en: "Mixed", es: "Mixto" }, price: "$6.50" },
@@ -208,7 +208,7 @@ export const menuItems = [
                     es: "Arroz frito ligero y sabroso hecho con verduras frescas y tu proteína a elección.",
                 },
                 variants: [
-                    { name: { en: "Pork", es: "Cerdo" }, price: "$2.50" },
+                    { name: { en: "Pork", es: "Puerco" }, price: "$2.50" },
                     {
                         name: { en: "Vegetarian", es: "Vegetariano" },
                         price: "$1.50",
@@ -232,7 +232,7 @@ export const menuItems = [
             {
                 name: {
                     en: "Boiled Chicken with Ginger",
-                    es: "Pollo Hervido con Jengibre",
+                    es: "Pollo al Estilo Chino con Jengibre",
                 },
                 description: {
                     en: "Tender boiled chicken infused with aromatic ginger.",
@@ -309,7 +309,7 @@ export const menuItems = [
                     es: "Fideos crujientes cubiertos con una mezcla sabrosa de vegetales salteados y tu proteína a elección. Un delicioso contraste de texturas y sabores.",
                 },
                 variants: [
-                    { name: { en: "Pork", es: "Cerdo" }, price: "$8.00" },
+                    { name: { en: "Pork", es: "Puerco" }, price: "$8.00" },
                     {
                         name: { en: "Vegetarian", es: "Vegetariano" },
                         price: "$8.00",
@@ -331,7 +331,7 @@ export const menuItems = [
                     es: "Una porción más pequeña de nuestro clásico chow mein, perfecto para una comida más ligera.",
                 },
                 variants: [
-                    { name: { en: "Pork", es: "Cerdo" }, price: "$6.00" },
+                    { name: { en: "Pork", es: "Puerco" }, price: "$6.00" },
                     {
                         name: { en: "Vegetarian", es: "Vegetariano" },
                         price: "$6.00",
@@ -353,7 +353,7 @@ export const menuItems = [
                     es: "Un salteado abundante de vegetales frescos y tu proteína a elección.",
                 },
                 variants: [
-                    { name: { en: "Pork", es: "Cerdo" }, price: "$8.50" },
+                    { name: { en: "Pork", es: "Puerco" }, price: "$8.50" },
                     { name: { en: "Mixed", es: "Mixto" }, price: "$9.50" },
                     { name: { en: "Shrimp", es: "Camarón" }, price: "$9.00" },
                     { name: { en: "Chicken", es: "Pollo" }, price: "$8.50" },
@@ -371,7 +371,7 @@ export const menuItems = [
                     es: "Una porción más pequeña de nuestro sabroso chop suey, ideal para un apetito más ligero.",
                 },
                 variants: [
-                    { name: { en: "Pork", es: "Cerdo" }, price: "$6.50" },
+                    { name: { en: "Pork", es: "Puerco" }, price: "$6.50" },
                     { name: { en: "Mixed", es: "Mixto" }, price: "$7.50" },
                     { name: { en: "Shrimp", es: "Camarón" }, price: "$7.00" },
                     { name: { en: "Chicken", es: "Pollo" }, price: "$6.50" },
@@ -389,7 +389,7 @@ export const menuItems = [
                     es: "Fideos de arroz anchos y planos salteados con vegetales frescos y tu proteína a elección.",
                 },
                 variants: [
-                    { name: { en: "Pork", es: "Cerdo" }, price: "$9.25" },
+                    { name: { en: "Pork", es: "Puerco" }, price: "$9.25" },
                     {
                         name: { en: "Vegetarian", es: "Vegetariano" },
                         price: "$9.25",
@@ -410,7 +410,7 @@ export const menuItems = [
                     es: "Una porción más pequeña de nuestro sabroso chow fun, perfecto para una comida más ligera.",
                 },
                 variants: [
-                    { name: { en: "Pork", es: "Cerdo" }, price: "$7.25" },
+                    { name: { en: "Pork", es: "Puerco" }, price: "$7.25" },
                     {
                         name: { en: "Vegetarian", es: "Vegetariano" },
                         price: "$7.25",
@@ -431,7 +431,7 @@ export const menuItems = [
                     es: "Un clásico abundante y sabroso. Nuestro arroz frito se prepara con tu proteína a elección, mezclado con vegetales y condimentos aromáticos.",
                 },
                 variants: [
-                    { name: { en: "Pork", es: "Cerdo" }, price: "$7.50" },
+                    { name: { en: "Pork", es: "Puerco" }, price: "$7.50" },
                     { name: { en: "Mixed", es: "Mixto" }, price: "$8.50" },
                     { name: { en: "Shrimp", es: "Camarón" }, price: "$8.00" },
                     { name: { en: "Chicken", es: "Pollo" }, price: "$7.50" },
@@ -456,7 +456,7 @@ export const menuItems = [
                     es: "Una porción más pequeña de nuestro delicioso arroz frito, perfecto para un apetito más ligero.",
                 },
                 variants: [
-                    { name: { en: "Pork", es: "Cerdo" }, price: "$5.50" },
+                    { name: { en: "Pork", es: "Puerco" }, price: "$5.50" },
                     { name: { en: "Mixed", es: "Mixto" }, price: "$6.50" },
                     { name: { en: "Shrimp", es: "Camarón" }, price: "$6.00" },
                     { name: { en: "Chicken", es: "Pollo" }, price: "$5.50" },
@@ -478,7 +478,7 @@ export const menuItems = [
                 },
                 description: {
                     en: "A flavorful rice dish made with chicken, pork, beef, shrimp, and egg.",
-                    es: "Un sabroso plato de arroz preparado con pollo, cerdo, res, camarón y huevo.",
+                    es: "Un sabroso plato de arroz preparado con pollo, puerco, res, camarón y huevo.",
                 },
                 price: "$9.00",
                 image: "img/menu-items/An full Order of Canton Rice.webp",
@@ -497,15 +497,15 @@ export const menuItems = [
             },
             {
                 name: {
-                    en: "An Full Order of Leon Panmein",
-                    es: "Orden Completa de Leon Panmein",
+                    en: "An Full Order of Leon Pan Mein",
+                    es: "Orden Completa de Leon Pan Mein",
                 },
                 description: {
                     en: "A delicious noodle dish made with your choice of protein and eggs.",
                     es: "Un delicioso plato de fideos preparado con tu proteína a elección y huevos.",
                 },
                 variants: [
-                    { name: { en: "Pork", es: "Cerdo" }, price: "$8.50" },
+                    { name: { en: "Pork", es: "Puerco" }, price: "$8.50" },
                     { name: { en: "Chicken", es: "Pollo" }, price: "$8.50" },
                     { name: { en: "Shrimp", es: "Camarón" }, price: "$9.00" },
                     { name: { en: "Mixed", es: "Mixto" }, price: "$9.50" },
@@ -522,7 +522,7 @@ export const menuItems = [
                     es: "Una porción más pequeña de nuestro sabroso pan mein, ideal para un apetito más ligero.",
                 },
                 variants: [
-                    { name: { en: "Pork", es: "Cerdo" }, price: "$6.50" },
+                    { name: { en: "Pork", es: "Puerco" }, price: "$6.50" },
                     { name: { en: "Chicken", es: "Pollo" }, price: "$6.50" },
                     { name: { en: "Shrimp", es: "Camarón" }, price: "$7.00" },
                     { name: { en: "Mixed", es: "Mixto" }, price: "$7.50" },
@@ -532,11 +532,11 @@ export const menuItems = [
             {
                 name: {
                     en: "Grilled Chicken with Fried Plantain",
-                    es: "Pollo a la Parrilla con Plátano Frito",
+                    es: "Pollo a la Parrilla con Patacones",
                 },
                 description: {
                     en: "Juicy grilled chicken served with fried plantains.",
-                    es: "Pollo jugoso a la parrilla servido con plátanos fritos.",
+                    es: "Pollo jugoso a la parrilla servido con Patacones.",
                 },
                 price: "$8.00",
                 image: "img/menu-items/Grilled Chicken with Fried Plantain.webp",
@@ -629,11 +629,11 @@ export const menuItems = [
             {
                 name: {
                     en: "Grilled Pork Chop with Fried Plantain",
-                    es: "Chuleta de Cerdo a la Parrilla con Plátano Frito",
+                    es: "Chuleta de Puerco a la Parrilla con Patacones",
                 },
                 description: {
                     en: "Juicy, grilled pork chop seasoned to perfection, served with fried plantains.",
-                    es: "Jugosa chuleta de cerdo a la parrilla sazonada a la perfección, servida con plátanos fritos.",
+                    es: "Jugosa chuleta de puerco a la parrilla sazonada a la perfección, servida con Patacones.",
                 },
                 price: "$8.00",
                 image: "img/menu-items/Grilled Pork Chop with Fried Plantain.webp",
@@ -641,11 +641,11 @@ export const menuItems = [
             {
                 name: {
                     en: "Grilled Pork Chop with Fries",
-                    es: "Chuleta de Cerdo a la Parrilla con Papas Fritas",
+                    es: "Chuleta de Puerco a la Parrilla con Papas Fritas",
                 },
                 description: {
                     en: "Juicy, perfectly grilled pork chop served with a side of golden, crispy fries. A classic, hearty dish that combines savory flavors with satisfying textures.",
-                    es: "Jugosa chuleta de cerdo perfectamente asada a la parrilla servida con papas fritas doradas y crujientes. Un plato clásico y abundante que combina sabores salados con texturas satisfactorias.",
+                    es: "Jugosa chuleta de puerco perfectamente asada a la parrilla servida con papas fritas doradas y crujientes. Un plato clásico y abundante que combina sabores salados con texturas satisfactorias.",
                 },
                 price: "$8.00",
                 image: "img/menu-items/Grilled Pork Chop with Fries.webp",
@@ -653,20 +653,23 @@ export const menuItems = [
             {
                 name: {
                     en: "Smoked Pork Chop with Fried Plantains",
-                    es: "Chuleta de Cerdo Ahumada con Plátanos Fritos",
+                    es: "Chuleta de Puerco Ahumada con Patacones",
                 },
                 description: {
                     en: "Smoky, tender pork chops served with fried plantains.",
-                    es: "Jugosas chuletas de cerdo ahumadas servidas con plátanos fritos.",
+                    es: "Jugosas chuletas de puerco ahumadas servidas con patacones.",
                 },
                 price: "$8.00",
                 image: "img/menu-items/Smoked Pork Chop with Fried Plantains.webp",
             },
             {
-                name: { en: "Breaded Pork Chop", es: "Chuleta Apanada" },
+                name: {
+                    en: "Breaded Pork Chop with Fries",
+                    es: "Chuleta Apanada con Papas Fritas",
+                },
                 description: {
                     en: "Crispy, golden breaded pork chop - tender and flavorful, served with a side of your choice.",
-                    es: "Crujiente chuleta de cerdo apanada dorada - tierna y sabrosa, servida con un acompañante de tu elección.",
+                    es: "Crujiente chuleta de puerco apanada dorada - tierna y sabrosa, servida con un acompañante de tu elección.",
                 },
                 price: "$8.50",
                 image: "img/menu-items/Breaded Pork Chop.avif",
@@ -674,11 +677,11 @@ export const menuItems = [
             {
                 name: {
                     en: "Roast/Sweet and Sour Pork with Fried Plantains",
-                    es: "Cerdo Asado/Agridulce con Plátanos Fritos",
+                    es: "Puerco Asado/Agridulce con Patacones",
                 },
                 description: {
                     en: "Tender roasted pork or crispy pork in sweet and sour sauce, served with fried plantains.",
-                    es: "Cerdo asado tierno o cerdo crujiente en salsa agridulce, servido con plátanos fritos.",
+                    es: "Puerco asado tierno o puerco crujiente en salsa agridulce, servido con patacones.",
                 },
                 price: "$7.50",
                 image: "img/menu-items/Roast or Sweet and Sour Pork with Fried Plantains.webp",
@@ -686,11 +689,11 @@ export const menuItems = [
             {
                 name: {
                     en: "Roast/Sweet and Sour Pork with Fries",
-                    es: "Cerdo Asado/Agridulce con Papas Fritas",
+                    es: "Puerco Asado/Agridulce con Papas Fritas",
                 },
                 description: {
                     en: "Tender roasted pork or crispy pork in sweet and sour sauce, served with fries.",
-                    es: "Cerdo asado tierno o cerdo crujiente en salsa agridulce, servido con papas fritas.",
+                    es: "Puerco asado tierno o puerco crujiente en salsa agridulce, servido con papas fritas.",
                 },
                 price: "$7.50",
                 image: "img/menu-items/Roast or Sweet and Sour Pork with Fries.webp",
@@ -714,7 +717,7 @@ export const menuItems = [
                 },
                 description: {
                     en: "A flavorful rice dish combining chicken, pork, beef, shrimp.",
-                    es: "Un sabroso plato de arroz que combina pollo, cerdo, res y camarón.",
+                    es: "Un sabroso plato de arroz que combina pollo, puerco, res y camarón.",
                 },
                 price: "$9.00",
                 image: "img/menu-items/Chinese Style Combination Rice.webp",
@@ -726,7 +729,7 @@ export const menuItems = [
                 },
                 description: {
                     en: "A flavorful rice dish combining chicken, pork, beef, shrimp, and choy sum.",
-                    es: "Un sabroso plato de arroz que combina pollo, cerdo, res, camarón y choy sum.",
+                    es: "Un sabroso plato de arroz que combina pollo, puerco, res, camarón y choy sum.",
                 },
                 price: "$9.00",
                 image: "img/menu-items/Chinese Style Combination Rice2.webp",
@@ -748,11 +751,11 @@ export const menuItems = [
             {
                 name: {
                     en: "Garlic Prawn with Fried Plantain",
-                    es: "Langostinos al Ajo con Plátano Frito",
+                    es: "Langostinos al Ajo con Patacones",
                 },
                 description: {
                     en: "Succulent prawns sautéed in a rich, aromatic garlic sauce, paired with fried plantains.<br><br>Available with or without shells.",
-                    es: "Langostinos suculentas salteadas en una rica salsa de ajo aromática, acompañadas de plátanos fritos.<br><br>Disponible con o sin cáscara.",
+                    es: "Langostinos suculentas salteadas en una rica salsa de ajo aromática, acompañadas de patacones.<br><br>Disponible con o sin cáscara.",
                 },
                 price: "$13.50",
                 image: "img/menu-items/Garlic Prawn with Fried Plantain.webp",
@@ -784,11 +787,11 @@ export const menuItems = [
             {
                 name: {
                     en: "Garlic Octopus with Fried Plantains",
-                    es: "Pulpo al Ajo con Plátanos Fritos",
+                    es: "Pulpo al Ajo con Patacones",
                 },
                 description: {
                     en: "Tender octopus cooked in a garlic sauce, served with sweet fried plantains.",
-                    es: "Pulpo tierno cocinado en salsa de ajo, servido con plátanos fritos dulces.",
+                    es: "Pulpo tierno cocinado en salsa de ajo, servido con Patacones dulces.",
                 },
                 price: "$9.75",
                 image: "img/menu-items/Garlic Octopus with Fried Plantains.webp",
@@ -800,7 +803,7 @@ export const menuItems = [
                 },
                 description: {
                     en: "Succulent shrimp sautéed in a rich, aromatic garlic sauce, served alongside fried plantains.",
-                    es: "Camarones suculentos salteados en una rica salsa de ajo aromática, servidos con plátanos fritos.",
+                    es: "Camarones suculentos salteados en una rica salsa de ajo aromática, servidos con Patacones.",
                 },
                 price: "$9.75",
                 image: "img/menu-items/Garlic Shrimp with Fried Plantain.webp",
@@ -812,7 +815,7 @@ export const menuItems = [
                 },
                 description: {
                     en: "Tender shrimp cooked in a garlic sauce, served with fried plantains.",
-                    es: "Camarones tiernos cocinados en salsa de ajo, servidos con plátanos fritos.",
+                    es: "Camarones tiernos cocinados en salsa de ajo, servidos con Patacones.",
                 },
                 price: "$9.75",
                 image: "img/menu-items/Garlic Shrimp with Fries.webp",
@@ -838,7 +841,7 @@ export const menuItems = [
                     en: "Juicy shrimp cooked in a garlic sauce, served with flavorful fried rice.",
                     es: "Camarones jugosos cocinados en salsa de ajo, servidos con arroz frito sabroso.",
                 },
-                price: "$9.75",
+                price: "$10.25",
                 image: "img/menu-items/Garlic Shrimp with Fried Rice.webp",
             },
             {
@@ -848,7 +851,7 @@ export const menuItems = [
                 },
                 description: {
                     en: "Shrimp cooked in a spicy Creole sauce, served with fried plantains.",
-                    es: "Camarones cocinados en salsa criolla picante, servidos con plátanos fritos.",
+                    es: "Camarones cocinados en salsa criolla picante, servidos con Patacones.",
                 },
                 price: "$9.75",
                 image: "img/menu-items/Creole Shrimp with Fried Plantain.webp",
@@ -860,7 +863,7 @@ export const menuItems = [
                 },
                 description: {
                     en: "Shrimp cooked in a rich buttery sauce, served with sweet fried plantains.",
-                    es: "Camarones cocinados en rica salsa de mantequilla, servidos con plátanos fritos dulces.",
+                    es: "Camarones cocinados en rica salsa de mantequilla, servidos con Patacones.",
                 },
                 price: "$9.75",
                 image: "img/menu-items/Butter Shrimp with Fried Plantain.webp",
@@ -880,11 +883,11 @@ export const menuItems = [
             {
                 name: {
                     en: "Breaded Shrimp with Fried Plantain",
-                    es: "Camarones Empanizados con Plátano Frito",
+                    es: "Camarones Empanizados con Patacones",
                 },
                 description: {
                     en: "Crispy breaded shrimp served with sweet fried plantains.",
-                    es: "Camarones empanizados crujientes servidos con plátanos fritos dulces.",
+                    es: "Camarones empanizados crujientes servidos con Patacones.",
                 },
                 price: "$9.75",
                 image: "img/menu-items/Breaded Shrimp with Fried Plantain.webp",
@@ -955,8 +958,8 @@ export const menuItems = [
                     es: "Pargo frito crujiente servido con arroz frito sabroso. Disponible en dos tamaños: 12oz por $9.75 y 16oz por $12.00.",
                 },
                 variants: [
-                    { name: { en: "12oz", es: "12oz" }, price: "$9.75" },
-                    { name: { en: "16oz", es: "16oz" }, price: "$12.00" },
+                    { name: { en: "12oz", es: "12oz" }, price: "$10.25" },
+                    { name: { en: "16oz", es: "16oz" }, price: "$12.50" },
                 ],
                 price: "$9.75",
                 image: "img/menu-items/Fried Snapper with Fried Rice.webp",
@@ -993,11 +996,11 @@ export const menuItems = [
             {
                 name: {
                     en: "Garlic Sea Bass Fillet with Fried Plantain",
-                    es: "Filete de Corvina al Ajo con Plátano Frito",
+                    es: "Filete de Corvina al Ajo con Patacones",
                 },
                 description: {
                     en: "Tender sea bass fillet cooked in a garlic sauce, served with fried plantains.",
-                    es: "Filete de corvina tierno cocinado en salsa de ajo, servido con plátanos fritos.",
+                    es: "Filete de corvina tierno cocinado en salsa de ajo, servido con Patacones.",
                 },
                 price: "$9.75",
                 image: "img/menu-items/Garlic Sea Bass Fillet with Fried Plantain.webp",
@@ -1041,11 +1044,11 @@ export const menuItems = [
             {
                 name: {
                     en: "Creole Sea Bass Fillet with Fried Plantain",
-                    es: "Filete de Corvina a la Criolla con Plátano Frito",
+                    es: "Filete de Corvina a la Criolla con Patacones",
                 },
                 description: {
                     en: "Creole-seasoned sea bass fillet served with fried plantains.",
-                    es: "Filete de corvina sazonado al estilo criollo servido con plátanos fritos.",
+                    es: "Filete de corvina sazonado al estilo criollo servido con Patacones.",
                 },
                 price: "$9.75",
                 image: "img/menu-items/Creole Sea Bass Fillet with Fried Plantain.webp",
@@ -1069,7 +1072,7 @@ export const menuItems = [
                 },
                 description: {
                     en: "Tender squid cooked in a garlic sauce, served with sweet fried plantains.",
-                    es: "Calamares tiernos cocinados en salsa de ajo, servidos con plátanos fritos dulces.",
+                    es: "Calamares tiernos cocinados en salsa de ajo, servidos con Patacones dulces.",
                 },
                 price: "$9.75",
                 image: "img/menu-items/Garlic Squid with Fried Plantain.webp",
@@ -1095,7 +1098,7 @@ export const menuItems = [
                 },
                 description: {
                     en: "A hearty soup made with chicken, pork, shrimp, egg, vegetables, and noodles.",
-                    es: "Una sopa sustanciosa hecha con pollo, cerdo, camarones, huevo, vegetales y fideos.",
+                    es: "Una sopa sustanciosa hecha con pollo, puerco, camarones, huevo, vegetales y fideos.",
                 },
                 price: "$5.00",
                 image: "img/menu-items/Mayor Aleman Soup.webp",
@@ -1107,7 +1110,7 @@ export const menuItems = [
                 },
                 description: {
                     en: "A comforting soup featuring chicken, pork, a wonton, and noodles.",
-                    es: "Una sopa reconfortante con pollo, cerdo, wonton y fideos.",
+                    es: "Una sopa reconfortante con pollo, puerco, wonton y fideos.",
                 },
                 price: "$4.00",
                 image: "img/menu-items/Wonton Soup.webp",
@@ -1119,7 +1122,7 @@ export const menuItems = [
                 },
                 description: {
                     en: "A traditional soup made with flat rice noodles, shrimp, chicken, pork, and beef.",
-                    es: "Una sopa tradicional hecha con fideos de arroz planos, camarones, pollo, cerdo y res.",
+                    es: "Una sopa tradicional hecha con fideos de arroz planos, camarones, pollo, puerco y res.",
                 },
                 price: "$6.00",
                 image: "img/menu-items/Chinese Style Noodle Soup.webp",
@@ -1131,7 +1134,7 @@ export const menuItems = [
                 },
                 description: {
                     en: "A hearty and comforting soup packed with a delicious mix of flavors and textures. <br><br>This dish features a savory broth filled with tender chicken, pork, shrimp, fresh vegetables, and noodles.",
-                    es: "Una sopa sustanciosa y reconfortante llena de una deliciosa mezcla de sabores y texturas. <br><br>Este plato presenta un caldo sabroso con pollo tierno, cerdo, camarones, vegetales frescos y fideos.",
+                    es: "Una sopa sustanciosa y reconfortante llena de una deliciosa mezcla de sabores y texturas. <br><br>Este plato presenta un caldo sabroso con pollo tierno, puerco, camarones, vegetales frescos y fideos.",
                 },
                 price: "$5.50",
                 image: "img/menu-items/Combination Soup.webp",
@@ -1264,7 +1267,7 @@ export const menuItems = [
                 },
                 description: {
                     en: "Flavorful stewed sausage served with sweet fried plantains.",
-                    es: "Salchicha guisada sabrosa servida con plátanos fritos dulces.",
+                    es: "Salchicha guisada sabrosa servida con Patacones.",
                 },
                 price: "$4.00",
                 image: "img/menu-items/Stewed Sausage with Fried Plantain.avif",
@@ -1312,7 +1315,7 @@ export const menuItems = [
                 },
                 description: {
                     en: "Savor our mouthwatering fried chicken, perfectly seasoned and fried to golden perfection, paired with crispy fried plantains.",
-                    es: "Saborea nuestro pollo frito delicioso, perfectamente sazonado y frito hasta lograr un dorado perfecto, acompañado de plátanos fritos crujientes.",
+                    es: "Saborea nuestro pollo frito delicioso, perfectamente sazonado y frito hasta lograr un dorado perfecto, acompañado de Patacones crujientes.",
                 },
                 price: "$4.50",
                 image: "img/menu-items/Fried Chicken with Fried Plantains.avif",
@@ -1383,7 +1386,7 @@ export const menuItems = [
                 },
                 description: {
                     en: "A large tray of fried rice, perfect for sharing. Available in chicken, pork, shrimp, mixed, or beef.",
-                    es: "Una bandeja grande de arroz frito, perfecta para compartir. Disponible con pollo, cerdo, camarón, mixto o res.",
+                    es: "Una bandeja grande de arroz frito, perfecta para compartir. Disponible con pollo, puerco, camarón, mixto o res.",
                 },
                 price: "$22.00",
                 image: "img/menu-items/Fried Rice Tray (For 8-10 People).webp",
@@ -1395,7 +1398,7 @@ export const menuItems = [
                 },
                 description: {
                     en: "A larger tray of fried rice, ideal for bigger gatherings. Available in chicken, pork, shrimp, mixed, or beef.",
-                    es: "Una bandeja más grande de arroz frito, ideal para reuniones más numerosas. Disponible con pollo, cerdo, camarón, mixto o res.",
+                    es: "Una bandeja más grande de arroz frito, ideal para reuniones más numerosas. Disponible con pollo, puerco, camarón, mixto o res.",
                 },
                 price: "$30.00",
                 image: "img/menu-items/Fried Rice Tray (For 12-18 People).webp",
@@ -1407,7 +1410,7 @@ export const menuItems = [
                 },
                 description: {
                     en: "A massive tray of fried rice, perfect for large events. Available in chicken, pork, shrimp, mixed, or beef.",
-                    es: "Una bandeja enorme de arroz frito, perfecta para eventos grandes. Disponible con pollo, cerdo, camarón, mixto o res.",
+                    es: "Una bandeja enorme de arroz frito, perfecta para eventos grandes. Disponible con pollo, puerco, camarón, mixto o res.",
                 },
                 price: "$37.00",
                 image: "img/menu-items/Fried Rice Tray (For 18-25 People).webp",
