@@ -201,7 +201,7 @@ export const menuItems = [
             {
                 name: {
                     en: "A Bowl of Vegetable Fried Rice",
-                    es: "Un Tazón de Arroz Frito con Verduras",
+                    es: "Un Taza de Arroz Frito con Verduras",
                 },
                 description: {
                     en: "Light and flavorful fried rice made with fresh vegetables and your choice of protein.",
@@ -599,7 +599,7 @@ export const menuItems = [
                     en: "Savor our perfectly seasoned fried or roasted chicken, served with golden crispy potatoes and flavorful fried rice.",
                     es: "Disfruta de nuestro pollo frito o asado perfectamente sazonado, servido con papas doradas crujientes y arroz frito sabroso.",
                 },
-                price: "$8.00",
+                price: "$6.50",
                 image: "img/menu-items/Quarter Fried or Roasted Chicken with Potatoes and Fried Rice.webp",
             },
             {
@@ -892,11 +892,11 @@ export const menuItems = [
             {
                 name: {
                     en: "Creole Oyster with Rice",
-                    es: "Ostras a la Criolla con Arroz",
+                    es: "Ostiones a la Criolla con Arroz",
                 },
                 description: {
                     en: "Fresh oysters cooked in a spicy Creole sauce, served with rice.",
-                    es: "Ostras frescas cocinadas en salsa criolla picante, servidas con arroz.",
+                    es: "Ostiones frescos cocinados en salsa criolla picante, servidos con arroz.",
                 },
                 price: "$9.75",
                 image: "img/menu-items/Creole Oyster with Rice.webp",
@@ -1016,8 +1016,8 @@ export const menuItems = [
             },
             {
                 name: {
-                    en: "Grilled Sea Bass with White Rice",
-                    es: "Corvina a la Parrilla con Arroz Blanco",
+                    en: "Grilled Sea Bass Fillet with White Rice",
+                    es: "Filete de Corvina a la Parrilla con Arroz Blanco",
                 },
                 description: {
                     en: "Grilled sea bass fillet served with white rice.",
@@ -1210,7 +1210,7 @@ export const menuItems = [
             {
                 name: {
                     en: "Caramel Custard",
-                    es: "Flan de Caramelo",
+                    es: "Flan",
                 },
                 description: {
                     en: "A creamy, smooth custard topped with a layer of rich caramel.",
@@ -1260,7 +1260,7 @@ export const menuItems = [
             {
                 name: {
                     en: "Stewed Sausage with Fried Plantain",
-                    es: "Salchicha Guisada con Plátano Frito",
+                    es: "Salchicha Guisada con Patacones",
                 },
                 description: {
                     en: "Flavorful stewed sausage served with sweet fried plantains.",
@@ -1272,7 +1272,7 @@ export const menuItems = [
             {
                 name: {
                     en: "Stewed Sausage with Fried Dough",
-                    es: "Salchicha Guisada con Masa Frita",
+                    es: "Salchicha Guisada con Hojaldre",
                 },
                 description: {
                     en: "Flavorful stewed sausage served with fried dough.",
@@ -1308,7 +1308,7 @@ export const menuItems = [
             {
                 name: {
                     en: "Fried Chicken with Fried Plantains",
-                    es: "Pollo Frito con Plátanos Fritos",
+                    es: "Pollo Frito con Patacones",
                 },
                 description: {
                     en: "Savor our mouthwatering fried chicken, perfectly seasoned and fried to golden perfection, paired with crispy fried plantains.",
