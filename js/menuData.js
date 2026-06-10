@@ -133,7 +133,7 @@ export const menuItems = [
                     en: "Crispy chicken pieces coated in a tangy sweet and sour glaze.",
                     es: "Trozos de pollo crujientes cubiertos con un glaseado agridulce.",
                 },
-                price: "$9.00",
+                price: "$11.00",
                 image: "img/menu-items/Sweet & Sour Chicken.webp",
             },
             {
@@ -157,7 +157,7 @@ export const menuItems = [
                     en: "Tender pork ribs slow-cooked with savory black beans.",
                     es: "Costillas de puerco tiernas cocinadas a fuego lento con frijoles negros.",
                 },
-                price: "$9.00",
+                price: "$10.00",
                 image: "img/menu-items/Ribs with Black Beans.avif",
             },
             {
@@ -283,7 +283,7 @@ export const menuItems = [
                     en: "Succulent lobster cooked in a rich garlic sauce. Served with your choice of fries, fried plantain, or rice.",
                     es: "Langosta suculenta cocinada en una rica salsa de ajo. Servida con tu elección de papas fritas, plátano frito o arroz.",
                 },
-                price: "$18.50",
+                price: "$25.00",
                 image: "img/menu-items/Garlic Lobster.webp",
             },
         ],
