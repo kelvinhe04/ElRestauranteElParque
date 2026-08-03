@@ -791,7 +791,7 @@ export const menuItems = [
                 },
                 description: {
                     en: "Tender octopus cooked in a garlic sauce, served with sweet fried plantains.",
-                    es: "Pulpo tierno cocinado en salsa de ajo, servido con Patacones dulces.",
+                    es: "Pulpo tierno cocinado en salsa de ajo, servido con Patacones.",
                 },
                 price: "$9.75",
                 image: "img/menu-items/Garlic Octopus with Fried Plantains.webp",
@@ -1056,11 +1056,11 @@ export const menuItems = [
             {
                 name: {
                     en: "Breaded School Shark Fillet with Fries",
-                    es: "Filete de Cazón Empanizado con Papas Fritas",
+                    es: "Filete de Cazón Apanado con Papas Fritas",
                 },
                 description: {
                     en: "Crispy breaded shark fillet served with golden fries.",
-                    es: "Filete de cazón empanizado crujiente servido con papas fritas doradas.",
+                    es: "Filete de cazón apanado crujiente servido con papas fritas doradas.",
                 },
                 price: "$6.00",
                 image: "img/menu-items/Breaded School Shark Fillet with Fries.webp",
@@ -1279,7 +1279,7 @@ export const menuItems = [
                 },
                 description: {
                     en: "Flavorful stewed sausage served with fried dough.",
-                    es: "Salchicha guisada sabrosa servida con masa frita.",
+                    es: "Salchicha guisada sabrosa servida con hojaldre.",
                 },
                 price: "$4.00",
                 image: "img/menu-items/Stewed Sausage with Fried Dough.webp",
