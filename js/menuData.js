@@ -954,8 +954,8 @@ export const menuItems = [
                     es: "Pargo Frito con Arroz Frito",
                 },
                 description: {
-                    en: "Crispy fried snapper served with flavorful fried rice. Available in two sizes: 12oz for $9.75 and 16oz for $12.00.",
-                    es: "Pargo frito crujiente servido con arroz frito sabroso. Disponible en dos tamaños: 12oz por $9.75 y 16oz por $12.00.",
+                    en: "Crispy fried snapper served with flavorful fried rice. Available in two sizes: 12oz for $10.25 and 16oz for $12.50.",
+                    es: "Pargo frito crujiente servido con arroz frito sabroso. Disponible en dos tamaños: 12oz por $10.25 y 16oz por $12.50.",
                 },
                 variants: [
                     { name: { en: "12oz", es: "12oz" }, price: "$10.25" },
