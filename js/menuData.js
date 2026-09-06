@@ -345,42 +345,6 @@ export const menuItems = [
             },
             {
                 name: {
-                    en: "An Full Order of Chop Suey",
-                    es: "Orden Completa de Chop Suey",
-                },
-                description: {
-                    en: "A hearty stir-fry of fresh vegetables and your choice of protein.",
-                    es: "Un salteado abundante de vegetales frescos y tu proteína a elección.",
-                },
-                variants: [
-                    { name: { en: "Pork", es: "Puerco" }, price: "$8.50" },
-                    { name: { en: "Mixed", es: "Mixto" }, price: "$9.50" },
-                    { name: { en: "Shrimp", es: "Camarón" }, price: "$9.00" },
-                    { name: { en: "Chicken", es: "Pollo" }, price: "$8.50" },
-                    { name: { en: "Beef", es: "Res" }, price: "$8.50" },
-                ],
-                image: "img/menu-items/An Full Order of Chop Suey.webp",
-            },
-            {
-                name: {
-                    en: "Half Order of Chop Suey",
-                    es: "Media Orden de Chop Suey",
-                },
-                description: {
-                    en: "A smaller portion of our flavorful chop suey, ideal for a lighter appetite.",
-                    es: "Una porción más pequeña de nuestro sabroso chop suey, ideal para un apetito más ligero.",
-                },
-                variants: [
-                    { name: { en: "Pork", es: "Puerco" }, price: "$6.50" },
-                    { name: { en: "Mixed", es: "Mixto" }, price: "$7.50" },
-                    { name: { en: "Shrimp", es: "Camarón" }, price: "$7.00" },
-                    { name: { en: "Chicken", es: "Pollo" }, price: "$6.50" },
-                    { name: { en: "Beef", es: "Res" }, price: "$6.50" },
-                ],
-                image: "img/menu-items/Half Order of Chop Suey.webp",
-            },
-            {
-                name: {
                     en: "An Full Order of Chow Fun",
                     es: "Orden Completa de Chow Fun",
                 },
